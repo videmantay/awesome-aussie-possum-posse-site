@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "siteTitle": "Awesome Aussie Possums",
+    "home": "Home",
+    "theBook": "The Book",
+    "characters": "Characters",
+    "forParents": "For Parents",
+    "theAuthor": "The Author",
+    "frontierPost": "Frontier Post"
+  },
+  "home": {
+    "title": "Welcome to the Wild West, Partner!",
+    "intro": "Saddle up for an adventure with the most awesome possums this side of the outback! Join our furry friends as they explore the wild frontier.",
+    "readStory": "Read the Story",
+    "meetCharacters": "Meet the Characters"
+  },
+  "about": {
+    "title": "The Book",
+    "comingSoon": "Coming soon — more details about the story and where to get your copy!"
+  },
+  "characters": {
+    "title": "Meet the Characters",
+    "comingSoon": "Our cast of awesome Aussie possums is getting ready to introduce themselves. Check back soon!"
+  },
+  "parents": {
+    "title": "For Parents",
+    "comingSoon": "Information for parents about the book, reading level, and educational themes — coming soon!"
+  },
+  "author": {
+    "title": "About the Author",
+    "intro": "Hello, I am <strong>Nilora Takia</strong>, and I know the name is a little strange to most bipeds but to us quadrupeds, I assure you it is really quite common.",
+    "whyPossums": "I am an aspiring author embarking on a book for little humans about Australian Possums. You may be thinking, \u201cWhy would a dog want to write a book about possums?\u201d That is a very good question as my affinity for marsupials has been less than flattering. There is one in particular that is always intruding into my property, and no matter how much I fuss, she continues to do so. Oh how I wish I could just get one bite in\u2026 So why then do I embark on writing a book upon the very target of my disdain?",
+    "photoCaption": "Sweetheart with Daddy",
+    "discovery": "Well, it is really quite simple: My two pets Daddy (he\u2019s the bigger one) and Sweetheart (she\u2019s the smaller one) were exploring a site about their ancestry when they were examining a newspaper written in the 19th century about a railroad robbery gone awry in the wild west \u2014 California to be exact. It seemed that neither conductor nor passengers had even realized that an infamous band of bandits had boarded the \u201ciron bronco\u201d, all because the perilous plot had gone plop even before the perpetrators had been perceived.",
+    "whitePossum": "How could that be? It was right then that I noticed something out of place in the granulated black and white photo taken at the scene, or rather <em>someone</em> out of place. It was a white lemur possum. I had to look twice to be sure because I had first assumed it was just a funny looking feline. But no, there stood a rare white <em>Hemibelideus Lemuroides</em>. I was flabbergasted. What was an Australian possum doing in the Southwest United States in the 19th century?",
+    "legend": "After a bit of research I stumbled upon the legend of <strong>The Awesome Aussie Possum Posse</strong>. It seems that a small band of Australian possums helped shape the Wild West by saving it from an ungracious and greedy gang of goons that had all but conquered it. Their story was so compelling\u2026 so inspiring, I wondered why I hadn\u2019t heard of them before. I plan to right this egregious historical oversight by writing a glorious historical overture to tell the world about those marvelous marsupial mavericks.",
+    "signoff": "Yours truly, Nilora"
+  },
+  "frontier": {
+    "title": "The Frontier Post",
+    "subtitle": "News, dispatches, and tales from the trail",
+    "comingSoon": "The presses are warming up! Check back soon for the latest dispatches from the posse."
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  }
+}

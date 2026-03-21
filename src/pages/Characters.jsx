@@ -1,14 +1,16 @@
 import { Title, Text, Stack } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 function Characters() {
+  const { t } = useTranslation();
+
   return (
     <Stack gap="md" py="xl">
       <Title order={1} style={{ color: 'var(--mantine-color-brown-8)' }}>
-        Meet the Characters
+        {t('characters.title')}
       </Title>
       <Text size="lg">
-        Our cast of awesome Aussie possums is getting ready to introduce
-        themselves. Check back soon!
+        {t('characters.comingSoon')}
       </Text>
     </Stack>
   );

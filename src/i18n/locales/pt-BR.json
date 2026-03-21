@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "siteTitle": "Os Incríveis Gambás Australianos",
+    "home": "Início",
+    "theBook": "O Livro",
+    "characters": "Personagens",
+    "forParents": "Para Pais",
+    "theAuthor": "A Autora",
+    "frontierPost": "O Correio da Fronteira"
+  },
+  "home": {
+    "title": "Bem-vindos ao Velho Oeste, Parceiro!",
+    "intro": "Prepare-se para uma aventura com os gambás mais incríveis deste lado do outback! Junte-se aos nossos amigos peludos enquanto exploram a fronteira selvagem.",
+    "readStory": "Leia a História",
+    "meetCharacters": "Conheça os Personagens"
+  },
+  "about": {
+    "title": "O Livro",
+    "comingSoon": "Em breve — mais detalhes sobre a história e onde conseguir sua cópia!"
+  },
+  "characters": {
+    "title": "Conheça os Personagens",
+    "comingSoon": "Nosso elenco de incríveis gambás australianos está se preparando para se apresentar. Volte em breve!"
+  },
+  "parents": {
+    "title": "Para Pais",
+    "comingSoon": "Informações para pais sobre o livro, nível de leitura e temas educacionais — em breve!"
+  },
+  "author": {
+    "title": "Sobre a Autora",
+    "intro": "Olá, eu sou <strong>Nilora Takia</strong>, e eu sei que o nome é um pouco estranho para a maioria dos bípedes, mas para nós quadrúpedes, garanto que é bastante comum.",
+    "whyPossums": "Sou uma aspirante a autora embarcando em um livro para pequenos humanos sobre os gambás australianos. Você pode estar pensando: \u201cPor que um cachorro iria querer escrever um livro sobre gambás?\u201d Essa é uma pergunta muito boa, já que minha afinidade por marsupiais tem sido menos que lisonjeira. Há um em particular que está sempre invadindo minha propriedade, e não importa o quanto eu reclame, ela continua fazendo isso. Como eu gostaria de poder dar uma mordidinha\u2026 Então, por que embarco em escrever um livro sobre o próprio alvo do meu desdém?",
+    "photoCaption": "Querida com Papai",
+    "discovery": "Bem, é realmente muito simples: Meus dois bichinhos de estimação Papai (ele é o maior) e Querida (ela é a menor) estavam explorando um site sobre sua ancestralidade quando examinavam um jornal escrito no século XIX sobre um roubo ferroviário fracassado no velho oeste \u2014 Califórnia para ser exata. Parecia que nem o condutor nem os passageiros haviam percebido que um infame bando de bandidos havia embarcado no \u201cbronco de ferro\u201d, tudo porque a trama perigosa desmoronou antes mesmo que os perpetradores fossem percebidos.",
+    "whitePossum": "Como isso poderia ser? Foi bem naquele momento que notei algo fora de lugar na foto granulada em preto e branco tirada na cena, ou melhor, <em>alguém</em> fora de lugar. Era um gambá lêmure branco. Tive que olhar duas vezes para ter certeza porque inicialmente presumi que era apenas um felino de aparência engraçada. Mas não, ali estava um raro <em>Hemibelideus Lemuroides</em> branco. Fiquei boquiaberta. O que um gambá australiano estava fazendo no sudoeste dos Estados Unidos no século XIX?",
+    "legend": "Após um pouco de pesquisa, me deparei com a lenda de <strong>A Incrível Gangue de Gambás Australianos</strong>. Parece que um pequeno bando de gambás australianos ajudou a moldar o Velho Oeste, salvando-o de uma gangue ingrata e gananciosa de capangas que praticamente o havia conquistado. A história deles era tão convincente\u2026 tão inspiradora, que me perguntei por que nunca tinha ouvido falar deles antes. Pretendo corrigir essa atroz omissão histórica escrevendo uma gloriosa abertura histórica para contar ao mundo sobre esses maravilhosos mavericks marsupiais.",
+    "signoff": "Atenciosamente, Nilora"
+  },
+  "frontier": {
+    "title": "O Correio da Fronteira",
+    "subtitle": "Notícias, despachos e contos da trilha",
+    "comingSoon": "As prensas estão esquentando! Volte em breve para os últimos despachos da gangue."
+  },
+  "languageSwitcher": {
+    "label": "Idioma"
+  }
+}

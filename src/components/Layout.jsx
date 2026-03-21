@@ -1,7 +1,11 @@
 import { AppShell, Group, Title, Anchor, Container } from '@mantine/core';
 import { Link, Outlet } from 'react-router';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 function Layout() {
+  const { t } = useTranslation();
+
   return (
     <AppShell header={{ height: 70 }} padding="md">
       <AppShell.Header
@@ -18,16 +22,16 @@ function Layout() {
               to="/"
               style={{ color: '#fdf4eb', textDecoration: 'none' }}
             >
-              Awesome Aussie Possums
+              {t('nav.siteTitle')}
             </Title>
             <Group gap="lg">
               {[
-                { to: '/', label: 'Home' },
-                { to: '/about', label: 'The Book' },
-                { to: '/characters', label: 'Characters' },
-                { to: '/parents', label: 'For Parents' },
-                { to: '/author', label: 'The Author' },
-                { to: '/frontier-post', label: 'Frontier Post' },
+                { to: '/', label: t('nav.home') },
+                { to: '/about', label: t('nav.theBook') },
+                { to: '/characters', label: t('nav.characters') },
+                { to: '/parents', label: t('nav.forParents') },
+                { to: '/author', label: t('nav.theAuthor') },
+                { to: '/frontier-post', label: t('nav.frontierPost') },
               ].map((link) => (
                 <Anchor
                   key={link.to}
@@ -39,6 +43,7 @@ function Layout() {
                   {link.label}
                 </Anchor>
               ))}
+              <LanguageSwitcher />
             </Group>
           </Group>
         </Container>

@@ -1,14 +1,16 @@
 import { Title, Text, Stack } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 function ParentsGuide() {
+  const { t } = useTranslation();
+
   return (
     <Stack gap="md" py="xl">
       <Title order={1} style={{ color: 'var(--mantine-color-brown-8)' }}>
-        For Parents
+        {t('parents.title')}
       </Title>
       <Text size="lg">
-        Information for parents about the book, reading level, and educational
-        themes — coming soon!
+        {t('parents.comingSoon')}
       </Text>
     </Stack>
   );

@@ -1,6 +1,9 @@
 import { Title, Text, Stack, Paper } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 function FrontierPost() {
+  const { t } = useTranslation();
+
   return (
     <Stack gap="xl" py="xl" maw={750} mx="auto">
       <Title
@@ -8,10 +11,10 @@ function FrontierPost() {
         ta="center"
         style={{ color: 'var(--mantine-color-brown-8)' }}
       >
-        The Frontier Post
+        {t('frontier.title')}
       </Title>
       <Text ta="center" size="lg" c="dimmed" fs="italic">
-        News, dispatches, and tales from the trail
+        {t('frontier.subtitle')}
       </Text>
 
       <Paper
@@ -24,8 +27,7 @@ function FrontierPost() {
         }}
       >
         <Text size="lg" ta="center">
-          The presses are warming up! Check back soon for the latest dispatches
-          from the posse.
+          {t('frontier.comingSoon')}
         </Text>
       </Paper>
     </Stack>

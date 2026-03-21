@@ -1,7 +1,10 @@
 import { Title, Text, Stack, Paper, Button, Group } from '@mantine/core';
 import { Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <Stack align="center" gap="xl" py="xl">
       <Title
@@ -9,7 +12,7 @@ function Home() {
         ta="center"
         style={{ fontSize: '3rem', color: 'var(--mantine-color-brown-8)' }}
       >
-        Welcome to the Wild West, Partner!
+        {t('home.title')}
       </Title>
 
       <Paper
@@ -23,8 +26,7 @@ function Home() {
         }}
       >
         <Text size="lg" ta="center" mb="md">
-          Saddle up for an adventure with the most awesome possums this side of
-          the outback! Join our furry friends as they explore the wild frontier.
+          {t('home.intro')}
         </Text>
         <Group justify="center">
           <Button
@@ -34,7 +36,7 @@ function Home() {
             radius="md"
             color="brown"
           >
-            Read the Story
+            {t('home.readStory')}
           </Button>
           <Button
             component={Link}
@@ -44,7 +46,7 @@ function Home() {
             variant="outline"
             color="brown"
           >
-            Meet the Characters
+            {t('home.meetCharacters')}
           </Button>
         </Group>
       </Paper>
