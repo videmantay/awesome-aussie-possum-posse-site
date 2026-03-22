@@ -6,6 +6,7 @@
     "characters": "Personajes",
     "forParents": "Para Padres",
     "theAuthor": "La Autora",
+    "theIllustrator": "El Ilustrador",
     "frontierPost": "El Correo Fronterizo"
   },
   "home": {
@@ -35,6 +36,10 @@
     "whitePossum": "¿Cómo podía ser eso? Fue justo entonces cuando noté algo fuera de lugar en la granulada foto en blanco y negro tomada en la escena, o más bien <em>alguien</em> fuera de lugar. Era una zarigüeya lémur blanca. Tuve que mirar dos veces para estar segura porque al principio había asumido que era solo un felino de aspecto gracioso. Pero no, ahí estaba una rara <em>Hemibelideus Lemuroides</em> blanca. Quedé boquiabierta. ¿Qué hacía una zarigüeya australiana en el suroeste de los Estados Unidos en el siglo XIX?",
     "legend": "Después de un poco de investigación, me topé con la leyenda de <strong>La Increíble Pandilla de Zarigüeyas Australianas</strong>. Parece que una pequeña banda de zarigüeyas australianas ayudó a dar forma al Viejo Oeste salvándolo de una pandilla desagradecida y codiciosa de matones que prácticamente lo habían conquistado. Su historia era tan convincente\u2026 tan inspiradora, que me pregunté por qué no había oído hablar de ellas antes. Planeo corregir esta atroz omisión histórica escribiendo una gloriosa obertura histórica para contarle al mundo sobre esos maravillosos mavericks marsupiales.",
     "signoff": "Atentamente, Nilora"
+  },
+  "illustrator": {
+    "title": "Sobre el Ilustrador",
+    "comingSoon": "Próximamente — ¡conoce al artista detrás de las increíbles zarigüeyas australianas!"
   },
   "frontier": {
     "title": "El Correo Fronterizo",

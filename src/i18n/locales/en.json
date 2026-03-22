@@ -6,6 +6,7 @@
     "characters": "Characters",
     "forParents": "For Parents",
     "theAuthor": "The Author",
+    "theIllustrator": "The Illustrator",
     "frontierPost": "Frontier Post"
   },
   "home": {
@@ -35,6 +36,10 @@
     "whitePossum": "How could that be? It was right then that I noticed something out of place in the granulated black and white photo taken at the scene, or rather <em>someone</em> out of place. It was a white lemur possum. I had to look twice to be sure because I had first assumed it was just a funny looking feline. But no, there stood a rare white <em>Hemibelideus Lemuroides</em>. I was flabbergasted. What was an Australian possum doing in the Southwest United States in the 19th century?",
     "legend": "After a bit of research I stumbled upon the legend of <strong>The Awesome Aussie Possum Posse</strong>. It seems that a small band of Australian possums helped shape the Wild West by saving it from an ungracious and greedy gang of goons that had all but conquered it. Their story was so compelling\u2026 so inspiring, I wondered why I hadn\u2019t heard of them before. I plan to right this egregious historical oversight by writing a glorious historical overture to tell the world about those marvelous marsupial mavericks.",
     "signoff": "Yours truly, Nilora"
+  },
+  "illustrator": {
+    "title": "About the Illustrator",
+    "comingSoon": "Coming soon — meet the artist behind the awesome Aussie possums!"
   },
   "frontier": {
     "title": "The Frontier Post",

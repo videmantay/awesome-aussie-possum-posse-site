@@ -6,6 +6,7 @@
     "characters": "Personagens",
     "forParents": "Para Pais",
     "theAuthor": "A Autora",
+    "theIllustrator": "O Ilustrador",
     "frontierPost": "O Correio da Fronteira"
   },
   "home": {
@@ -35,6 +36,10 @@
     "whitePossum": "Como isso poderia ser? Foi bem naquele momento que notei algo fora de lugar na foto granulada em preto e branco tirada na cena, ou melhor, <em>alguém</em> fora de lugar. Era um gambá lêmure branco. Tive que olhar duas vezes para ter certeza porque inicialmente presumi que era apenas um felino de aparência engraçada. Mas não, ali estava um raro <em>Hemibelideus Lemuroides</em> branco. Fiquei boquiaberta. O que um gambá australiano estava fazendo no sudoeste dos Estados Unidos no século XIX?",
     "legend": "Após um pouco de pesquisa, me deparei com a lenda de <strong>A Incrível Gangue de Gambás Australianos</strong>. Parece que um pequeno bando de gambás australianos ajudou a moldar o Velho Oeste, salvando-o de uma gangue ingrata e gananciosa de capangas que praticamente o havia conquistado. A história deles era tão convincente\u2026 tão inspiradora, que me perguntei por que nunca tinha ouvido falar deles antes. Pretendo corrigir essa atroz omissão histórica escrevendo uma gloriosa abertura histórica para contar ao mundo sobre esses maravilhosos mavericks marsupiais.",
     "signoff": "Atenciosamente, Nilora"
+  },
+  "illustrator": {
+    "title": "Sobre o Ilustrador",
+    "comingSoon": "Em breve — conheça o artista por trás dos incríveis gambás australianos!"
   },
   "frontier": {
     "title": "O Correio da Fronteira",

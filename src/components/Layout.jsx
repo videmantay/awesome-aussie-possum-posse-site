@@ -31,6 +31,7 @@ function Layout() {
                 { to: '/characters', label: t('nav.characters') },
                 { to: '/parents', label: t('nav.forParents') },
                 { to: '/author', label: t('nav.theAuthor') },
+                { to: '/illustrator', label: t('nav.theIllustrator') },
                 { to: '/frontier-post', label: t('nav.frontierPost') },
               ].map((link) => (
                 <Anchor

@@ -9,6 +9,7 @@ import Characters from './pages/Characters';
 import ParentsGuide from './pages/ParentsGuide';
 import AboutAuthor from './pages/AboutAuthor';
 import FrontierPost from './pages/FrontierPost';
+import AboutIllustrator from './pages/AboutIllustrator';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/characters" element={<Characters />} />
           <Route path="/parents" element={<ParentsGuide />} />
           <Route path="/author" element={<AboutAuthor />} />
+          <Route path="/illustrator" element={<AboutIllustrator />} />
           <Route path="/frontier-post" element={<FrontierPost />} />
         </Route>
       </Routes>
