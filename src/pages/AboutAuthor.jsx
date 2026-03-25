@@ -1,5 +1,6 @@
-import { Title, Text, Stack, Paper } from '@mantine/core';
+import { Title, Text, Stack, Paper, Image } from '@mantine/core';
 import { Trans, useTranslation } from 'react-i18next';
+import authPic from '../assets/authorPic1.png'
 
 function AboutAuthor() {
   const { t } = useTranslation();
@@ -24,6 +25,7 @@ function AboutAuthor() {
         }}
       >
         <Stack gap="md">
+          <Image src={authPic} h={400} w={"auto"} />
           <Text size="lg">
             <span dangerouslySetInnerHTML={{ __html: t('author.intro') }} />
           </Text>
