@@ -22,7 +22,7 @@ function Layout() {
               to="/"
               style={{ color: '#fdf4eb', textDecoration: 'none' }}
             >
-              {t('nav.siteTitle')}
+              {t('The Awesome Aussie Possum Posse')}
             </Title>
             <Group gap="lg">
               {[

@@ -18,7 +18,7 @@ const theme = createTheme({
   },
   fontFamily: '"Georgia", serif',
   headings: {
-    fontFamily: '"Rye", "Georgia", serif',
+    fontFamily: '"Rio Grande", "Rye", "Georgia", serif',
   },
 });
 

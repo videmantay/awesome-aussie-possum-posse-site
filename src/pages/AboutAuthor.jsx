@@ -1,6 +1,7 @@
 import { Title, Text, Stack, Paper, Image } from '@mantine/core';
 import { Trans, useTranslation } from 'react-i18next';
-import authPic from '../assets/authorPic1.png'
+import authPic from '../assets/imgs/authorPic1.png';
+import daddySweetie from '../assets/imgs/daddySweetheart.jpg';
 
 function AboutAuthor() {
   const { t } = useTranslation();
@@ -25,7 +26,7 @@ function AboutAuthor() {
         }}
       >
         <Stack gap="md">
-          <Image src={authPic} h={400} w={"auto"} />
+          <Image src={authPic} h={"25rem"} w={"auto"} />
           <Text size="lg">
             <span dangerouslySetInnerHTML={{ __html: t('author.intro') }} />
           </Text>
@@ -33,7 +34,7 @@ function AboutAuthor() {
           <Text size="lg">
             {t('author.whyPossums')}
           </Text>
-
+          <Image h={"25em"} src={daddySweetie} fit='contain' />
           <Text
             ta="center"
             fs="italic"

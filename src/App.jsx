@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css';
+import './fonts.css';
 import { MantineProvider } from '@mantine/core';
 import { Routes, Route } from 'react-router';
 import theme from './theme';
@@ -10,6 +11,7 @@ import ParentsGuide from './pages/ParentsGuide';
 import AboutAuthor from './pages/AboutAuthor';
 import FrontierPost from './pages/FrontierPost';
 import AboutIllustrator from './pages/AboutIllustrator';
+
 
 function App() {
   return (
