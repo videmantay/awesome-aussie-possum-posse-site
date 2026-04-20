@@ -9,10 +9,11 @@
     "frontierPost": "El Correo Fronterizo"
   },
   "home": {
-    "title": "¡Bienvenidos al Viejo Oeste, Compañero!",
-    "intro": "¡Prepárate para una aventura con las zarigüeyas más increíbles de este lado del outback! Únete a nuestros amigos peludos mientras exploran la frontera salvaje.",
+    "title": "La Increíble Pandilla de Zarigüeyas Australianas",
+    "intro": "¡Prepárate para una aventura con las zarigüeyas más increíbles de este lado del outback! Siete extraordinarios marsupiales que ayudaron a dar forma al Viejo Oeste.",
     "readStory": "Lee la Historia",
-    "meetCharacters": "Conoce a los Personajes"
+    "meetCharacters": "Conoce a los Personajes",
+    "scrollHint": "Desplázate para explorar"
   },
   "about": {
     "title": "El Libro",
@@ -47,5 +48,67 @@
   },
   "languageSwitcher": {
     "label": "Idioma"
+  },
+  "character": {
+    "sectionTitle": "Conoce la Pandilla",
+    "sectionSubtitle": "Siete extraordinarias zarigüeyas australianas que entraron en la leyenda",
+    "skillLabel": "Habilidad Especial",
+    "brennen": {
+      "name": "Brennen",
+      "species": "Zarigüeya Común de Cola Peluda",
+      "blurb": "Valiente, audaz y siempre el primero en meterse en problemas. Brennen lidera la Pandilla con un corazón tan grande como el outback.",
+      "skill": "Líder Nato"
+    },
+    "gretel": {
+      "name": "Gretel",
+      "species": "Petauro del Azúcar",
+      "blurb": "Ágil de mente y de alas, Gretel puede planear sobre cualquier problema — y casi siempre aterriza de pie.",
+      "skill": "Exploradora Aérea"
+    },
+    "hana": {
+      "name": "Hana",
+      "species": "Zarigüeya Pigmea de Montaña",
+      "blurb": "No dejes que su pequeño tamaño te engañe. El conocimiento de Hana sobre hierbas y remedios fronterizos ha salvado a la Pandilla más de una vez.",
+      "skill": "Sanadora Silvestre"
+    },
+    "plaid": {
+      "name": "Plaid",
+      "species": "Zarigüeya Rayada",
+      "blurb": "Colorida, inteligente y nunca aburrida. Plaid tiene un talento para los disfraces y para meterse — y salir — de situaciones increíblemente difíciles.",
+      "skill": "Maestra del Disfraz"
+    },
+    "pygmy": {
+      "name": "Pygmy",
+      "species": "Zarigüeya Pigmea Oriental",
+      "blurb": "El miembro más pequeño con las ideas más grandes. Las invenciones de Pygmy son en partes iguales genialidad y caos glorioso.",
+      "skill": "Inventora Salvaje"
+    },
+    "remmy": {
+      "name": "Remmy",
+      "species": "Zarigüeya Lémur de Cola Anillada",
+      "blurb": "Rara, sabia y maravillosamente misteriosa. Se dice que Remmy es la legendaria zarigüeya blanca de los viejos cuentos fronterizos — pero Remmy no lo confirma.",
+      "skill": "Rastreadora Ancestral"
+    },
+    "willow": {
+      "name": "Willow",
+      "species": "Zarigüeya Común de Cola Anillada",
+      "blurb": "Tranquila bajo presión y elegante bajo el fuego. La cola prensil de Willow puede lazar el sombrero de un bandido desde el otro lado del corral.",
+      "skill": "Tiradora de Élite"
+    }
+  },
+  "teaser": {
+    "heading": "Un Vistazo...",
+    "subheading": "Una aventura en el Viejo Oeste como ninguna otra te espera adentro"
+  },
+  "cta": {
+    "heading": "¡Únete al Correo Fronterizo!",
+    "subheading": "Sé el primero en saber cuándo comienza la aventura. Despachos de la Pandilla, directo a tu correo.",
+    "emailPlaceholder": "tu@correo.com",
+    "submitButton": "Únete a la Pandilla",
+    "successMessage": "¡Yeehaw! ¡Estás dentro, compañero! Pronto llegaremos a tu bandeja de entrada.",
+    "errorMessage": "Hmm, eso no parece correcto — verifica tu correo e inténtalo de nuevo.",
+    "exploreMore": "Explorar Más",
+    "browseCharacters": "Conoce a los Personajes",
+    "readAbout": "Sobre el Libro"
   }
 }

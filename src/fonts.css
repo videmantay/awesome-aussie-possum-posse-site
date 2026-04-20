@@ -5,3 +5,38 @@
   font-style: normal;
   font-display: swap;
 }
+
+body {
+  margin: 0;
+  background-image: url('./assets/imgs/au2cal.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* Smooth scrollbar for the drawer */
+.nav-drawer::-webkit-scrollbar {
+  width: 6px;
+}
+.nav-drawer::-webkit-scrollbar-thumb {
+  background: var(--mantine-color-brown-4);
+  border-radius: 3px;
+}
+
+/* Fun nav link hover animation */
+.nav-link {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border-radius: 12px;
+}
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+/* Page card entrance */
+.page-card {
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}

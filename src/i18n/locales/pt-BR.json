@@ -9,10 +9,11 @@
     "frontierPost": "O Correio da Fronteira"
   },
   "home": {
-    "title": "Bem-vindos ao Velho Oeste, Parceiro!",
-    "intro": "Prepare-se para uma aventura com os gambás mais incríveis deste lado do outback! Junte-se aos nossos amigos peludos enquanto exploram a fronteira selvagem.",
+    "title": "A Incrível Gangue de Gambás Australianos",
+    "intro": "Prepare-se para uma aventura com os gambás mais incríveis deste lado do outback! Sete extraordinários marsupiais que ajudaram a moldar o Velho Oeste.",
     "readStory": "Leia a História",
-    "meetCharacters": "Conheça os Personagens"
+    "meetCharacters": "Conheça os Personagens",
+    "scrollHint": "Role para explorar"
   },
   "about": {
     "title": "O Livro",
@@ -47,5 +48,67 @@
   },
   "languageSwitcher": {
     "label": "Idioma"
+  },
+  "character": {
+    "sectionTitle": "Conheça a Gangue",
+    "sectionSubtitle": "Sete extraordinários gambás australianos que entraram para a lenda",
+    "skillLabel": "Habilidade Especial",
+    "brennen": {
+      "name": "Brennen",
+      "species": "Gambá Comum de Cauda Peluda",
+      "blurb": "Corajoso, audacioso e sempre o primeiro a entrar em apuros. Brennen lidera a Gangue com um coração tão grande quanto o outback.",
+      "skill": "Líder Nato"
+    },
+    "gretel": {
+      "name": "Gretel",
+      "species": "Petauro do Açúcar",
+      "blurb": "Rápida de raciocínio e de asas, Gretel pode planar sobre qualquer problema — e quase sempre pousa de pé.",
+      "skill": "Batedora Aérea"
+    },
+    "hana": {
+      "name": "Hana",
+      "species": "Gambá Pigmeu da Montanha",
+      "blurb": "Não deixe seu tamanho minúsculo enganar você. O conhecimento de Hana sobre ervas e remédios da fronteira salvou a Gangue mais de uma vez.",
+      "skill": "Curandeira Silvestre"
+    },
+    "plaid": {
+      "name": "Plaid",
+      "species": "Gambá Listrado",
+      "blurb": "Colorido, inteligente e nunca entediante. Plaid tem jeito para fantasias e para entrar — e sair — de situações incrivelmente difíceis.",
+      "skill": "Mestre do Disfarce"
+    },
+    "pygmy": {
+      "name": "Pygmy",
+      "species": "Gambá Pigmeu Oriental",
+      "blurb": "O menor membro com as maiores ideias. As invenções de Pygmy são iguais partes genialidade e caos glorioso.",
+      "skill": "Inventor Selvagem"
+    },
+    "remmy": {
+      "name": "Remmy",
+      "species": "Gambá Lêmure de Cauda Anelada",
+      "blurb": "Raro, sábio e maravilhosamente misterioso. Diz a lenda que Remmy é o lendário gambá branco dos velhos contos da fronteira — mas Remmy não confirma.",
+      "skill": "Rastreador Ancestral"
+    },
+    "willow": {
+      "name": "Willow",
+      "species": "Gambá Comum de Cauda Anelada",
+      "blurb": "Calmo sob pressão e gracioso sob o fogo. A cauda preênsil de Willow consegue laçar o chapéu de um bandido do outro lado do curral.",
+      "skill": "Atirador de Elite"
+    }
+  },
+  "teaser": {
+    "heading": "Dê uma Espiada...",
+    "subheading": "Uma aventura no Velho Oeste como nenhuma outra espera lá dentro"
+  },
+  "cta": {
+    "heading": "Junte-se ao Correio da Fronteira!",
+    "subheading": "Seja o primeiro a saber quando a aventura começa. Despachos da Gangue direto para sua caixa de entrada.",
+    "emailPlaceholder": "seu@email.com",
+    "submitButton": "Entrar para a Gangue",
+    "successMessage": "Yeehaw! Você está dentro, parceiro! Em breve chegamos à sua caixa de entrada.",
+    "errorMessage": "Hmm, isso não parece certo — verifique seu e-mail e tente novamente.",
+    "exploreMore": "Explorar Mais",
+    "browseCharacters": "Conheça os Personagens",
+    "readAbout": "Sobre o Livro"
   }
 }

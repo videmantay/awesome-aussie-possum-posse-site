@@ -16,9 +16,14 @@ const theme = createTheme({
       '#824404',
     ],
   },
-  fontFamily: '"Georgia", serif',
+  fontFamily: '"Baloo 2", "Bubblegum Sans", sans-serif',
   headings: {
-    fontFamily: '"Rio Grande", "Rye", "Georgia", serif',
+    fontFamily: '"Rio Grande", "Bangers", "Bubblegum Sans", cursive',
+  },
+  other: {
+    handwrittenFont: '"Patrick Hand", cursive',
+    funFont: '"Bangers", cursive',
+    bodyFont: '"Baloo 2", sans-serif',
   },
 });
 

@@ -9,10 +9,11 @@
     "frontierPost": "Frontier Post"
   },
   "home": {
-    "title": "Welcome to the Wild West, Partner!",
-    "intro": "Saddle up for an adventure with the most awesome possums this side of the outback! Join our furry friends as they explore the wild frontier.",
+    "title": "The Awesome Aussie Possum Posse",
+    "intro": "Saddle up for an adventure with the most awesome possums this side of the outback! Seven extraordinary marsupials who helped shape the Wild West.",
     "readStory": "Read the Story",
-    "meetCharacters": "Meet the Characters"
+    "meetCharacters": "Meet the Characters",
+    "scrollHint": "Scroll to explore"
   },
   "about": {
     "title": "The Book",
@@ -47,5 +48,67 @@
   },
   "languageSwitcher": {
     "label": "Language"
+  },
+  "character": {
+    "sectionTitle": "Meet the Posse",
+    "sectionSubtitle": "Seven extraordinary Aussie possums who rode into legend",
+    "skillLabel": "Special Skill",
+    "brennen": {
+      "name": "Brennen",
+      "species": "Common Brushtail Possum",
+      "blurb": "Brave, bold, and always first into trouble. Brennen leads the Posse with a heart as big as the outback and courage to match.",
+      "skill": "Natural-born Leader"
+    },
+    "gretel": {
+      "name": "Gretel",
+      "species": "Sugar Glider",
+      "blurb": "Quick-witted and quick-winged, Gretel can glide over any problem — and she almost always lands on her feet.",
+      "skill": "Aerial Scout"
+    },
+    "hana": {
+      "name": "Hana",
+      "species": "Mountain Pygmy Possum",
+      "blurb": "Don't let her tiny size fool you. Hana's knowledge of herbs and frontier remedies has saved the Posse more than once.",
+      "skill": "Wilderness Healer"
+    },
+    "plaid": {
+      "name": "Plaid",
+      "species": "Striped Possum",
+      "blurb": "Colourful, clever, and never boring. Plaid has a knack for disguises and getting into — and out of — incredibly tight spots.",
+      "skill": "Master of Disguise"
+    },
+    "pygmy": {
+      "name": "Pygmy",
+      "species": "Eastern Pygmy Possum",
+      "blurb": "The smallest member with the biggest ideas. Pygmy's inventions are equal parts genius and glorious chaos.",
+      "skill": "Wild Inventor"
+    },
+    "remmy": {
+      "name": "Remmy",
+      "species": "Lemuroid Ringtail Possum",
+      "blurb": "Rare, wise, and wonderfully mysterious. Rumour has it Remmy is the legendary white possum from the old frontier tales — but Remmy isn't saying.",
+      "skill": "Ancient Tracker"
+    },
+    "willow": {
+      "name": "Willow",
+      "species": "Common Ringtail Possum",
+      "blurb": "Calm under pressure and graceful under fire. Willow's prehensile tail can lasso a bandit's hat from clear across the corral.",
+      "skill": "Sharpshooter"
+    }
+  },
+  "teaser": {
+    "heading": "Sneak a Peek...",
+    "subheading": "A wild west adventure like no other awaits inside"
+  },
+  "cta": {
+    "heading": "Join the Frontier Post!",
+    "subheading": "Be the first to know when the adventure begins. Dispatches from the Posse, straight to your inbox.",
+    "emailPlaceholder": "your@email.com",
+    "submitButton": "Join the Posse",
+    "successMessage": "Yeehaw! You're in, partner! We'll ride to your inbox soon.",
+    "errorMessage": "Hmm, that doesn't look right — check your email and try again.",
+    "exploreMore": "Explore More",
+    "browseCharacters": "Meet the Characters",
+    "readAbout": "About the Book"
   }
 }

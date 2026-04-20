@@ -1,36 +1,64 @@
-import { Title, Text, Stack, Paper } from '@mantine/core';
+import { Title, Text, Stack, Paper, Box } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
 function FrontierPost() {
   const { t } = useTranslation();
 
   return (
-    <Stack gap="xl" py="xl" maw={750} mx="auto">
-      <Title
-        order={1}
-        ta="center"
-        style={{ color: 'var(--mantine-color-brown-8)' }}
-      >
-        {t('frontier.title')}
-      </Title>
-      <Text ta="center" size="lg" c="dimmed" fs="italic">
-        {t('frontier.subtitle')}
-      </Text>
-
+    <Box maw={800} mx="auto" py="xl">
       <Paper
-        shadow="sm"
-        radius="md"
+        className="page-card"
+        shadow="xl"
+        radius="xl"
         p="xl"
         style={{
-          backgroundColor: 'var(--mantine-color-brown-0)',
-          border: '2px solid var(--mantine-color-brown-3)',
+          backgroundColor: 'rgba(253, 244, 235, 0.95)',
+          border: '3px solid var(--mantine-color-brown-3)',
         }}
       >
-        <Text size="lg" ta="center">
-          {t('frontier.comingSoon')}
-        </Text>
+        <Stack gap="xl">
+          <div>
+            <Title
+              order={1}
+              ta="center"
+              style={{
+                color: 'var(--mantine-color-brown-8)',
+                fontFamily: '"Rio Grande", "Bangers", cursive',
+              }}
+            >
+              {t('frontier.title')}
+            </Title>
+            <Text
+              ta="center"
+              size="lg"
+              fs="italic"
+              mt="xs"
+              style={{ fontFamily: '"Patrick Hand", cursive', color: 'var(--mantine-color-brown-6)' }}
+            >
+              {t('frontier.subtitle')}
+            </Text>
+          </div>
+
+          <Paper
+            shadow="sm"
+            radius="lg"
+            p="xl"
+            style={{
+              backgroundColor: 'var(--mantine-color-brown-0)',
+              border: '2px dashed var(--mantine-color-brown-3)',
+            }}
+          >
+            <Text
+              size="lg"
+              ta="center"
+              style={{ fontFamily: '"Bubblegum Sans", sans-serif' }}
+            >
+              {t('frontier.comingSoon')}
+            </Text>
+          </Paper>
+        </Stack>
       </Paper>
-    </Stack>
+    </Box>
   );
 }
 
