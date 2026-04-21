@@ -16,7 +16,6 @@ import { Link, Outlet, useLocation } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import MusicPlayer from './MusicPlayer';
-import possumIcon from '../assets/icons/possumSilohette.svg';
 
 const navLinks = [
   { to: '/', labelKey: 'nav.home', emoji: '\u{1F3E0}' },
@@ -66,7 +65,6 @@ function Layout() {
               color="#fdf4eb"
               aria-label="Toggle navigation"
             />
-            <Image src={possumIcon} h={36} w={36} style={{ filter: 'invert(1) brightness(2)' }} />
             <Title
               order={3}
               component={Link}
@@ -74,7 +72,7 @@ function Layout() {
               style={{
                 color: '#fdf4eb',
                 textDecoration: 'none',
-                fontFamily: '"Rio Grande", "Bangers", cursive',
+                fontFamily: '"Rye", cursive',
                 letterSpacing: '1px',
               }}
             >

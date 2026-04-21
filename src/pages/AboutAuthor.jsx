@@ -1,7 +1,16 @@
 import { Title, Text, Stack, Paper, Image, Box } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
-import authPic from '../assets/imgs/authorPic1.png';
-import daddySweetie from '../assets/imgs/daddySweetheart.jpg';
+import authPic from '../assets/imgs/aboutAuthor/authorPic1.png';
+import daddySweetie from '../assets/imgs/aboutAuthor/daddySweetheart.jpg';
+
+const sectionHeadingStyle = {
+  fontFamily: '"Rye", cursive',
+  fontSize: 'clamp(1.4rem, 3vw, 1.9rem)',
+  color: 'var(--mantine-color-brown-7)',
+  margin: '0.5rem 0 0',
+};
+
+const bodyStyle = { fontFamily: '"Baloo 2", sans-serif' };
 
 function AboutAuthor() {
   const { t } = useTranslation();
@@ -24,7 +33,7 @@ function AboutAuthor() {
             ta="center"
             style={{
               color: 'var(--mantine-color-brown-8)',
-              fontFamily: '"Rio Grande", "Bangers", cursive',
+              fontFamily: '"Rye", cursive',
             }}
           >
             {t('author.title')}
@@ -32,31 +41,34 @@ function AboutAuthor() {
 
           <Image src={authPic} h="25rem" w="auto" radius="lg" />
 
-          <Text size="lg" style={{ fontFamily: '"Baloo 2", sans-serif' }}>
-            <span dangerouslySetInnerHTML={{ __html: t('author.intro') }} />
-          </Text>
+          {/* Introduction */}
+          <h2 style={sectionHeadingStyle}>{t('author.introTitle')}</h2>
+          <Text size="lg" style={bodyStyle}>{t('author.intro1')}</Text>
+          <Text size="lg" style={bodyStyle}>{t('author.intro2')}</Text>
+          <Text size="lg" style={{ ...bodyStyle, fontStyle: 'italic' }}>{t('author.introQuestion')}</Text>
 
-          <Text size="lg" style={{ fontFamily: '"Baloo 2", sans-serif' }}>
-            {t('author.whyPossums')}
-          </Text>
+          {/* The Discovery */}
+          <h2 style={sectionHeadingStyle}>{t('author.discoveryTitle')}</h2>
+          <Text size="lg" style={bodyStyle}>{t('author.discovery1')}</Text>
+          <Text size="lg" style={bodyStyle}>{t('author.discovery2')}</Text>
 
           <Image h="25em" src={daddySweetie} fit="contain" radius="lg" />
-
           <Text ta="center" fs="italic" c="dimmed" size="sm" style={{ fontFamily: '"Patrick Hand", cursive' }}>
             {t('author.photoCaption')}
           </Text>
 
-          <Text size="lg" style={{ fontFamily: '"Baloo 2", sans-serif' }}>
-            {t('author.discovery')}
+          <Text size="lg" style={bodyStyle}>{t('author.discovery3')}</Text>
+          <Text size="lg" style={bodyStyle}>
+            <span dangerouslySetInnerHTML={{ __html: t('author.discovery4') }} />
           </Text>
 
-          <Text size="lg" style={{ fontFamily: '"Baloo 2", sans-serif' }}>
-            <span dangerouslySetInnerHTML={{ __html: t('author.whitePossum') }} />
+          {/* The Legend */}
+          <h2 style={sectionHeadingStyle}>{t('author.legendTitle')}</h2>
+          <Text size="lg" style={bodyStyle}>
+            <span dangerouslySetInnerHTML={{ __html: t('author.legend1') }} />
           </Text>
-
-          <Text size="lg" style={{ fontFamily: '"Baloo 2", sans-serif' }}>
-            <span dangerouslySetInnerHTML={{ __html: t('author.legend') }} />
-          </Text>
+          <Text size="lg" style={bodyStyle}>{t('author.legend2')}</Text>
+          <Text size="lg" style={bodyStyle}>{t('author.legend3')}</Text>
 
           <Text
             size="lg"
@@ -69,7 +81,7 @@ function AboutAuthor() {
               fontSize: '1.3rem',
             }}
           >
-            {t('author.signoff')}
+            {t('author.signoff')}<br />{t('author.signoffName')}
           </Text>
         </Stack>
       </Paper>

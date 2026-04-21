@@ -9,7 +9,7 @@
     "frontierPost": "O Correio da Fronteira"
   },
   "home": {
-    "title": "A Incrível Gangue de Gambás Australianos",
+    "title": "The Awesome Aussie Possum Posse",
     "intro": "Prepare-se para uma aventura com os gambás mais incríveis deste lado do outback! Sete extraordinários marsupiais que ajudaram a moldar o Velho Oeste.",
     "readStory": "Leia a História",
     "meetCharacters": "Conheça os Personagens",
@@ -29,13 +29,22 @@
   },
   "author": {
     "title": "Sobre a Autora",
-    "intro": "Olá, eu sou <strong>Nilora Takia</strong>, e eu sei que o nome é um pouco estranho para a maioria dos bípedes, mas para nós quadrúpedes, garanto que é bastante comum.",
-    "whyPossums": "Sou uma aspirante a autora embarcando em um livro para pequenos humanos sobre os gambás australianos. Você pode estar pensando: \u201cPor que um cachorro iria querer escrever um livro sobre gambás?\u201d Essa é uma pergunta muito boa, já que minha afinidade por marsupiais tem sido menos que lisonjeira. Há um em particular que está sempre invadindo minha propriedade, e não importa o quanto eu reclame, ela continua fazendo isso. Como eu gostaria de poder dar uma mordidinha\u2026 Então, por que embarco em escrever um livro sobre o próprio alvo do meu desdém?",
+    "introTitle": "Introdu\u00e7\u00e3o",
+    "intro1": "Ol\u00e1. Eu sou a Nilora Takia. Sei que meu nome pode soar um pouco \u201cex\u00f3tico\u201d para voc\u00eas, b\u00edpedes, mas no mundo dos quadr\u00fapedes intelectuais, garanto que \u00e9 um cl\u00e1ssico.",
+    "intro2": "Sou uma autora iniciante. No momento, estou escrevendo um livro para \u201cpequenos humanos\u201d sobre os possums australianos. Agora, eu sei o que voc\u00eas est\u00e3o pensando: \u201cNilora, por que uma cachorra escreveria um livro sobre seus piores inimigos?\u201d. \u00c9 uma boa pergunta. Geralmente, minha rela\u00e7\u00e3o com marsupiais envolve muitos latidos e persegui\u00e7\u00f5es para fora do meu quintal. Tem uma gamb\u00e1 espec\u00edfica que adora invadir meu territ\u00f3rio e, por mais que eu tente \u201cconversar\u201d com ela pelo port\u00e3o, ela n\u00e3o vai embora. Ah, o que eu n\u00e3o daria por uma abocanhada de leve!",
+    "introQuestion": "Ent\u00e3o, por que escrever sobre as criaturinhas que eu tanto detesto?",
+    "discoveryTitle": "A Descoberta",
+    "discovery1": "Tudo come\u00e7ou com os meus dois bichinhos de estima\u00e7\u00e3o. Tem o Papai (o grand\u00e3o) e a Sweetheart (a menorzinha e mais r\u00e1pida). Eles estavam lendo um jornal digital bem antigo, l\u00e1 do s\u00e9culo 19. Estavam pesquisando sobre um famoso assalto a trem no Velho Oeste \u2014 na Calif\u00f3rnia, para ser exata.",
+    "discovery2": "Segundo o artigo, um bando de bandidos tinha subido no \u201cCavalo de Ferro\u201d (era como chamavam os trens naquela \u00e9poca). Mas a\u00ed vem a parte estranha: o plano \u201cperfeito\u201d dos bandidos deu errado antes mesmo de eles roubarem uma \u00fanica moeda de ouro. Ningu\u00e9m sabia o porqu\u00ea!",
+    "discovery3": "Eu cheguei perto para ver a foto em preto e branco borrada da cena. No come\u00e7o, achei que fosse um gato com uma cara bem engra\u00e7ada. Mas farejei a tela, olhei bem de perto e\u2026 que susto! Fiquei passada.",
+    "discovery4": "Bem ali, no meio do deserto, estava um Possum-lemur-branco. Um raro <em>Hemibelideus lemuroides</em>, para ser cient\u00edfica. Eu fiquei chocada! O que um possum australiano estava fazendo no sudoeste dos Estados Unidos em pleno s\u00e9culo 19?",
+    "legendTitle": "A Lenda",
+    "legend1": "Eu come\u00e7ei a cavar (e n\u00e3o estou falando do jardim). Descobri uma lenda esquecida: <strong>O Incr\u00edvel Esquadr\u00e3o de Possums Australianos</strong>.",
+    "legend2": "Acontece que um pequeno grupo de possums australianos salvou o Velho Oeste! Eles protegeram a fronteira de uma gangue de malfeitores gananciosos que queriam dominar tudo. A hist\u00f3ria deles \u00e9 t\u00e3o corajosa \u2014 t\u00e3o inspiradora \u2014 que eu n\u00e3o conseguia acreditar que ningu\u00e9m nunca tinha ouvido falar deles.",
+    "legend3": "\u00c9 uma injusti\u00e7a hist\u00f3rica! E, como uma cadela de muita honra, pretendo consertar isso. Estou escrevendo um tributo glorioso a esses marsupiais maravilhosos. Chegou a hora de o mundo saber a verdade sobre esses her\u00f3is que vieram l\u00e1 do outro lado do oceano.",
     "photoCaption": "Querida com Papai",
-    "discovery": "Bem, é realmente muito simples: Meus dois bichinhos de estimação Papai (ele é o maior) e Querida (ela é a menor) estavam explorando um site sobre sua ancestralidade quando examinavam um jornal escrito no século XIX sobre um roubo ferroviário fracassado no velho oeste \u2014 Califórnia para ser exata. Parecia que nem o condutor nem os passageiros haviam percebido que um infame bando de bandidos havia embarcado no \u201cbronco de ferro\u201d, tudo porque a trama perigosa desmoronou antes mesmo que os perpetradores fossem percebidos.",
-    "whitePossum": "Como isso poderia ser? Foi bem naquele momento que notei algo fora de lugar na foto granulada em preto e branco tirada na cena, ou melhor, <em>alguém</em> fora de lugar. Era um gambá lêmure branco. Tive que olhar duas vezes para ter certeza porque inicialmente presumi que era apenas um felino de aparência engraçada. Mas não, ali estava um raro <em>Hemibelideus Lemuroides</em> branco. Fiquei boquiaberta. O que um gambá australiano estava fazendo no sudoeste dos Estados Unidos no século XIX?",
-    "legend": "Após um pouco de pesquisa, me deparei com a lenda de <strong>A Incrível Gangue de Gambás Australianos</strong>. Parece que um pequeno bando de gambás australianos ajudou a moldar o Velho Oeste, salvando-o de uma gangue ingrata e gananciosa de capangas que praticamente o havia conquistado. A história deles era tão convincente\u2026 tão inspiradora, que me perguntei por que nunca tinha ouvido falar deles antes. Pretendo corrigir essa atroz omissão histórica escrevendo uma gloriosa abertura histórica para contar ao mundo sobre esses maravilhosos mavericks marsupiais.",
-    "signoff": "Atenciosamente, Nilora"
+    "signoff": "Com carinho,",
+    "signoffName": "Nilora"
   },
   "illustrator": {
     "title": "Sobre o Ilustrador",

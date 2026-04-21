@@ -89,7 +89,7 @@ function NewsletterSignup() {
 
         <h2
           style={{
-            fontFamily: '"Rio Grande", "Bangers", cursive',
+            fontFamily: '"Rye", cursive',
             fontSize: 'clamp(2.2rem, 6vw, 3.8rem)',
             color: '#fdf4eb',
             margin: '0 0 0.5rem',
@@ -124,7 +124,7 @@ function NewsletterSignup() {
           >
             <p
               style={{
-                fontFamily: '"Rio Grande", "Bangers", cursive',
+                fontFamily: '"Rye", cursive',
                 fontSize: '1.8rem',
                 color: '#a95c14',
                 margin: 0,

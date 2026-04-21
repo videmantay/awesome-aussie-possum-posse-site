@@ -9,7 +9,7 @@
     "frontierPost": "El Correo Fronterizo"
   },
   "home": {
-    "title": "La Increíble Pandilla de Zarigüeyas Australianas",
+    "title": "The Awesome Aussie Possum Posse",
     "intro": "¡Prepárate para una aventura con las zarigüeyas más increíbles de este lado del outback! Siete extraordinarios marsupiales que ayudaron a dar forma al Viejo Oeste.",
     "readStory": "Lee la Historia",
     "meetCharacters": "Conoce a los Personajes",
@@ -29,13 +29,22 @@
   },
   "author": {
     "title": "Sobre la Autora",
-    "intro": "Hola, soy <strong>Nilora Takia</strong>, y sé que el nombre es un poco extraño para la mayoría de los bípedos, pero para nosotros los cuadrúpedos, les aseguro que es bastante común.",
-    "whyPossums": "Soy una aspirante a autora embarcándome en un libro para pequeños humanos sobre las zarigüeyas australianas. Quizás estés pensando: \u201c¿Por qué un perro querría escribir un libro sobre zarigüeyas?\u201d Esa es una muy buena pregunta, ya que mi afinidad por los marsupiales ha sido menos que halagadora. Hay una en particular que siempre está entrando en mi propiedad, y no importa cuánto me queje, ella sigue haciéndolo. Cómo desearía poder darle una mordidita\u2026 Entonces, ¿por qué me embarco en escribir un libro sobre el mismo blanco de mi desdén?",
-    "photoCaption": "Corazón con Papi",
-    "discovery": "Bueno, es realmente bastante simple: Mis dos mascotas Papi (él es el más grande) y Corazón (ella es la más pequeña) estaban explorando un sitio sobre su ascendencia cuando examinaban un periódico escrito en el siglo XIX sobre un robo ferroviario fallido en el viejo oeste \u2014 California para ser exactos. Parecía que ni el conductor ni los pasajeros se habían dado cuenta de que una infame banda de bandidos había abordado el \u201cbronco de hierro\u201d, todo porque la peligrosa trama se derrumbó incluso antes de que los perpetradores fueran percibidos.",
-    "whitePossum": "¿Cómo podía ser eso? Fue justo entonces cuando noté algo fuera de lugar en la granulada foto en blanco y negro tomada en la escena, o más bien <em>alguien</em> fuera de lugar. Era una zarigüeya lémur blanca. Tuve que mirar dos veces para estar segura porque al principio había asumido que era solo un felino de aspecto gracioso. Pero no, ahí estaba una rara <em>Hemibelideus Lemuroides</em> blanca. Quedé boquiabierta. ¿Qué hacía una zarigüeya australiana en el suroeste de los Estados Unidos en el siglo XIX?",
-    "legend": "Después de un poco de investigación, me topé con la leyenda de <strong>La Increíble Pandilla de Zarigüeyas Australianas</strong>. Parece que una pequeña banda de zarigüeyas australianas ayudó a dar forma al Viejo Oeste salvándolo de una pandilla desagradecida y codiciosa de matones que prácticamente lo habían conquistado. Su historia era tan convincente\u2026 tan inspiradora, que me pregunté por qué no había oído hablar de ellas antes. Planeo corregir esta atroz omisión histórica escribiendo una gloriosa obertura histórica para contarle al mundo sobre esos maravillosos mavericks marsupiales.",
-    "signoff": "Atentamente, Nilora"
+    "introTitle": "Introducci\u00f3n",
+    "intro1": "Hola. Soy Nilora Takia. Entiendo que mi nombre les parezca un poco \u201cextra\u00f1o\u201d a ustedes los b\u00edpedos, pero entre nosotros los cuadr\u00fapedos, les aseguro que es de lo m\u00e1s distinguido.",
+    "intro2": "Soy una autora en potencia. Actualmente, escribo un libro para \u201chumanos peque\u00f1itos\u201d sobre los p\u00f3sums australianos. Ya s\u00e9 lo que est\u00e1n pensando: \u201cNilora, \u00bfpor qu\u00e9 una perrita escribir\u00eda un libro sobre sus peores enemigos?\u201d. Es una pregunta v\u00e1lida. Normalmente, mi relaci\u00f3n con los marsupiales consiste en muchos ladridos y en corretearlos fuera de mi jard\u00edn. Hay una zari\u00fcey a en particular que se mete en mi propiedad y, por m\u00e1s que le \u201cllamo la atenci\u00f3n\u201d tras la reja, no se va. \u00a1Ay, lo que dar\u00eda por darle aunque sea una mordidita!",
+    "introQuestion": "Entonces, \u00bfpor qu\u00e9 escribir sobre las mismas criaturas que tanto me irritan?",
+    "discoveryTitle": "El Descubrimiento",
+    "discovery1": "Todo empez\u00f3 con mis dos mascotas. Est\u00e1 Daddy (el grandote) y Sweetheart (la m\u00e1s chiquita y veloz). Estaban revisando un peri\u00f3dico digital muy viejo de los a\u00f1os 1800. Investigaban un famoso asalto a un tren en el Viejo Oeste \u2014en California, para ser exactos.",
+    "discovery2": "Seg\u00fan el art\u00edculo, una banda de bandidos se subi\u00f3 al \u201cBronco de Hierro\u201d (as\u00ed le dec\u00edan a los trenes antes). Pero aqu\u00ed est\u00e1 lo raro: el plan \u201cperfecto\u201d de los ladrones se vino abajo antes de que pudieran robarse una sola moneda de oro. \u00a1Nadie sab\u00eda por qu\u00e9!",
+    "discovery3": "Me acerc\u00e9 a ver la foto borrosa en blanco y negro de la escena. Al principio, pens\u00e9 que era un gato muy raro. Pero olfate\u00e9 la pantalla, mir\u00e9 bien y \u00a1pum! Me qued\u00e9 de a seis.",
+    "discovery4": "Ah\u00ed mismo, en medio del desierto, hab\u00eda un P\u00f3sum Lemur Blanco. Un raro <em>Hemibelideus lemuroides</em>, para ser cient\u00edficos. \u00a1Estaba estupefacta! \u00bfQu\u00e9 hac\u00eda un p\u00f3sum australiano en el suroeste de Estados Unidos en el siglo XIX?",
+    "legendTitle": "La Leyenda",
+    "legend1": "Me puse a escarbar (y no me refiero al jard\u00edn). Descubr\u00ed una leyenda oculta: <strong>La Incre\u00edble Patrulla de P\u00f3sums Australianos</strong>.",
+    "legend2": "Resulta que un peque\u00f1o grupo de p\u00f3sums australianos \u00a1salv\u00f3 al Viejo Oeste! Protegieron la frontera de una banda de maleantes codiciosos que quer\u00edan apoderarse de todo. Su historia es tan valiente e inspiradora que no pod\u00eda creer que nadie la recordara.",
+    "legend3": "\u00a1Es una tragedia hist\u00f3rica! Y como perrita de honor que soy, pienso arreglarlo. Estoy escribiendo un glorioso tributo a estos maravillosos marsupiales. Ya es hora de que el mundo sepa la verdad sobre estos h\u00e9roes del otro lado del mundo.",
+    "photoCaption": "Coraz\u00f3n con Papi",
+    "signoff": "Atentamente,",
+    "signoffName": "Nilora"
   },
   "illustrator": {
     "title": "Sobre el Ilustrador",

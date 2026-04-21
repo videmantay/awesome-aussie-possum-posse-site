@@ -22,7 +22,7 @@ function About() {
             ta="center"
             style={{
               color: 'var(--mantine-color-brown-8)',
-              fontFamily: '"Rio Grande", "Bangers", cursive',
+              fontFamily: '"Rye", cursive',
             }}
           >
             {t('about.title')}

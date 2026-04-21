@@ -29,13 +29,22 @@
   },
   "author": {
     "title": "About the Author",
-    "intro": "Hello, I am <strong>Nilora Takia</strong>, and I know the name is a little strange to most bipeds but to us quadrupeds, I assure you it is really quite common.",
-    "whyPossums": "I am an aspiring author embarking on a book for little humans about Australian Possums. You may be thinking, \u201cWhy would a dog want to write a book about possums?\u201d That is a very good question as my affinity for marsupials has been less than flattering. There is one in particular that is always intruding into my property, and no matter how much I fuss, she continues to do so. Oh how I wish I could just get one bite in\u2026 So why then do I embark on writing a book upon the very target of my disdain?",
+    "introTitle": "Introduction",
+    "intro1": "Hello. I am Nilora Takia. I realize my name might sound a bit \u201cexotic\u201d to those of you who walk on two legs, but in the world of four-legged intellectuals, I assure you it is quite a classic.",
+    "intro2": "I am an aspiring author. Currently, I am writing a book for \u201clittle humans\u201d about Australian possums. Now, I know what you\u2019re thinking: \u201cNilora, why would a dog write a book about her sworn enemies?\u201d It\u2019s a fair question. Usually, my relationship with marsupials involves a lot of barking and chasing them off my lawn. There is one particular possum in my backyard who refuses to leave, no matter how much I \u201cdiscuss\u201d the matter with her through the fence. Oh, what I wouldn\u2019t give for just one little nip!",
+    "introQuestion": "So, why write about the very creatures I find so annoying?",
+    "discoveryTitle": "The Discovery",
+    "discovery1": "It all started with my two pets. There\u2019s Daddy (the tall one) and Sweetheart (the smaller, faster one). They were looking at an old digital newspaper from the 1800s. They were researching a famous train robbery in the Wild West\u2014California, to be exact.",
+    "discovery2": "According to the article, a group of bandits had boarded the \u201cIron Bronco\u201d (that\u2019s what they called trains back then). But here\u2019s the weird part: the bandits\u2019 \u201cperfect plan\u201d fell apart before they could even steal a single gold coin. Nobody knew why!",
+    "discovery3": "I leaned in to look at the blurry, black-and-white photo of the crime scene. At first, I thought I saw a very strange-looking cat. But I sniffed the screen, looked closer, and gasped.",
+    "discovery4": "Standing right there in the middle of the desert was a White Lemur Possum. A rare <em>Hemibelideus lemuroides</em>, to be scientific. I was flabbergasted! What was an Australian possum doing in the American Southwest in the 19th century?",
+    "legendTitle": "The Legend",
+    "legend1": "I did some digging (and I don\u2019t mean in the garden). I discovered a hidden legend: <strong>The Awesome Aussie Possum Posse</strong>.",
+    "legend2": "It turns out a small group of Australian possums actually saved the Wild West! They protected the frontier from a greedy gang of goons who were trying to take over. Their story was so brave\u2014so inspiring\u2014that I couldn\u2019t believe it had been forgotten.",
+    "legend3": "It is a historical tragedy! And as a dog of great honor, I plan to fix it. I am writing a glorious tribute to these marvelous marsupials. It\u2019s time the world knew the truth about the heroes from Down Under.",
     "photoCaption": "Sweetheart with Daddy",
-    "discovery": "Well, it is really quite simple: My two pets Daddy (he\u2019s the bigger one) and Sweetheart (she\u2019s the smaller one) were exploring a site about their ancestry when they were examining a newspaper written in the 19th century about a railroad robbery gone awry in the wild west \u2014 California to be exact. It seemed that neither conductor nor passengers had even realized that an infamous band of bandits had boarded the \u201ciron bronco\u201d, all because the perilous plot had gone plop even before the perpetrators had been perceived.",
-    "whitePossum": "How could that be? It was right then that I noticed something out of place in the granulated black and white photo taken at the scene, or rather <em>someone</em> out of place. It was a white lemur possum. I had to look twice to be sure because I had first assumed it was just a funny looking feline. But no, there stood a rare white <em>Hemibelideus Lemuroides</em>. I was flabbergasted. What was an Australian possum doing in the Southwest United States in the 19th century?",
-    "legend": "After a bit of research I stumbled upon the legend of <strong>The Awesome Aussie Possum Posse</strong>. It seems that a small band of Australian possums helped shape the Wild West by saving it from an ungracious and greedy gang of goons that had all but conquered it. Their story was so compelling\u2026 so inspiring, I wondered why I hadn\u2019t heard of them before. I plan to right this egregious historical oversight by writing a glorious historical overture to tell the world about those marvelous marsupial mavericks.",
-    "signoff": "Yours truly, Nilora"
+    "signoff": "Yours truly,",
+    "signoffName": "Nilora"
   },
   "illustrator": {
     "title": "About the Illustrator",

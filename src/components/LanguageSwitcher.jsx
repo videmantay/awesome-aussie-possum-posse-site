@@ -2,9 +2,9 @@ import { Select } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
-  { value: 'en', label: 'English' },
-  { value: 'es-MX', label: 'Español (MX)' },
-  { value: 'pt-BR', label: 'Português (BR)' },
+  { value: 'en',    label: '🇺🇸 English'   },
+  { value: 'es-MX', label: '🇲🇽 Español'   },
+  { value: 'pt-BR', label: '🇧🇷 Português' },
 ];
 
 function LanguageSwitcher() {

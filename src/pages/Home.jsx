@@ -65,7 +65,7 @@ function HeroTitle() {
       <h1
         className="hero-text-item"
         style={{
-          fontFamily: '"Rio Grande", "Bangers", cursive',
+          fontFamily: '"Rye", cursive',
           fontSize: 'clamp(1.9rem, 5.5vw, 4rem)',
           color: '#fdf4eb',
           margin: '0 0 0.75rem',

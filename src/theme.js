@@ -18,7 +18,7 @@ const theme = createTheme({
   },
   fontFamily: '"Baloo 2", "Bubblegum Sans", sans-serif',
   headings: {
-    fontFamily: '"Rio Grande", "Bangers", "Bubblegum Sans", cursive',
+    fontFamily: '"Rye", cursive',
   },
   other: {
     handwrittenFont: '"Patrick Hand", cursive',

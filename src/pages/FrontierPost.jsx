@@ -23,7 +23,7 @@ function FrontierPost() {
               ta="center"
               style={{
                 color: 'var(--mantine-color-brown-8)',
-                fontFamily: '"Rio Grande", "Bangers", cursive',
+                fontFamily: '"Rye", cursive',
               }}
             >
               {t('frontier.title')}

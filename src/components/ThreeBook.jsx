@@ -3,8 +3,8 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import { gsap } from 'gsap';
-import coverImg from '../assets/imgs/au2cal.png';
-import woodenSignImg from '../assets/imgs/AwesAussPossPossWoodenSign.png';
+import coverImg from '../assets/imgs/shared/Bookcover.png';
+import woodenSignImg from '../assets/imgs/threeBook/au2cal.png';
 
 function DustParticles() {
   const ref = useRef();
