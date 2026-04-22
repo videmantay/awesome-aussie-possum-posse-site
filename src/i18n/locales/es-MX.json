@@ -65,44 +65,44 @@
     "brennen": {
       "name": "Brennen",
       "species": "Zarigüeya Común de Cola Peluda",
-      "blurb": "Valiente, audaz y siempre el primero en meterse en problemas. Brennen lidera la Pandilla con un corazón tan grande como el outback.",
+      "blurb": "Nada tiene de común este possum tan especial. Brennen aparece justo cuando alguien lo necesita — valiente, encantador y con mando natural. Su misión: reunir a los suyos y volver a casa, a Australia.",
       "skill": "Líder Nato"
     },
     "gretel": {
       "name": "Gretel",
-      "species": "Petauro del Azúcar",
-      "blurb": "Ágil de mente y de alas, Gretel puede planear sobre cualquier problema — y casi siempre aterriza de pie.",
-      "skill": "Exploradora Aérea"
+      "species": "Gran Planeadora",
+      "blurb": "No confundas a Gretel con una doncella en apuros — esta hermosa planeadora es inteligente para resolver cualquier problema antes de que empeore. Con sus membranas que la hacen volar como un papalote, desciende desde las alturas y salva el día con todo el estilo.",
+      "skill": "Maestra del Planeo"
     },
     "hana": {
-      "name": "Hana",
-      "species": "Zarigüeya Pigmea de Montaña",
-      "blurb": "No dejes que su pequeño tamaño te engañe. El conocimiento de Hana sobre hierbas y remedios fronterizos ha salvado a la Pandilla más de una vez.",
-      "skill": "Sanadora Silvestre"
+      "name": "Hanna",
+      "species": "Possum Melero",
+      "blurb": "No te dejes engañar por su tamaño — Hanna cabe en un dedal, pero es lista, sigilosa y más ágil que nadie. ¿Necesitas un artilugio para salvar al pueblo? Lo tendrá listo antes de que termines de pedirlo.",
+      "skill": "Artesana Sigilosa"
     },
     "plaid": {
       "name": "Plaid",
       "species": "Zarigüeya Rayada",
-      "blurb": "Colorida, inteligente y nunca aburrida. Plaid tiene un talento para los disfraces y para meterse — y salir — de situaciones increíblemente difíciles.",
-      "skill": "Maestra del Disfraz"
+      "blurb": "Plaid no es de los que hablan mucho y tampoco gana premios de moda, pero cuando estás en apuros, es el que quieres de tu lado. Los animales salvajes más grandes le obedecen sin pensarlo, y a donde va Plaid, ellos van también.",
+      "skill": "Domador de Bestias"
     },
     "pygmy": {
       "name": "Pygmy",
       "species": "Zarigüeya Pigmea Oriental",
-      "blurb": "El miembro más pequeño con las ideas más grandes. Las invenciones de Pygmy son en partes iguales genialidad y caos glorioso.",
-      "skill": "Inventora Salvaje"
+      "blurb": "No te dejes engañar por su tamaño — la cola de Pygmy se extiende toda una cuadra y golpea con la fuerza de un rinoceronte. Es el más tranquilo de la pandilla, pero si te pones del lado equivocado... mejor agarra vuelo.",
+      "skill": "Cola de Acero"
     },
     "remmy": {
       "name": "Remmy",
-      "species": "Zarigüeya Lémur de Cola Anillada",
-      "blurb": "Rara, sabia y maravillosamente misteriosa. Se dice que Remmy es la legendaria zarigüeya blanca de los viejos cuentos fronterizos — pero Remmy no lo confirma.",
-      "skill": "Rastreadora Ancestral"
+      "species": "Zarigüeya de Cola Anillada",
+      "blurb": "Remmy es un possum de cola anillada que solo quiere pasarla bien — y los villanos siempre cometen el error de subestimarlo. Míralo a los ojos el tiempo suficiente y caerás bajo 'El Whammy': listo para hacer lo que Remmy diga.",
+      "skill": "El Whammy"
     },
     "willow": {
       "name": "Willow",
-      "species": "Zarigüeya Común de Cola Anillada",
-      "blurb": "Tranquila bajo presión y elegante bajo el fuego. La cola prensil de Willow puede lazar el sombrero de un bandido desde el otro lado del corral.",
-      "skill": "Tiradora de Élite"
+      "species": "Zarigüeya Blanca de Cola Anillada",
+      "blurb": "Willow Willemina tiene el corazón encendido y cero miedo. No hay villano que se le escape ni pelea que no pueda frenar. ¿Metido en problemas con unos rufianes? Ya va Willow.",
+      "skill": "Domadora de Rufianes"
     }
   },
   "teaser": {

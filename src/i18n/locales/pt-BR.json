@@ -65,44 +65,44 @@
     "brennen": {
       "name": "Brennen",
       "species": "Gambá Comum de Cauda Peluda",
-      "blurb": "Corajoso, audacioso e sempre o primeiro a entrar em apuros. Brennen lidera a Gangue com um coração tão grande quanto o outback.",
+      "blurb": "Apesar do nome, não há nada de comum neste gambá. Brennen tem o dom de aparecer na hora certa para ajudar quem precisa — corajoso, charmoso e com jeito de líder. Sua missão: encontrar os amigos e voltar para casa, na Austrália.",
       "skill": "Líder Nato"
     },
     "gretel": {
       "name": "Gretel",
-      "species": "Petauro do Açúcar",
-      "blurb": "Rápida de raciocínio e de asas, Gretel pode planar sobre qualquer problema — e quase sempre pousa de pé.",
-      "skill": "Batedora Aérea"
+      "species": "Grande Planadora",
+      "blurb": "Não confunda Gretel com uma donzela em apuros — essa linda planadora é inteligente o suficiente para resolver qualquer problema na hora. Com membranas que a fazem voar igual a uma pipa, ela desce do céu e salva o dia com toda a elegância.",
+      "skill": "Mestre do Planeio"
     },
     "hana": {
-      "name": "Hana",
-      "species": "Gambá Pigmeu da Montanha",
-      "blurb": "Não deixe seu tamanho minúsculo enganar você. O conhecimento de Hana sobre ervas e remédios da fronteira salvou a Gangue mais de uma vez.",
-      "skill": "Curandeira Silvestre"
+      "name": "Hanna",
+      "species": "Possum do Mel",
+      "blurb": "Não se deixe enganar pelo tamanho — Hanna cabe num dedal, mas é esperta, ágil e sorrateira como poucos. Precisa de um engenho para salvar a cidade? Ela faz numa piscar de olhos, e você nem vai notar.",
+      "skill": "Artesã Ágil"
     },
     "plaid": {
       "name": "Plaid",
       "species": "Gambá Listrado",
-      "blurb": "Colorido, inteligente e nunca entediante. Plaid tem jeito para fantasias e para entrar — e sair — de situações incrivelmente difíceis.",
-      "skill": "Mestre do Disfarce"
+      "blurb": "Plaid não é muito de conversa e definitivamente não ganha prêmios de moda, mas quando você está numa fria, ele é exatamente quem você quer por perto. Os animais selvagens mais ferozes o seguem para onde quer que ele vá.",
+      "skill": "Encantador de Feras"
     },
     "pygmy": {
       "name": "Pygmy",
       "species": "Gambá Pigmeu Oriental",
-      "blurb": "O menor membro com as maiores ideias. As invenções de Pygmy são iguais partes genialidade e caos glorioso.",
-      "skill": "Inventor Selvagem"
+      "blurb": "Não deixe o tamanho enganar — a cauda de Pygmy se estende por uma quadra inteira e tem a força de um rinoceronte em disparada. É o mais gentil da gangue, mas se você estiver do lado errado da lei, pode se preparar para voar bem alto.",
+      "skill": "Cauda de Aço"
     },
     "remmy": {
       "name": "Remmy",
-      "species": "Gambá Lêmure de Cauda Anelada",
-      "blurb": "Raro, sábio e maravilhosamente misterioso. Diz a lenda que Remmy é o lendário gambá branco dos velhos contos da fronteira — mas Remmy não confirma.",
-      "skill": "Rastreador Ancestral"
+      "species": "Gambá de Cauda Anelada",
+      "blurb": "Remmy é um gambá de cauda anelada que só quer se divertir — e os vilões vivem cometendo o erro de subestimá-lo. Fique encarando esses olhos esbugalhados por tempo demais e você vai levar um 'Whammy': pronto para fazer tudo o que Remmy mandar.",
+      "skill": "O Whammy"
     },
     "willow": {
       "name": "Willow",
-      "species": "Gambá Comum de Cauda Anelada",
-      "blurb": "Calmo sob pressão e gracioso sob o fogo. A cauda preênsil de Willow consegue laçar o chapéu de um bandido do outro lado do curral.",
-      "skill": "Atirador de Elite"
+      "species": "Gambá Branco de Cauda Anelada",
+      "blurb": "Willow Willemina tem o espírito de fogo e zero medo. Nenhum vilão escapa dela e nenhuma confusão é grande demais. Está em apuros com uns valentões? Willow já está a caminho.",
+      "skill": "Domadora de Valentões"
     }
   },
   "teaser": {

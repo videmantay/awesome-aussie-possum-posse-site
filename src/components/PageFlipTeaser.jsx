@@ -7,12 +7,10 @@ import coverImg from '../assets/imgs/shared/Bookcover.png';
 const rightModules = import.meta.glob('../assets/imgs/pageFlipTeaser/right-img*.{jpg,jpeg,png,webp}', { eager: true });
 const rightImgs = Object.keys(rightModules).sort().map((k) => rightModules[k].default);
 
-const leftModules = import.meta.glob('../assets/imgs/characterParade/*Solo.png', { eager: true });
-const leftImgs = Object.keys(leftModules).sort().map((k) => leftModules[k].default);
-
 // Cover leads the right side; character solos fill the left; Coming Soon closes it
 const RIGHT_PAGES = [coverImg, ...rightImgs];
-const LEFT_PAGES = [...leftImgs, ...Array(Math.max(0, RIGHT_PAGES.length - leftImgs.length)).fill(null)];
+//left pages filled by pageFlip*.json files where the content is used to fill in the html
+const LEFT_PAGES = [];
 
 const FLIP_THRESHOLD = 60; // degrees — past this on release, complete the flip
 
@@ -164,7 +162,7 @@ function PageFlipTeaser() {
           style={{
             position: 'relative',
             width: 'clamp(400px, 82vw, 880px)',
-            height: 'clamp(280px, 42vw, 500px)',
+            aspectRatio: '352 / 250',
             transformStyle: 'preserve-3d',
             willChange: 'transform',
           }}

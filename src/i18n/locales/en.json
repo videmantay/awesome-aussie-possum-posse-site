@@ -65,44 +65,44 @@
     "brennen": {
       "name": "Brennen",
       "species": "Common Brushtail Possum",
-      "blurb": "Brave, bold, and always first into trouble. Brennen leads the Posse with a heart as big as the outback and courage to match.",
+      "blurb": "Anything but ordinary, Brennen Bingham has a gift for showing up exactly when someone's in trouble — cool, charming, and born to lead. His mission: round up his friends and find his way back home to Australia.",
       "skill": "Natural-born Leader"
     },
     "gretel": {
       "name": "Gretel",
-      "species": "Sugar Glider",
-      "blurb": "Quick-witted and quick-winged, Gretel can glide over any problem — and she almost always lands on her feet.",
-      "skill": "Aerial Scout"
+      "species": "Greater Glider",
+      "blurb": "Don't mistake Gretel for a damsel in distress — this gorgeous greater glider is smart enough to solve any problem before anyone else even spots it. She's mastered Bernoulli's Principle, and those gliding membranes let her swoop in like a kite and save the day in style.",
+      "skill": "Master Glider"
     },
     "hana": {
-      "name": "Hana",
-      "species": "Mountain Pygmy Possum",
-      "blurb": "Don't let her tiny size fool you. Hana's knowledge of herbs and frontier remedies has saved the Posse more than once.",
-      "skill": "Wilderness Healer"
+      "name": "Hanna",
+      "species": "Honey Possum",
+      "blurb": "Don't let the tiny size fool you — Hanna is barely the size of a thimble, but she's sharp, sneaky, and nimble as can be. Need a clever contraption to save the townsfolk? She'll whip one up before you even finish asking.",
+      "skill": "Nimble Tinkerer"
     },
     "plaid": {
       "name": "Plaid",
       "species": "Striped Possum",
-      "blurb": "Colourful, clever, and never boring. Plaid has a knack for disguises and getting into — and out of — incredibly tight spots.",
-      "skill": "Master of Disguise"
+      "blurb": "Plaid isn't much for small talk and he won't be winning any fashion contests — but when you're stuck in a tight spot, he's exactly who you want. He has a mysterious way with wild animals, and wherever Plaid goes, they follow.",
+      "skill": "Beast Whisperer"
     },
     "pygmy": {
       "name": "Pygmy",
       "species": "Eastern Pygmy Possum",
-      "blurb": "The smallest member with the biggest ideas. Pygmy's inventions are equal parts genius and glorious chaos.",
-      "skill": "Wild Inventor"
+      "blurb": "Don't be fooled by the tiny frame — Pygmy's tail stretches a full city block and hits with the force of a charging rhino. He's the gentlest soul in the Posse, but cross the wrong line and you just might find yourself launched over the moon.",
+      "skill": "Tail of Steel"
     },
     "remmy": {
       "name": "Remmy",
-      "species": "Lemuroid Ringtail Possum",
-      "blurb": "Rare, wise, and wonderfully mysterious. Rumour has it Remmy is the legendary white possum from the old frontier tales — but Remmy isn't saying.",
-      "skill": "Ancient Tracker"
+      "species": "Ringtail Possum",
+      "blurb": "Remmy is a free-spirited ringtail possum who just wants to have a jolly good time — and bad guys are always making the mistake of underestimating him. Stare at those wall eyes a moment too long and you've been 'Whamied,' ready to do whatever Remmy says.",
+      "skill": "The Whammy"
     },
     "willow": {
       "name": "Willow",
-      "species": "Common Ringtail Possum",
-      "blurb": "Calm under pressure and graceful under fire. Willow's prehensile tail can lasso a bandit's hat from clear across the corral.",
-      "skill": "Sharpshooter"
+      "species": "White Ringtail Possum",
+      "blurb": "Willow Willemina is a white ringtail possum with a fiery streak and zero fear. No villain too tough, no brawl too big — if roughians are giving you trouble, Willow's already on her way.",
+      "skill": "Roughian Wrangler"
     }
   },
   "teaser": {

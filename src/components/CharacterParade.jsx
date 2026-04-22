@@ -154,6 +154,7 @@ function CharacterParade() {
   const [current, setCurrent] = useState(0);
   const cardRefs = useRef([]);
   const wrapperRef = useRef();
+  const stageRef = useRef();
   const sideOffsetRef = useRef(270);
   const currentRef = useRef(0);
   const animating = useRef(false);
@@ -179,6 +180,18 @@ function CharacterParade() {
     ro.observe(wrapper);
     return () => ro.disconnect();
   }, []);
+
+  useEffect(() => {
+    const activeEl = cardRefs.current[current];
+    const stage = stageRef.current;
+    if (!activeEl || !stage) return;
+    const ro = new ResizeObserver(() => {
+      stage.style.height = activeEl.offsetHeight + 'px';
+    });
+    ro.observe(activeEl);
+    stage.style.height = activeEl.offsetHeight + 'px';
+    return () => ro.disconnect();
+  }, [current]);
 
   const goTo = useCallback((next) => {
     if (animating.current || next === currentRef.current) return;
@@ -263,16 +276,16 @@ function CharacterParade() {
         </p>
       </div>
 
-      {/* Carousel wrapper — overflow:hidden clips side cards at edges */}
+      {/* Carousel wrapper — overflowX:hidden clips side cards at edges */}
       <div
         ref={wrapperRef}
         style={{
           position: 'relative',
-          overflow: 'hidden',
+          overflowX: 'hidden',
           width: '100%',
           maxWidth: '860px',
           margin: '0 auto',
-          padding: '0 52px', // breathing room so arrows don't overlap cards
+          padding: '0 52px',
           boxSizing: 'border-box',
         }}
       >
@@ -293,11 +306,11 @@ function CharacterParade() {
 
         {/* Card stage — CARD_W wide, centered; cards absolutely layered inside */}
         <div
+          ref={stageRef}
           style={{
             position: 'relative',
             width: CARD_W,
             margin: '0 auto',
-            minHeight: '520px',
           }}
         >
           {CHARACTER_IDS.map((id, i) => (
