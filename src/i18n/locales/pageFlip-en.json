@@ -1,9 +1,48 @@
 {
-  "leftPages": [
+  "pages": [
     {
-      "title": "Kidnapped and Shipwrecked",
-      "body": "Cool under pressure, first to help, and last to back down. Brennen has one mission: round up his friends and find his way back to Australia — and nothing in the Wild West is going to stop him."
+      "heading": "Meet Brennen.",
+      "paragraphs": [
+        "Shipwrecked on a beach he's never heard of. Cage door finally open. Sand in his fur. Zero plan.",
+        "And he's already looking for someone to help."
+      ]
+    },
+    {
+      "heading": "This is Pygmy.",
+      "paragraphs": [
+        "While Brennen was trapped under that crate hollering for help, Pygmy found his shipping label and started reading it.",
+        "Turns out he has the strongest tail in the Posse. He just didn't see the need to rush."
+      ]
+    },
+    {
+      "heading": "That's Gretel.",
+      "paragraphs": [
+        "Brennen tried to rescue her. She bit her way free, spread her gliding membranes, and left.",
+        "She did grab Brennen on the way out — mostly because he was slowing her down."
+      ]
+    },
+    {
+      "heading": "That's Willow. And yes, that's Brennen again.",
+      "paragraphs": [
+        "She said tree hollow. He said thornbush.",
+        "Nobody moved. The nets closed in anyway.",
+        "These two are going to be a problem."
+      ]
+    },
+    {
+      "heading": "The Awesome Aussie Possum Posse.",
+      "paragraphs": [
+        "One shipwreck. Six survivors. Three of them already arguing about who's in charge.",
+        "Nobody volunteered for this. Nobody's going home either."
+      ]
+    },
+    {
+      "heading": "Heading east.",
+      "paragraphs": [
+        "No map. No money. Somewhere ahead: a city called Philadelphia and a zoo with their names on the cages.",
+        "Hanna built a stagecoach from a tumbleweed. Pygmy has a rabbit that won't cooperate.",
+        "They're going to be fine."
+      ]
     }
-    
   ]
 }

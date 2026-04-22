@@ -5,13 +5,14 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import en from './locales/en.json';
 import esMX from './locales/es-MX.json';
 import ptBR from './locales/pt-BR.json';
+import pageFlipEn from './locales/pageFlip-en.json';
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { translation: en },
+      en: { translation: en, pageFlip: pageFlipEn },
       'es-MX': { translation: esMX },
       'pt-BR': { translation: ptBR },
     },

@@ -6,16 +6,23 @@ import {
   Burger,
   NavLink,
   Stack,
-  Image,
   Divider,
   Box,
   ScrollArea,
+  Tooltip,
+  ActionIcon,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link, Outlet, useLocation } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
+import ReactCountryFlag from 'react-country-flag';
 import MusicPlayer from './MusicPlayer';
+
+const LANGUAGES = [
+  { code: 'en',    countryCode: 'US', label: 'English'   },
+  { code: 'es-MX', countryCode: 'MX', label: 'Español'   },
+  { code: 'pt-BR', countryCode: 'BR', label: 'Português' },
+];
 
 const navLinks = [
   { to: '/', labelKey: 'nav.home', emoji: '\u{1F3E0}' },
@@ -28,7 +35,7 @@ const navLinks = [
 ];
 
 function Layout() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [opened, { toggle, close }] = useDisclosure(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -56,7 +63,7 @@ function Layout() {
           transition: 'background-color 0.3s',
         }}
       >
-        <Group h="100%" px="md" justify="space-between">
+        <Group h="100%" px="md">
           <Group gap="sm">
             <Burger
               opened={opened}
@@ -79,7 +86,6 @@ function Layout() {
               {t('The Awesome Aussie Possum Posse')}
             </Title>
           </Group>
-          <LanguageSwitcher />
         </Group>
       </AppShell.Header>
 
@@ -133,6 +139,67 @@ function Layout() {
             ))}
 
             <Divider my="md" color="brown.3" />
+
+            <Box px="sm">
+              <Text
+                size="xs"
+                fw={700}
+                tt="uppercase"
+                c="brown.5"
+                mb={6}
+                style={{ fontFamily: '"Bangers", cursive', letterSpacing: '2px', fontSize: '0.75rem' }}
+              >
+                {t('languageSwitcher.label')}
+              </Text>
+              <Group gap={6}>
+                {LANGUAGES.map(({ code, countryCode, label }) => {
+                  const isActive = i18n.language === code;
+                  return (
+                    <Tooltip
+                      key={code}
+                      label={label}
+                      position="top"
+                      withArrow
+                      arrowSize={6}
+                      styles={{
+                        tooltip: {
+                          backgroundColor: 'var(--mantine-color-brown-8)',
+                          color: '#fdf4eb',
+                          fontFamily: '"Bubblegum Sans", sans-serif',
+                          fontSize: '0.8rem',
+                          border: '1px solid var(--mantine-color-brown-5)',
+                        },
+                        arrow: { borderColor: 'var(--mantine-color-brown-5)' },
+                      }}
+                    >
+                      <ActionIcon
+                        variant={isActive ? 'filled' : 'subtle'}
+                        size="lg"
+                        radius="md"
+                        onClick={() => i18n.changeLanguage(code)}
+                        aria-label={label}
+                        aria-pressed={isActive}
+                        style={{
+                          fontSize: '1.4rem',
+                          backgroundColor: isActive ? 'var(--mantine-color-brown-3)' : 'transparent',
+                          border: isActive
+                            ? '2px solid var(--mantine-color-brown-5)'
+                            : '2px solid transparent',
+                          transition: 'background-color 0.2s ease, border-color 0.2s ease',
+                        }}
+                      >
+                        <ReactCountryFlag
+                          countryCode={countryCode}
+                          svg
+                          style={{ width: '1.4rem', height: '1.4rem', display: 'block' }}
+                          aria-hidden="true"
+                        />
+                      </ActionIcon>
+                    </Tooltip>
+                  );
+                })}
+              </Group>
+            </Box>
 
             <Box px="sm">
               <Text
