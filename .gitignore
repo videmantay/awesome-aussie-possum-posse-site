@@ -26,3 +26,12 @@ Thumbs.db
 npm-debug.log*
 
 .claude/
+.agents/
+.continue/
+.firebase/
+.firebaserc
+firebase.json
+package-lock.json
+skills-lock.json
+postcss.config.cjs
+

@@ -83,6 +83,8 @@ function Layout() {
                 textDecoration: 'none',
                 fontFamily: '"Rye", cursive',
                 letterSpacing: '1px',
+                fontSize: 'clamp(0.7rem, 3vw, 1.1rem)',
+                whiteSpace: 'nowrap',
               }}
             >
               {t('The Awesome Aussie Possum Posse')}
@@ -219,7 +221,12 @@ function Layout() {
       </AppShell.Navbar>
 
       {/* --- Main Content --- */}
-      <AppShell.Main>
+      <AppShell.Main
+        style={isHome ? undefined : {
+          background: 'linear-gradient(160deg, #6b2a0a 0%, #c45a1a 40%, #e8901a 70%, #f5c87a 100%)',
+          minHeight: 'calc(100vh - var(--app-shell-header-height, 65px) - var(--app-shell-footer-height, 56px))',
+        }}
+      >
         <Outlet />
       </AppShell.Main>
 

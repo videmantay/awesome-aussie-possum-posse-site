@@ -109,6 +109,15 @@
     "heading": "Un Vistazo...",
     "subheading": "Una aventura en el Viejo Oeste como ninguna otra te espera adentro"
   },
+  "kidscta": {
+    "heading": "¿Quieres Unirte a la Pandilla?",
+    "message": "¡Pídele a un adulto que te inscriba! Recibirán noticias de la Pandilla, adelantos exclusivos y actualizaciones directamente en su buzón.",
+    "button": "¡Ve a Pedirle a un Adulto! →"
+  },
+  "parentscta": {
+    "heading": "Mantente Informado",
+    "subheading": "Sé el primero en saber cuando el libro salga — recibe actualizaciones, adelantos y despachos de la Pandilla directo a tu correo."
+  },
   "cta": {
     "heading": "¡Únete al Correo Fronterizo!",
     "subheading": "Sé el primero en saber cuándo comienza la aventura. Despachos de la Pandilla, directo a tu correo.",

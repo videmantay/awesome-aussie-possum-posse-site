@@ -152,7 +152,7 @@ function Home() {
       <section
         style={{
           position: 'relative',
-          minHeight: '100vh',
+          minHeight: 'calc(100vh - var(--app-shell-header-height, 65px) - var(--app-shell-footer-height, 56px))',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

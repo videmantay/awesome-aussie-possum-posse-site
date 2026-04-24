@@ -109,6 +109,15 @@
     "heading": "Dê uma Espiada...",
     "subheading": "Uma aventura no Velho Oeste como nenhuma outra espera lá dentro"
   },
+  "kidscta": {
+    "heading": "Quer Entrar na Turma?",
+    "message": "Peça a um adulto para te inscrever! Eles vão receber novidades da Turma, préviasexclusivas e atualizações direto na caixa de entrada deles.",
+    "button": "Vai Pedir para um Adulto! →"
+  },
+  "parentscta": {
+    "heading": "Fique por Dentro",
+    "subheading": "Seja o primeiro a saber quando o livro lançar — receba atualizações, prévias e despachos da Turma direto na sua caixa de entrada."
+  },
   "cta": {
     "heading": "Junte-se ao Correio da Fronteira!",
     "subheading": "Seja o primeiro a saber quando a aventura começa. Despachos da Gangue direto para sua caixa de entrada.",

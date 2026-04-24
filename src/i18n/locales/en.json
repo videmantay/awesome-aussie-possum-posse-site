@@ -109,6 +109,15 @@
     "heading": "Sneak a Peek...",
     "subheading": "A wild west adventure like no other awaits inside"
   },
+  "kidscta": {
+    "heading": "Wanna Join the Posse?",
+    "message": "Ask a grown-up to sign you up! They'll get Posse news, sneak peeks, and updates delivered straight to their inbox.",
+    "button": "Go Ask a Grown-Up! →"
+  },
+  "parentscta": {
+    "heading": "Stay in the Loop",
+    "subheading": "Be the first to know when the book launches — get updates, sneak peeks, and dispatches from the Posse delivered straight to your inbox."
+  },
   "cta": {
     "heading": "Join the Frontier Post!",
     "subheading": "Be the first to know when the adventure begins. Dispatches from the Posse, straight to your inbox.",

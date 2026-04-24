@@ -1,100 +1,107 @@
-import { forwardRef, useRef } from 'react';
+import { forwardRef, useRef, useEffect } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import { useTranslation } from 'react-i18next';
-import coverImg from '../assets/imgs/shared/Bookcover.png';
+import coverImg from '../assets/imgs/shared/Bookcover.png?format=webp&width=1000&quality=75&as=url';
 
-const rightModules = import.meta.glob('../assets/imgs/pageFlipTeaser/right-img*.{jpg,jpeg,png,webp}', { eager: true });
+const rightModules = import.meta.glob('../assets/imgs/pageFlipTeaser/right-img*.{jpg,jpeg,png,webp}', { eager: true, query: { format: 'webp', width: 900, quality: 75, as: 'url' } });
 const rightImgs = Object.keys(rightModules).sort().map((k) => rightModules[k].default);
 
-const pageBase = { width: '100%', height: '100%', overflow: 'hidden', boxSizing: 'border-box', background: '#fff' };
+// pageInner fills the outer ref-div (which page-flip controls via style.cssText).
+// Visual styles live here so they survive the library's cssText replacement.
+const pageInner = { position: 'absolute', inset: 0, overflow: 'hidden', boxSizing: 'border-box' };
 
 const ImagePage = forwardRef(({ src, alt }, ref) => (
-  <div ref={ref} style={pageBase}>
-    <img
-      src={src}
-      alt={alt}
-      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-      loading="lazy"
-    />
+  <div ref={ref}>
+    <div style={{ ...pageInner, background: '#fff' }}>
+      <img
+        src={src}
+        alt={alt}
+        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+      />
+    </div>
   </div>
 ));
 ImagePage.displayName = 'ImagePage';
 
 const TextPage = forwardRef(({ data }, ref) => (
-  <div ref={ref} style={{
-    ...pageBase,
-    background: '#fdf4eb',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    padding: '2rem',
-  }}>
-    {data ? (
-      <>
-        <h3 style={{
-          fontFamily: '"Rye", cursive',
-          fontSize: 'clamp(0.85rem, 1.8vw, 1.2rem)',
-          color: '#a95c14',
-          margin: '0 0 1rem 0',
-          lineHeight: 1.25,
-        }}>
-          {data.heading}
-        </h3>
-        {data.paragraphs.map((p, i) => (
-          <p key={i} style={{
-            fontFamily: '"Patrick Hand", cursive',
-            fontSize: 'clamp(0.75rem, 1.4vw, 0.95rem)',
-            color: '#3a1e00',
-            margin: i < data.paragraphs.length - 1 ? '0 0 0.6rem 0' : '0',
-            lineHeight: 1.6,
+  <div ref={ref}>
+    <div style={{
+      ...pageInner,
+      background: '#fdf4eb',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '2rem',
+    }}>
+      {data ? (
+        <>
+          <h3 style={{
+            fontFamily: '"Rye", cursive',
+            fontSize: 'clamp(0.85rem, 1.8vw, 1.2rem)',
+            color: '#a95c14',
+            margin: '0 0 1rem 0',
+            lineHeight: 1.25,
           }}>
-            {p}
-          </p>
-        ))}
-      </>
-    ) : (
-      <span style={{
-        fontFamily: '"Rye", cursive',
-        fontSize: '1.2rem',
-        color: '#a95c14',
-        textAlign: 'center',
-      }}>
-        Coming Soon...
-      </span>
-    )}
+            {data.heading}
+          </h3>
+          {data.paragraphs.map((p, i) => (
+            <p key={i} style={{
+              fontFamily: '"Patrick Hand", cursive',
+              fontSize: 'clamp(0.75rem, 1.4vw, 0.95rem)',
+              color: '#3a1e00',
+              margin: i < data.paragraphs.length - 1 ? '0 0 0.6rem 0' : '0',
+              lineHeight: 1.6,
+            }}>
+              {p}
+            </p>
+          ))}
+        </>
+      ) : (
+        <span style={{
+          fontFamily: '"Rye", cursive',
+          fontSize: '1.2rem',
+          color: '#a95c14',
+          textAlign: 'center',
+        }}>
+          Coming Soon...
+        </span>
+      )}
+    </div>
   </div>
 ));
 TextPage.displayName = 'TextPage';
 
 const CtaPage = forwardRef((_, ref) => (
-  <div ref={ref} style={{
-    ...pageBase,
-    background: '#3a1000',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '2rem',
-    textAlign: 'center',
-  }}>
-    <p style={{
-      fontFamily: '"Rye", cursive',
-      fontSize: 'clamp(1rem, 2vw, 1.4rem)',
-      color: '#f5c87a',
-      margin: '0 0 0.75rem 0',
-      lineHeight: 1.3,
+  <div ref={ref}>
+    <div style={{
+      ...pageInner,
+      background: '#3a1000',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '2rem',
+      textAlign: 'center',
     }}>
-      The Awesome Aussie Possum Posse
-    </p>
-    <p style={{
-      fontFamily: '"Patrick Hand", cursive',
-      fontSize: '0.95rem',
-      color: '#d4a055',
-      fontStyle: 'italic',
-      margin: 0,
-    }}>
-      Coming soon to bookstores everywhere.
-    </p>
+      <p style={{
+        fontFamily: '"Rye", cursive',
+        fontSize: 'clamp(1rem, 2vw, 1.4rem)',
+        color: '#f5c87a',
+        margin: '0 0 0.75rem 0',
+        lineHeight: 1.3,
+      }}>
+        The Awesome Aussie Possum Posse
+      </p>
+      <p style={{
+        fontFamily: '"Patrick Hand", cursive',
+        fontSize: '0.95rem',
+        color: '#d4a055',
+        fontStyle: 'italic',
+        margin: 0,
+      }}>
+        Coming soon to bookstores everywhere.
+      </p>
+    </div>
   </div>
 ));
 CtaPage.displayName = 'CtaPage';
@@ -104,6 +111,13 @@ function PageFlipTeaser() {
   const { t: tFlip } = useTranslation('pageFlip');
   const leftPages = tFlip('pages', { returnObjects: true, fallbackLng: 'en' }) || [];
   const bookRef = useRef(null);
+
+  useEffect(() => {
+    [coverImg, ...rightImgs].forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   // 14 pages: cover + 6×(text+image) + cta back cover
   const pages = [
@@ -117,7 +131,7 @@ function PageFlipTeaser() {
 
   return (
     <section style={{
-      minHeight: '100vh',
+      minHeight: 'calc(100vh - var(--app-shell-header-height, 65px) - var(--app-shell-footer-height, 56px))',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

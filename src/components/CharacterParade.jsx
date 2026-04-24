@@ -2,13 +2,13 @@ import { useRef, useEffect, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { gsap } from 'gsap';
-import brennenSolo from '../assets/imgs/characterParade/brennenSolo.png';
-import gretelSolo from '../assets/imgs/characterParade/gretelSolo.png';
-import hanaSolo from '../assets/imgs/characterParade/hanaSolo.png';
-import plaidSolo from '../assets/imgs/characterParade/plaidSolo.png';
-import pygmySolo from '../assets/imgs/characterParade/pygmySolo.png';
-import remmySolo from '../assets/imgs/characterParade/remmySolo.png';
-import willowSolo from '../assets/imgs/characterParade/willowSolo.png';
+import brennenSolo from '../assets/imgs/characterParade/brennenSolo.png?format=webp&width=500&quality=75&as=url';
+import gretelSolo from '../assets/imgs/characterParade/gretelSolo.png?format=webp&width=500&quality=75&as=url';
+import hanaSolo from '../assets/imgs/characterParade/hanaSolo.png?format=webp&width=500&quality=75&as=url';
+import plaidSolo from '../assets/imgs/characterParade/plaidSolo.png?format=webp&width=500&quality=75&as=url';
+import pygmySolo from '../assets/imgs/characterParade/pygmySolo.png?format=webp&width=500&quality=75&as=url';
+import remmySolo from '../assets/imgs/characterParade/remmySolo.png?format=webp&width=500&quality=75&as=url';
+import willowSolo from '../assets/imgs/characterParade/willowSolo.png?format=webp&width=500&quality=75&as=url';
 
 const CHARACTER_IDS = ['brennen', 'gretel', 'hana', 'plaid', 'pygmy', 'remmy', 'willow'];
 const CHARACTER_IMAGES = {
@@ -32,7 +32,7 @@ const CARD_ACCENTS = {
 };
 
 const TOTAL = CHARACTER_IDS.length + 1;
-const CARD_W = 290;
+const MAX_CARD_W = 420;
 const SIDE_SCALE = 0.74;
 const SIDE_OPACITY = 0.38;
 
@@ -156,6 +156,7 @@ function CharacterParade() {
   const wrapperRef = useRef();
   const stageRef = useRef();
   const sideOffsetRef = useRef(270);
+  const cardWRef = useRef(320);
   const currentRef = useRef(0);
   const animating = useRef(false);
 
@@ -164,12 +165,25 @@ function CharacterParade() {
     if (!wrapper) return;
 
     const applyLayout = () => {
-      // Side card centers sit ~15px inside each edge of the wrapper
       const w = wrapper.offsetWidth;
-      sideOffsetRef.current = Math.max(160, (w - CARD_W) / 2 - 15);
+      // Fill the wrapper minus minimal breathing room; cap at MAX_CARD_W
+      const cardW = Math.min(MAX_CARD_W, Math.max(220, w - 24));
+      cardWRef.current = cardW;
+      // Side card center: allow overlap on narrow screens
+      sideOffsetRef.current = Math.max(cardW * 0.55, (w - cardW) / 2 - 4);
+
+      const stage = stageRef.current;
+      if (stage) stage.style.width = cardW + 'px';
+
       cardRefs.current.forEach((el, i) => {
         if (el) gsap.set(el, targetProps(i, currentRef.current, sideOffsetRef.current));
       });
+
+      // Lock stage to tallest card so height never changes during navigation
+      if (stage) {
+        const maxH = Math.max(0, ...cardRefs.current.filter(Boolean).map(el => el.offsetHeight));
+        if (maxH > 0) stage.style.height = maxH + 'px';
+      }
     };
 
     applyLayout();
@@ -180,18 +194,6 @@ function CharacterParade() {
     ro.observe(wrapper);
     return () => ro.disconnect();
   }, []);
-
-  useEffect(() => {
-    const activeEl = cardRefs.current[current];
-    const stage = stageRef.current;
-    if (!activeEl || !stage) return;
-    const ro = new ResizeObserver(() => {
-      stage.style.height = activeEl.offsetHeight + 'px';
-    });
-    ro.observe(activeEl);
-    stage.style.height = activeEl.offsetHeight + 'px';
-    return () => ro.disconnect();
-  }, [current]);
 
   const goTo = useCallback((next) => {
     if (animating.current || next === currentRef.current) return;
@@ -242,7 +244,7 @@ function CharacterParade() {
       style={{
         background: 'linear-gradient(160deg, #2a1500 0%, #5a2800 40%, #8b4400 70%, #c87828 100%)',
         overflow: 'hidden',
-        minHeight: '100vh',
+        minHeight: 'calc(100vh - var(--app-shell-header-height, 65px) - var(--app-shell-footer-height, 56px))',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -309,7 +311,7 @@ function CharacterParade() {
           ref={stageRef}
           style={{
             position: 'relative',
-            width: CARD_W,
+            width: cardWRef.current,
             margin: '0 auto',
           }}
         >

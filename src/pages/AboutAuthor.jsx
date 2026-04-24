@@ -1,7 +1,7 @@
 import { Title, Text, Stack, Paper, Image, Box } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
-import authPic from '../assets/imgs/aboutAuthor/authorPic1.png';
-import daddySweetie from '../assets/imgs/aboutAuthor/daddySweetheart.jpg';
+import authPic from '../assets/imgs/aboutAuthor/authorPic1.png?format=webp&width=800&quality=75&as=url';
+import daddySweetie from '../assets/imgs/aboutAuthor/daddySweetheart.jpg?format=webp&width=800&quality=75&as=url';
 
 const sectionHeadingStyle = {
   fontFamily: '"Rye", cursive',
