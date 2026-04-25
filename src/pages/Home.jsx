@@ -63,7 +63,7 @@ function HeroTitle() {
   return (
     <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 2rem 3.5rem', width: '100%' }}>
       <h1
-        className="hero-text-item"
+        className="hero-text-item hero-heading"
         style={{
           fontFamily: '"Rye", cursive',
           fontSize: 'clamp(1.9rem, 5.5vw, 4rem)',
@@ -78,7 +78,7 @@ function HeroTitle() {
       </h1>
 
       <p
-        className="hero-text-item"
+        className="hero-text-item hero-intro"
         style={{
           fontFamily: '"Baloo 2", sans-serif',
           fontSize: 'clamp(0.95rem, 2vw, 1.2rem)',
