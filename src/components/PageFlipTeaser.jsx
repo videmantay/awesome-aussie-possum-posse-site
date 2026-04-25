@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useEffect } from 'react';
+import { forwardRef, useRef, useMemo } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import { useTranslation } from 'react-i18next';
 import { RichText } from '../design-system/richText';
@@ -6,6 +6,12 @@ import coverImg from '../assets/imgs/shared/Bookcover.png';
 
 const rightModules = import.meta.glob('../assets/imgs/pageFlipTeaser/right-img*.{jpg,jpeg,png,webp}', { eager: true });
 const rightImgs = Object.keys(rightModules).sort().map((k) => rightModules[k].default);
+
+// Preload all images at module-load time (when the lazy chunk arrives) so the browser
+// cache is warm before the first render — prevents the blur-then-sharpen flash.
+if (typeof window !== 'undefined') {
+  [coverImg, ...rightImgs].forEach(src => { new Image().src = src; });
+}
 
 // pageInner fills the outer ref-div (which page-flip controls via style.cssText).
 // Visual styles live here so they survive the library's cssText replacement.
@@ -17,6 +23,8 @@ const ImagePage = forwardRef(({ src, alt }, ref) => (
       <img
         src={src}
         alt={alt}
+        draggable={false}
+        decoding="async"
         style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
       />
     </div>
@@ -113,22 +121,17 @@ function PageFlipTeaser() {
   const leftPages = tFlip('pages', { returnObjects: true, fallbackLng: 'en' }) || [];
   const bookRef = useRef(null);
 
-  useEffect(() => {
-    [coverImg, ...rightImgs].forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
-
-  // 14 pages: cover + 6×(text+image) + cta back cover
-  const pages = [
+  // Memoised so react-pageflip always receives the same element instances.
+  // Rebuilding this array on re-renders causes the library to remount pages,
+  // which triggers image re-fetches and the blur-then-sharpen effect.
+  const pages = useMemo(() => [
     <ImagePage key="cover" src={coverImg} alt="The Awesome Aussie Possum Posse — book cover" />,
     ...rightImgs.flatMap((src, i) => [
       <TextPage key={`text-${i}`} data={Array.isArray(leftPages) ? leftPages[i] : null} />,
       <ImagePage key={`img-${i}`} src={src} alt={`Illustration ${i + 1}`} />,
     ]),
     <CtaPage key="cta" />,
-  ];
+  ], [leftPages]);
 
   return (
     <section style={{

@@ -61,7 +61,13 @@ function BookMesh() {
   const [coverTex, signTex] = useTexture(
     [coverImg, woodenSignImg],
     (textures) => {
-      textures.forEach(t => { t.colorSpace = THREE.SRGBColorSpace; });
+      textures.forEach(t => {
+        t.colorSpace = THREE.SRGBColorSpace;
+        // Anisotropic filtering keeps the texture sharp when viewed at an angle.
+        // 16 is the maximum most GPUs support; Three.js clamps to the device limit.
+        t.anisotropy = 16;
+        t.needsUpdate = true;
+      });
     }
   );
 

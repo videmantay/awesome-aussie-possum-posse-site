@@ -71,7 +71,7 @@
     "gretel": {
       "name": "Gretel",
       "species": "Grande Planadora",
-      "blurb": "Não confunda Gretel com uma donzela em apuros — essa linda planadora é inteligente o suficiente para resolver qualquer problema na hora. Com membranas que a fazem voar igual a uma pipa, ela desce do céu e salva o dia com toda a elegância.",
+      "blurb": "Não confunda Gretel com uma donzela em apuros — essa planadora resolve qualquer problema antes que piore. Com membranas que a fazem voar igual a uma pipa, ela desce do céu e salva o dia com elegância.",
       "skill": "Mestre do Planeio"
     },
     "hana": {
@@ -83,7 +83,7 @@
     "plaid": {
       "name": "Plaid",
       "species": "Gambá Listrado",
-      "blurb": "Plaid não é muito de conversa e definitivamente não ganha prêmios de moda, mas quando você está numa fria, ele é exatamente quem você quer por perto. Os animais selvagens mais ferozes o seguem para onde quer que ele vá.",
+      "blurb": "Plaid não é muito de conversa e não ganha prêmios de moda. Mas quando você está numa fria, é exatamente quem você quer por perto — os animais selvagens o seguem para onde quer que vá.",
       "skill": "Encantador de Feras"
     },
     "pygmy": {

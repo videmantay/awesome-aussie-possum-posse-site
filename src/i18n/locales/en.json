@@ -65,37 +65,37 @@
     "brennen": {
       "name": "Brennen",
       "species": "Common Brushtail Possum",
-      "blurb": "Anything but ordinary, Brennen Bingham has a gift for showing up exactly when someone's in trouble — cool, charming, and born to lead. His mission: round up his friends and find his way back home to Australia.",
+      "blurb": "Brennen has a gift for showing up exactly when someone's in trouble — cool, charming, and born to lead. His mission: round up his friends and find his way back home to Australia.",
       "skill": "Natural-born Leader"
     },
     "gretel": {
       "name": "Gretel",
       "species": "Greater Glider",
-      "blurb": "Don't mistake Gretel for a damsel in distress — this gorgeous greater glider is smart enough to solve any problem before anyone else even spots it. She's mastered Bernoulli's Principle, and those gliding membranes let her swoop in like a kite and save the day in style.",
+      "blurb": "Don't mistake Gretel for a damsel in distress — this greater glider solves problems before anyone else spots them. Her gliding membranes let her swoop in like a kite and save the day in style.",
       "skill": "Master Glider"
     },
     "hana": {
       "name": "Hanna",
       "species": "Honey Possum",
-      "blurb": "Don't let the tiny size fool you — Hanna is barely the size of a thimble, but she's sharp, sneaky, and nimble as can be. Need a clever contraption to save the townsfolk? She'll whip one up before you even finish asking.",
+      "blurb": "Don't let the tiny size fool you — Hanna is barely the size of a thimble, but she's sharp, sneaky, and nimble. Need a contraption to save the townsfolk? She'll have it built before you finish asking.",
       "skill": "Nimble Tinkerer"
     },
     "plaid": {
       "name": "Plaid",
       "species": "Striped Possum",
-      "blurb": "Plaid isn't much for small talk and he won't be winning any fashion contests — but when you're stuck in a tight spot, he's exactly who you want. He has a mysterious way with wild animals, and wherever Plaid goes, they follow.",
+      "blurb": "Plaid isn't much for small talk and he won't be winning any fashion contests. But when you're stuck in a tight spot, he's exactly who you want — wild animals follow wherever he goes.",
       "skill": "Beast Whisperer"
     },
     "pygmy": {
       "name": "Pygmy",
       "species": "Eastern Pygmy Possum",
-      "blurb": "Don't be fooled by the tiny frame — Pygmy's tail stretches a full city block and hits with the force of a charging rhino. He's the gentlest soul in the Posse, but cross the wrong line and you just might find yourself launched over the moon.",
+      "blurb": "Don't be fooled by the tiny frame — Pygmy's tail stretches a full city block and hits like a charging rhino. He's the gentlest soul in the Posse, but cross the wrong line and you'll find yourself launched over the moon.",
       "skill": "Tail of Steel"
     },
     "remmy": {
       "name": "Remmy",
       "species": "Ringtail Possum",
-      "blurb": "Remmy is a free-spirited ringtail possum who just wants to have a jolly good time — and bad guys are always making the mistake of underestimating him. Stare at those wall eyes a moment too long and you've been 'Whamied,' ready to do whatever Remmy says.",
+      "blurb": "Remmy just wants to have a jolly good time — bad guys always make the mistake of underestimating him. Stare at those wall eyes a moment too long and you've been 'Whamied,' ready to do whatever Remmy says.",
       "skill": "The Whammy"
     },
     "willow": {

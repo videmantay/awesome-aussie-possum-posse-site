@@ -79,14 +79,14 @@ function CharacterCard({ id, image, accent }) {
           padding: '1.5rem 1rem 0',
           display: 'flex',
           justifyContent: 'center',
-          minHeight: '260px',
+          minHeight: 'clamp(160px, 40vw, 260px)',
           alignItems: 'flex-end',
         }}
       >
         <img
           src={image}
           alt={t(`character.${id}.name`)}
-          style={{ maxHeight: '250px', width: 'auto', objectFit: 'contain', display: 'block' }}
+          style={{ maxHeight: 'clamp(150px, 38vw, 250px)', width: 'auto', objectFit: 'contain', display: 'block' }}
           loading="lazy"
         />
       </div>
@@ -96,7 +96,7 @@ function CharacterCard({ id, image, accent }) {
           style={{
             margin: '0 0 0.2rem',
             fontFamily: '"Rye", cursive',
-            fontSize: '1.9rem',
+            fontSize: 'clamp(1.4rem, 4.5vw, 1.9rem)',
             color: accent,
             letterSpacing: '1px',
           }}
@@ -166,8 +166,8 @@ function CharacterParade() {
 
     const applyLayout = () => {
       const w = wrapper.offsetWidth;
-      // Fill the wrapper minus minimal breathing room; cap at MAX_CARD_W
-      const cardW = Math.min(MAX_CARD_W, Math.max(220, w - 24));
+      // Fit card inside the arrow buttons (52px padding each side), cap at MAX_CARD_W
+      const cardW = Math.min(MAX_CARD_W, Math.max(200, w - 112));
       cardWRef.current = cardW;
       // Side card center: allow overlap on narrow screens
       sideOffsetRef.current = Math.max(cardW * 0.55, (w - cardW) / 2 - 4);
@@ -276,6 +276,21 @@ function CharacterParade() {
         >
           {t('character.sectionSubtitle')}
         </p>
+        <Link
+          to="/frontier-post"
+          style={{
+            display: 'inline-block',
+            marginTop: '0.9rem',
+            color: '#f3c47a',
+            fontFamily: '"Bangers", cursive',
+            fontSize: '1rem',
+            letterSpacing: '1.5px',
+            textDecoration: 'none',
+            opacity: 0.85,
+          }}
+        >
+          Visit the Frontier Post →
+        </Link>
       </div>
 
       {/* Carousel wrapper — overflowX:hidden clips side cards at edges */}

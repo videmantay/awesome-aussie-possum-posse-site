@@ -71,7 +71,7 @@
     "gretel": {
       "name": "Gretel",
       "species": "Gran Planeadora",
-      "blurb": "No confundas a Gretel con una doncella en apuros — esta hermosa planeadora es inteligente para resolver cualquier problema antes de que empeore. Con sus membranas que la hacen volar como un papalote, desciende desde las alturas y salva el día con todo el estilo.",
+      "blurb": "No confundas a Gretel con una doncella en apuros — esta planeadora resuelve cualquier problema antes de que empeore. Sus membranas la hacen volar como un papalote y salva el día con todo el estilo.",
       "skill": "Maestra del Planeo"
     },
     "hana": {
@@ -83,7 +83,7 @@
     "plaid": {
       "name": "Plaid",
       "species": "Zarigüeya Rayada",
-      "blurb": "Plaid no es de los que hablan mucho y tampoco gana premios de moda, pero cuando estás en apuros, es el que quieres de tu lado. Los animales salvajes más grandes le obedecen sin pensarlo, y a donde va Plaid, ellos van también.",
+      "blurb": "Plaid no es de los que hablan mucho y tampoco gana premios de moda. Pero cuando estás en apuros, es el que quieres de tu lado — a donde va Plaid, los animales salvajes van también.",
       "skill": "Domador de Bestias"
     },
     "pygmy": {
