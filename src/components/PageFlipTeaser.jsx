@@ -1,9 +1,10 @@
 import { forwardRef, useRef, useEffect } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import { useTranslation } from 'react-i18next';
-import coverImg from '../assets/imgs/shared/Bookcover.png?format=webp&width=1000&quality=75&as=url';
+import { RichText } from '../design-system/richText';
+import coverImg from '../assets/imgs/shared/Bookcover.png';
 
-const rightModules = import.meta.glob('../assets/imgs/pageFlipTeaser/right-img*.{jpg,jpeg,png,webp}', { eager: true, query: { format: 'webp', width: 900, quality: 75, as: 'url' } });
+const rightModules = import.meta.glob('../assets/imgs/pageFlipTeaser/right-img*.{jpg,jpeg,png,webp}', { eager: true });
 const rightImgs = Object.keys(rightModules).sort().map((k) => rightModules[k].default);
 
 // pageInner fills the outer ref-div (which page-flip controls via style.cssText).
@@ -42,7 +43,7 @@ const TextPage = forwardRef(({ data }, ref) => (
             margin: '0 0 1rem 0',
             lineHeight: 1.25,
           }}>
-            {data.heading}
+            <RichText>{data.heading}</RichText>
           </h3>
           {data.paragraphs.map((p, i) => (
             <p key={i} style={{
@@ -52,7 +53,7 @@ const TextPage = forwardRef(({ data }, ref) => (
               margin: i < data.paragraphs.length - 1 ? '0 0 0.6rem 0' : '0',
               lineHeight: 1.6,
             }}>
-              {p}
+              <RichText>{p}</RichText>
             </p>
           ))}
         </>

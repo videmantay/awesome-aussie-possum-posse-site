@@ -2,13 +2,13 @@ import { useRef, useEffect, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { gsap } from 'gsap';
-import brennenSolo from '../assets/imgs/characterParade/brennenSolo.png?format=webp&width=500&quality=75&as=url';
-import gretelSolo from '../assets/imgs/characterParade/gretelSolo.png?format=webp&width=500&quality=75&as=url';
-import hanaSolo from '../assets/imgs/characterParade/hanaSolo.png?format=webp&width=500&quality=75&as=url';
-import plaidSolo from '../assets/imgs/characterParade/plaidSolo.png?format=webp&width=500&quality=75&as=url';
-import pygmySolo from '../assets/imgs/characterParade/pygmySolo.png?format=webp&width=500&quality=75&as=url';
-import remmySolo from '../assets/imgs/characterParade/remmySolo.png?format=webp&width=500&quality=75&as=url';
-import willowSolo from '../assets/imgs/characterParade/willowSolo.png?format=webp&width=500&quality=75&as=url';
+import brennenSolo from '../assets/imgs/characterParade/brennenSolo.png';
+import gretelSolo from '../assets/imgs/characterParade/gretelSolo.png';
+import hanaSolo from '../assets/imgs/characterParade/hanaSolo.png';
+import plaidSolo from '../assets/imgs/characterParade/plaidSolo.png';
+import pygmySolo from '../assets/imgs/characterParade/pygmySolo.png';
+import remmySolo from '../assets/imgs/characterParade/remmySolo.png';
+import willowSolo from '../assets/imgs/characterParade/willowSolo.png';
 
 const CHARACTER_IDS = ['brennen', 'gretel', 'hana', 'plaid', 'pygmy', 'remmy', 'willow'];
 const CHARACTER_IMAGES = {
@@ -283,7 +283,7 @@ function CharacterParade() {
         ref={wrapperRef}
         style={{
           position: 'relative',
-          overflowX: 'hidden',
+          overflow: 'hidden',
           width: '100%',
           maxWidth: '860px',
           margin: '0 auto',
@@ -371,7 +371,7 @@ function CharacterParade() {
                 Want to know more?
               </p>
               <Link
-                to="/characters"
+                to="/frontier-post"
                 style={{
                   background: '#fdf4eb',
                   color: '#a95c14',
@@ -384,7 +384,7 @@ function CharacterParade() {
                   boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
                 }}
               >
-                Full Character Profiles →
+                Frontier Post →
               </Link>
             </div>
           </div>
