@@ -373,7 +373,7 @@ function CharacterParade() {
                 padding: '2rem',
               }}
             >
-              <p
+              <p id="text-link-to-frontier"
                 style={{
                   fontFamily: '"Rye", cursive',
                   fontSize: '2rem',
