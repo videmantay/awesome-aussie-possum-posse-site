@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
+import DOMPurify from 'dompurify';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
@@ -44,6 +45,50 @@ const LANG_TABS = [
 const ANIMATION_OPTIONS = Object.entries(ANIMATION_PRESETS).map(([value, { label }]) => ({
   value, label,
 }));
+
+// ─── Preview ────────────────────────────────────────────────────────────────
+
+function PostPreview({ langs, activeLang, post }) {
+  const title = langs[activeLang]?.title || langs.en?.title || '';
+  const body  = langs[activeLang]?.body  || langs.en?.body  || '';
+
+  return (
+    <Box maw={760} mx="auto" py="xl">
+      <Paper
+        shadow="xl"
+        radius="xl"
+        style={{
+          backgroundColor: 'rgba(253, 244, 235, 0.97)',
+          border: '3px solid var(--mantine-color-brown-3)',
+          overflow: 'hidden',
+        }}
+      >
+        {post.mediaUrl && (
+          post.mediaType === 'video'
+            ? <video src={post.mediaUrl} controls style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
+            : <img src={post.mediaUrl} alt="" style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
+        )}
+        <Box p="xl">
+          <Text
+            component="h2"
+            style={{ fontFamily: '"Rye", cursive', color: 'var(--mantine-color-brown-8)', fontSize: 'clamp(1.4rem, 3.5vw, 2rem)', margin: '0 0 0.5rem' }}
+          >
+            {title || <span style={{ opacity: 0.35 }}>No title yet…</span>}
+          </Text>
+          <Text size="xs" c="brown.5" mb="md" style={{ fontFamily: '"Patrick Hand", cursive' }}>
+            Preview — not yet published
+          </Text>
+          <div
+            className="post-content"
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(body) }}
+            style={!body ? { color: 'var(--mantine-color-brown-3)', fontFamily: '"Baloo 2", sans-serif' } : undefined}
+          />
+          {!body && <Text c="brown.3" style={{ fontFamily: '"Baloo 2", sans-serif' }}>No body yet…</Text>}
+        </Box>
+      </Paper>
+    </Box>
+  );
+}
 
 // ─── Toolbar ────────────────────────────────────────────────────────────────
 
@@ -122,6 +167,7 @@ export default function PostEditor() {
   const [loadingPost, setLoadingPost] = useState(!isNew);
   const [saving, setSaving]           = useState(false);
   const [translating, setTranslating] = useState(false);
+  const [preview, setPreview]         = useState(false);
   const [uploadProgress, setUploadProgress] = useState(null);
   const imageInputRef = useRef();
 
@@ -298,6 +344,14 @@ export default function PostEditor() {
           </Badge>
         </Group>
         <Group gap="sm">
+          <Button
+            variant={preview ? 'filled' : 'outline'}
+            color="brown"
+            onClick={() => setPreview(p => !p)}
+            style={{ fontFamily: '"Baloo 2", sans-serif', borderRadius: '20px' }}
+          >
+            {preview ? '✏️ Edit' : '👁 Preview'}
+          </Button>
           <Button variant="outline" color="brown" loading={saving} onClick={() => handleSave('draft')}
             style={{ fontFamily: '"Baloo 2", sans-serif', borderRadius: '20px' }}>Save Draft</Button>
           <Button loading={saving} onClick={() => handleSave('published')}
@@ -307,8 +361,11 @@ export default function PostEditor() {
         </Group>
       </Group>
 
+      {/* ── Preview mode ── */}
+      {preview && <PostPreview langs={langs} activeLang={activeLang} post={post} />}
+
       {/* ── Two-column layout ── */}
-      <Box style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '1.5rem', alignItems: 'start' }}>
+      <Box style={{ display: preview ? 'none' : 'grid', gridTemplateColumns: '1fr 300px', gap: '1.5rem', alignItems: 'start' }}>
 
         {/* ── Left: language tabs + editor ── */}
         <Stack gap="md">

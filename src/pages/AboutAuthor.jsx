@@ -1,5 +1,6 @@
 import { Title, Text, Stack, Paper, Image, Box } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
 import authPic from '../assets/imgs/aboutAuthor/authorPic1.png?format=webp&width=800&quality=75&as=url';
 import daddySweetie from '../assets/imgs/aboutAuthor/daddySweetheart.jpg?format=webp&width=800&quality=75&as=url';
 
@@ -16,6 +17,7 @@ function AboutAuthor() {
   const { t } = useTranslation();
 
   return (
+    <div>
     <Box maw={800} mx="auto" py="xl">
       <Paper
         className="page-card"
@@ -86,6 +88,50 @@ function AboutAuthor() {
         </Stack>
       </Paper>
     </Box>
+    <div
+      style={{
+        background: '#2a1500',
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '1rem',
+        flexWrap: 'wrap',
+        padding: '1.5rem 2rem',
+      }}
+    >
+      <Link
+        to="/characters"
+        style={{
+          background: '#c45a1a',
+          color: '#fdf4eb',
+          padding: '0.75rem 2rem',
+          borderRadius: '30px',
+          fontFamily: '"Bangers", cursive',
+          fontSize: '1.2rem',
+          letterSpacing: '1.5px',
+          textDecoration: 'none',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.35)',
+        }}
+      >
+        Meet the Characters →
+      </Link>
+      <Link
+        to="/about"
+        style={{
+          background: 'transparent',
+          color: '#f5c87a',
+          padding: '0.75rem 2rem',
+          borderRadius: '30px',
+          border: '2px solid #f5c87a',
+          fontFamily: '"Bangers", cursive',
+          fontSize: '1.2rem',
+          letterSpacing: '1.5px',
+          textDecoration: 'none',
+        }}
+      >
+        Read the Book →
+      </Link>
+    </div>
+    </div>
   );
 }
 
