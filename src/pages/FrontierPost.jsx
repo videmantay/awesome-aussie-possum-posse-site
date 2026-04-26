@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import DOMPurify from 'dompurify';
 import { Box, Center, Loader, Paper, Stack, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 import { collection, onSnapshot, query, where } from 'firebase/firestore';
@@ -7,7 +8,18 @@ import { db } from '../firebase';
 import { ANIMATION_PRESETS, SPEED_MAP, TRIGGER_MAP } from '../lib/animationPresets';
 import '../assets/styles/tiptap.css';
 
-function PostCard({ post }) {
+// Maps i18n language codes → Firestore field suffix
+const LANG_CODE = { en: 'en', 'es-MX': 'es', 'pt-BR': 'pt' };
+
+function getLocalized(post, field, i18nLang) {
+  const code = LANG_CODE[i18nLang] || 'en';
+  return post[`${field}_${code}`] || post[`${field}_en`] || post[field] || '';
+}
+
+function PostCard({ post, i18nLang }) {
+  const title = getLocalized(post, 'title', i18nLang);
+  const body  = getLocalized(post, 'body',  i18nLang);
+
   return (
     <Paper
       data-post-id={post.id}
@@ -21,53 +33,33 @@ function PostCard({ post }) {
     >
       {post.mediaUrl && (
         post.mediaType === 'video' ? (
-          <video
-            src={post.mediaUrl}
-            controls
-            style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }}
-          />
+          <video src={post.mediaUrl} controls
+            style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
         ) : (
-          <img
-            src={post.mediaUrl}
-            alt=""
-            style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }}
-          />
+          <img src={post.mediaUrl} alt=""
+            style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
         )
       )}
       <Box p="xl">
-        <Title
-          order={2}
-          mb="xs"
-          style={{
-            fontFamily: '"Rye", cursive',
-            color: 'var(--mantine-color-brown-8)',
-            fontSize: 'clamp(1.4rem, 3.5vw, 2rem)',
-          }}
-        >
-          {post.title}
+        <Title order={2} mb="xs"
+          style={{ fontFamily: '"Rye", cursive', color: 'var(--mantine-color-brown-8)', fontSize: 'clamp(1.4rem, 3.5vw, 2rem)' }}>
+          {title}
         </Title>
         {post.publishedAt && (
-          <Text
-            size="xs"
-            c="brown.5"
-            mb="md"
-            style={{ fontFamily: '"Patrick Hand", cursive' }}
-          >
-            {post.publishedAt.toDate().toLocaleDateString('en-US', {
+          <Text size="xs" c="brown.5" mb="md" style={{ fontFamily: '"Patrick Hand", cursive' }}>
+            {post.publishedAt.toDate().toLocaleDateString(i18nLang, {
               year: 'numeric', month: 'long', day: 'numeric',
             })}
           </Text>
         )}
-        <div
-          className="post-content"
-          dangerouslySetInnerHTML={{ __html: post.body }}
-        />
+        <div className="post-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(body) }} />
       </Box>
     </Paper>
   );
 }
 
 function FrontierPostFeed() {
+  const { i18n } = useTranslation();
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -157,7 +149,7 @@ function FrontierPostFeed() {
 
   return (
     <Stack gap="xl">
-      {posts.map(post => <PostCard key={post.id} post={post} />)}
+      {posts.map(post => <PostCard key={post.id} post={post} i18nLang={i18n.language} />)}
     </Stack>
   );
 }

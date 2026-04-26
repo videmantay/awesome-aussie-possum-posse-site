@@ -18,7 +18,6 @@ import { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import ReactCountryFlag from 'react-country-flag';
-import MusicPlayer from './MusicPlayer';
 import WesternIcon from './icons/WesternIcon';
 import AnnouncementBanner from './AnnouncementBanner';
 
@@ -248,10 +247,7 @@ function Layout() {
         <Outlet />
       </AppShell.Main>
 
-      {/* --- Persistent Music Player --- */}
-      <MusicPlayer />
-
-      {/* --- Footer --- */}
+{/* --- Footer --- */}
       <AppShell.Footer
         style={{
           backgroundColor: 'var(--mantine-color-brown-9)',
