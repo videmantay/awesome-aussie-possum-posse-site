@@ -118,7 +118,7 @@ CtaPage.displayName = 'CtaPage';
 function PageFlipTeaser() {
   const { t } = useTranslation();
   const { t: tFlip } = useTranslation('pageFlip');
-  const leftPages = tFlip('pages', { returnObjects: true, fallbackLng: 'en' }) || [];
+  const leftPages = tFlip('pages', { returnObjects: true }) || [];
   const bookRef = useRef(null);
 
   // Memoised so react-pageflip always receives the same element instances.

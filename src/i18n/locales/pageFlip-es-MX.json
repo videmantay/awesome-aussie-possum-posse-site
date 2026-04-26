@@ -1,39 +1,53 @@
 {
-  "leftPages": [
+  "pages": [
     {
-      "title": "Brennen Bingham",
-      "subtitle": "Zarigüeya Común de Cola Peluda",
-      "body": "Tranquilo bajo presión, primero en ayudar y último en rendirse. Brennen tiene una misión: reunir a los suyos y volver a Australia — y nada en el Viejo Oeste lo va a detener."
+      "heading": "Brennen Bingham",
+      "paragraphs": [
+        "Zarigüeya Común de Cola Peluda",
+        "Tranquilo bajo presión, primero en ayudar y último en rendirse. Brennen tiene una misión: reunir a los suyos y volver a Australia — y nada en el Viejo Oeste lo va a detener."
+      ]
     },
     {
-      "title": "Gretel",
-      "subtitle": "Gran Planeadora",
-      "body": "Resolvió el Principio de Bernoulli antes del desayuno y puede planear más lejos de lo que puedes gritar '¡Cuidado!' No la confundas con una doncella — ella es quien hace el rescate."
+      "heading": "Gretel",
+      "paragraphs": [
+        "Gran Planeadora",
+        "Resolvió el Principio de Bernoulli antes del desayuno y puede planear más lejos de lo que puedes gritar '¡Cuidado!' No la confundas con una doncella — ella es quien hace el rescate."
+      ]
     },
     {
-      "title": "Hanna",
-      "subtitle": "Possum Melero",
-      "body": "Cabe en la palma de tu mano, pero tiene más cerebro que un rancho lleno de bandidos. Dale unas piezas sueltas y construirá algo que salve a todo el pueblo."
+      "heading": "Hanna",
+      "paragraphs": [
+        "Possum Melero",
+        "Cabe en la palma de tu mano, pero tiene más cerebro que un rancho lleno de bandidos. Dale unas piezas sueltas y construirá algo que salve a todo el pueblo."
+      ]
     },
     {
-      "title": "Plaid",
-      "subtitle": "Zarigüeya Rayada",
-      "body": "No dice mucho. No necesita hacerlo. Los animales salvajes del doble de su tamaño lo siguen como si fuera su jefe — y puede que lo sea."
+      "heading": "Plaid",
+      "paragraphs": [
+        "Zarigüeya Rayada",
+        "No dice mucho. No necesita hacerlo. Los animales salvajes del doble de su tamaño lo siguen como si fuera su jefe — y puede que lo sea."
+      ]
     },
     {
-      "title": "Pygmy",
-      "subtitle": "Zarigüeya Pigmea Oriental",
-      "body": "El alma más tierna de la pandilla — hasta que te pones del lado equivocado. Esa cola puede lazar un búfalo y golpea con la fuerza de un rinoceronte en carrera."
+      "heading": "Pygmy",
+      "paragraphs": [
+        "Zarigüeya Pigmea Oriental",
+        "El alma más tierna de la pandilla — hasta que te pones del lado equivocado. Esa cola puede lazar un búfalo y golpea con la fuerza de un rinoceronte en carrera."
+      ]
     },
     {
-      "title": "Remmy",
-      "subtitle": "Zarigüeya de Cola Anillada",
-      "body": "Siempre riendo, siempre divirtiéndose. Los villanos siempre cometen el error de subestimarlo — hasta que caen bajo 'El Whammy' y hacen todo lo que Remmy dice."
+      "heading": "Remmy",
+      "paragraphs": [
+        "Zarigüeya de Cola Anillada",
+        "Siempre riendo, siempre divirtiéndose. Los villanos siempre cometen el error de subestimarlo — hasta que caen bajo 'El Whammy' y hacen todo lo que Remmy dice."
+      ]
     },
     {
-      "title": "Willow Willemina",
-      "subtitle": "Zarigüeya Blanca de Cola Anillada",
-      "body": "Ardiente, valiente y siempre la primera en la batalla. No hay villano demasiado duro ni pelea demasiado grande. ¿Rufianes dándote problemas? Llama a Willow."
+      "heading": "Willow Willemina",
+      "paragraphs": [
+        "Zarigüeya Blanca de Cola Anillada",
+        "Ardiente, valiente y siempre la primera en la batalla. No hay villano demasiado duro ni pelea demasiado grande. ¿Rufianes dándote problemas? Llama a Willow."
+      ]
     }
   ]
 }
