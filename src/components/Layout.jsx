@@ -14,11 +14,13 @@ import {
   Anchor,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import ReactCountryFlag from 'react-country-flag';
 import MusicPlayer from './MusicPlayer';
 import WesternIcon from './icons/WesternIcon';
+import AnnouncementBanner from './AnnouncementBanner';
 
 const LANGUAGES = [
   { code: 'en',    countryCode: 'US', label: 'English'   },
@@ -40,12 +42,13 @@ const navLinks = [
 function Layout() {
   const { t, i18n } = useTranslation();
   const [opened, { toggle, close }] = useDisclosure(false);
+  const [hasBanner, setHasBanner] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
 
   return (
     <AppShell
-      header={{ height: 65 }}
+      header={{ height: hasBanner ? 65 + 36 : 65 }}
       footer={{ height: 56 }}
       navbar={{
         width: 260,
@@ -65,9 +68,12 @@ function Layout() {
             : '4px solid var(--mantine-color-brown-9)',
           backdropFilter: isHome ? 'blur(8px)' : 'none',
           transition: 'background-color 0.3s',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        <Group h="100%" px="md">
+        <AnnouncementBanner onPresence={setHasBanner} />
+        <Group h="65px" px="md">
           <Group gap="sm">
             <Burger
               opened={opened}
