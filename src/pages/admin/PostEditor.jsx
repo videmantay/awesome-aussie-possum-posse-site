@@ -48,12 +48,52 @@ const ANIMATION_OPTIONS = Object.entries(ANIMATION_PRESETS).map(([value, { label
 
 // ─── Preview ────────────────────────────────────────────────────────────────
 
-function PostPreview({ langs, activeLang, post }) {
-  const title = langs[activeLang]?.title || langs.en?.title || '';
-  const body  = langs[activeLang]?.body  || langs.en?.body  || '';
+function PostPreview({ langs, post }) {
+  const [previewLang, setPreviewLang] = useState('en');
+  const title = langs[previewLang]?.title || langs.en?.title || '';
+  const body  = langs[previewLang]?.body  || langs.en?.body  || '';
 
   return (
     <Box maw={760} mx="auto" py="xl">
+      {/* Language tabs */}
+      <Paper radius="lg" mb="md" style={{ border: '2px solid var(--mantine-color-brown-3)', overflow: 'hidden', background: '#fff9f3' }}>
+        <Group gap={0}>
+          {LANG_TABS.map(tab => {
+            const hasContent = !!(langs[tab.code]?.title && langs[tab.code]?.body);
+            const isActive   = previewLang === tab.code;
+            return (
+              <button
+                key={tab.code}
+                onClick={() => setPreviewLang(tab.code)}
+                style={{
+                  flex: 1,
+                  padding: '10px 8px',
+                  border: 'none',
+                  borderRight: '1px solid var(--mantine-color-brown-3)',
+                  background: isActive ? 'var(--mantine-color-brown-1)' : 'transparent',
+                  cursor: 'pointer',
+                  fontFamily: '"Bubblegum Sans", sans-serif',
+                  fontSize: '0.95rem',
+                  color: isActive ? 'var(--mantine-color-brown-8)' : 'var(--mantine-color-brown-5)',
+                  fontWeight: isActive ? 700 : 400,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 6,
+                }}
+              >
+                <span>{tab.flag}</span>
+                <span>{tab.label}</span>
+                {!hasContent && (
+                  <span style={{ fontSize: '0.7rem', opacity: 0.5 }}>empty</span>
+                )}
+              </button>
+            );
+          })}
+        </Group>
+      </Paper>
+
+      {/* Post card */}
       <Paper
         shadow="xl"
         radius="xl"
@@ -78,11 +118,7 @@ function PostPreview({ langs, activeLang, post }) {
           <Text size="xs" c="brown.5" mb="md" style={{ fontFamily: '"Patrick Hand", cursive' }}>
             Preview — not yet published
           </Text>
-          <div
-            className="post-content"
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(body) }}
-            style={!body ? { color: 'var(--mantine-color-brown-3)', fontFamily: '"Baloo 2", sans-serif' } : undefined}
-          />
+          <div className="post-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(body) }} />
           {!body && <Text c="brown.3" style={{ fontFamily: '"Baloo 2", sans-serif' }}>No body yet…</Text>}
         </Box>
       </Paper>
@@ -362,7 +398,7 @@ export default function PostEditor() {
       </Group>
 
       {/* ── Preview mode ── */}
-      {preview && <PostPreview langs={langs} activeLang={activeLang} post={post} />}
+      {preview && <PostPreview langs={langs} post={post} />}
 
       {/* ── Two-column layout ── */}
       <Box style={{ display: preview ? 'none' : 'grid', gridTemplateColumns: '1fr 300px', gap: '1.5rem', alignItems: 'start' }}>
