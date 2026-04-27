@@ -107,7 +107,11 @@
   },
   "teaser": {
     "heading": "Un Vistazo...",
-    "subheading": "Una aventura en el Viejo Oeste como ninguna otra te espera adentro"
+    "subheading": "Una aventura en el Viejo Oeste como ninguna otra te espera adentro",
+    "backcover": "Mantente al tanto de Amazon y de tus tiendas favoritas.",
+    "comingSoon": "Próximamente...",
+    "prevPage": "Página anterior",
+    "nextPage": "Página siguiente"
   },
   "kidscta": {
     "heading": "¿Quieres Unirte a la Pandilla?",

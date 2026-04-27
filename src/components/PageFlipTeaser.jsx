@@ -3,6 +3,7 @@ import HTMLFlipBook from 'react-pageflip';
 import { useTranslation } from 'react-i18next';
 import { RichText } from '../design-system/richText';
 import coverImg from '../assets/imgs/shared/Bookcover.png';
+import woodenSignImg from '../assets/imgs/shared/AwesAussPossPossWoodenSign.png';
 
 const rightModules = import.meta.glob('../assets/imgs/pageFlipTeaser/right-img*.{jpg,jpeg,png,webp}', { eager: true });
 const rightImgs = Object.keys(rightModules).sort().map((k) => rightModules[k].default);
@@ -10,7 +11,7 @@ const rightImgs = Object.keys(rightModules).sort().map((k) => rightModules[k].de
 // Preload all images at module-load time (when the lazy chunk arrives) so the browser
 // cache is warm before the first render — prevents the blur-then-sharpen flash.
 if (typeof window !== 'undefined') {
-  [coverImg, ...rightImgs].forEach(src => { new Image().src = src; });
+  [coverImg, woodenSignImg, ...rightImgs].forEach(src => { new Image().src = src; });
 }
 
 // pageInner fills the outer ref-div (which page-flip controls via style.cssText).
@@ -32,7 +33,7 @@ const ImagePage = forwardRef(({ src, alt }, ref) => (
 ));
 ImagePage.displayName = 'ImagePage';
 
-const TextPage = forwardRef(({ data }, ref) => (
+const TextPage = forwardRef(({ data, t }, ref) => (
   <div ref={ref}>
     <div style={{
       ...pageInner,
@@ -72,7 +73,7 @@ const TextPage = forwardRef(({ data }, ref) => (
           color: '#a95c14',
           textAlign: 'center',
         }}>
-          Coming Soon...
+          {t('teaser.comingSoon')}
         </span>
       )}
     </div>
@@ -80,7 +81,7 @@ const TextPage = forwardRef(({ data }, ref) => (
 ));
 TextPage.displayName = 'TextPage';
 
-const CtaPage = forwardRef((_, ref) => (
+const CtaPage = forwardRef(({ t }, ref) => (
   <div ref={ref}>
     <div style={{
       ...pageInner,
@@ -92,15 +93,12 @@ const CtaPage = forwardRef((_, ref) => (
       padding: '2rem',
       textAlign: 'center',
     }}>
-      <p style={{
-        fontFamily: '"Rye", cursive',
-        fontSize: 'clamp(1rem, 2vw, 1.4rem)',
-        color: '#f5c87a',
-        margin: '0 0 0.75rem 0',
-        lineHeight: 1.3,
-      }}>
-        The Awesome Aussie Possum Posse
-      </p>
+      <img
+        src={woodenSignImg}
+        alt={t('home.title')}
+        draggable={false}
+        style={{ width: '100%', maxWidth: '280px', marginBottom: '1rem' }}
+      />
       <p style={{
         fontFamily: '"Patrick Hand", cursive',
         fontSize: '0.95rem',
@@ -108,7 +106,7 @@ const CtaPage = forwardRef((_, ref) => (
         fontStyle: 'italic',
         margin: 0,
       }}>
-        Coming soon to bookstores everywhere.
+        {t('teaser.backcover')}
       </p>
     </div>
   </div>
@@ -125,13 +123,13 @@ function PageFlipTeaser() {
   // Rebuilding this array on re-renders causes the library to remount pages,
   // which triggers image re-fetches and the blur-then-sharpen effect.
   const pages = useMemo(() => [
-    <ImagePage key="cover" src={coverImg} alt="The Awesome Aussie Possum Posse — book cover" />,
+    <ImagePage key="cover" src={coverImg} alt={t('home.title')} />,
     ...rightImgs.flatMap((src, i) => [
-      <TextPage key={`text-${i}`} data={Array.isArray(leftPages) ? leftPages[i] : null} />,
-      <ImagePage key={`img-${i}`} src={src} alt={`Illustration ${i + 1}`} />,
+      <TextPage key={`text-${i}`} data={Array.isArray(leftPages) ? leftPages[i] : null} t={t} />,
+      <ImagePage key={`img-${i}`} src={src} alt={`${t('teaser.heading')} ${i + 1}`} />,
     ]),
-    <CtaPage key="cta" />,
-  ], [leftPages]);
+    <CtaPage key="cta" t={t} />,
+  ], [leftPages, t]);
 
   return (
     <section style={{
@@ -186,7 +184,7 @@ function PageFlipTeaser() {
       <div style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
         <button
           onClick={() => bookRef.current?.pageFlip().flipPrev()}
-          aria-label="Previous page"
+          aria-label={t('teaser.prevPage')}
           style={{
             background: 'none', border: 'none', padding: 0,
             fontSize: '2rem', lineHeight: 1, color: '#a07040', cursor: 'pointer',
@@ -196,7 +194,7 @@ function PageFlipTeaser() {
         </button>
         <button
           onClick={() => bookRef.current?.pageFlip().flipNext()}
-          aria-label="Next page"
+          aria-label={t('teaser.nextPage')}
           style={{
             background: 'none', border: 'none', padding: 0,
             fontSize: '2rem', lineHeight: 1, color: '#a07040', cursor: 'pointer',

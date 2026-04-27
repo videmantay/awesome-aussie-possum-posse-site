@@ -107,7 +107,11 @@
   },
   "teaser": {
     "heading": "Sneak a Peek...",
-    "subheading": "A wild west adventure like no other awaits inside"
+    "subheading": "A wild west adventure like no other awaits inside",
+    "backcover": "Be on the lookout , on Amazon and your favorite bookstore",
+    "comingSoon": "Coming Soon...",
+    "prevPage": "Previous page",
+    "nextPage": "Next page"
   },
   "kidscta": {
     "heading": "Wanna Join the Posse?",
