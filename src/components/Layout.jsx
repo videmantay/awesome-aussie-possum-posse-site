@@ -197,7 +197,7 @@ function Layout() {
                         variant={isActive ? 'filled' : 'subtle'}
                         size="lg"
                         radius="md"
-                        onClick={() => i18n.changeLanguage(code)}
+                        onClick={() => { i18n.changeLanguage(code); close(); }}
                         aria-label={label}
                         aria-pressed={isActive}
                         style={{

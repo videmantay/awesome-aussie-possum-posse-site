@@ -276,21 +276,6 @@ function CharacterParade() {
         >
           {t('character.sectionSubtitle')}
         </p>
-        <Link
-          to="/frontier-post"
-          style={{
-            display: 'inline-block',
-            marginTop: '0.9rem',
-            color: '#f3c47a',
-            fontFamily: '"Bangers", cursive',
-            fontSize: '1rem',
-            letterSpacing: '1.5px',
-            textDecoration: 'none',
-            opacity: 0.85,
-          }}
-        >
-          Visit the Frontier Post →
-        </Link>
       </div>
 
       {/* Carousel wrapper — overflowX:hidden clips side cards at edges */}
