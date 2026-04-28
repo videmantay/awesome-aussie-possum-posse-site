@@ -9,6 +9,7 @@ exports.syncSubscriberToMailerLite = onDocumentCreated(
   {
     document: 'subscribers/{docId}',
     database: 'awesausspossposs',
+    region: 'us-west1',
     secrets: [mailerLiteKey, mailerLiteGroupId],
   },
   async (event) => {
