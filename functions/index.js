@@ -1,11 +1,11 @@
-const { onDocumentCreated } = require('firebase-functions/v2/firestore');
-const { defineSecret } = require('firebase-functions/params');
-const { logger } = require('firebase-functions');
+import { onDocumentCreated } from 'firebase-functions/v2/firestore';
+import { defineSecret } from 'firebase-functions/params';
+import { logger } from 'firebase-functions';
 
 const mailerLiteKey = defineSecret('MAILERLITE_API_KEY');
 const mailerLiteGroupId = defineSecret('MAILERLITE_GROUP_ID');
 
-exports.syncSubscriberToMailerLite = onDocumentCreated(
+export const syncSubscriberToMailerLite = onDocumentCreated(
   {
     document: 'subscribers/{docId}',
     database: 'awesausspossposs',
@@ -20,14 +20,24 @@ exports.syncSubscriberToMailerLite = onDocumentCreated(
       return;
     }
 
+    const groupId = mailerLiteGroupId.value();
+    const apiKey = mailerLiteKey.value();
+
+    logger.info('syncSubscriberToMailerLite: sending to MailerLite', {
+      email: data.email,
+      hasName: !!data.name,
+      groupId,
+      apiKeyPrefix: apiKey.slice(0, 8) + '...',
+    });
+
     const payload = {
       email: data.email,
-      groups: [mailerLiteGroupId.value()],
+      groups: [groupId],
+      fields: {
+        ...(data.name && { name: data.name }),
+        ...(data.prefLang && { pref_lang: data.prefLang }),
+      },
     };
-
-    if (data.name) {
-      payload.fields = { name: data.name };
-    }
 
     let res;
     try {
@@ -36,7 +46,7 @@ exports.syncSubscriberToMailerLite = onDocumentCreated(
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-          'Authorization': `Bearer ${mailerLiteKey.value()}`,
+          'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify(payload),
       });
@@ -45,19 +55,23 @@ exports.syncSubscriberToMailerLite = onDocumentCreated(
       throw err;
     }
 
+    const responseBody = await res.text();
+
     // 200 = updated existing subscriber, 201 = created new — both are success.
-    // 409 can also mean duplicate; MailerLite v3 typically returns 200/201.
     if (!res.ok) {
-      const body = await res.text();
       logger.error('syncSubscriberToMailerLite: MailerLite returned an error', {
         status: res.status,
-        body,
+        body: responseBody,
         email: data.email,
       });
       // Re-throw so Cloud Functions marks the invocation as failed and retries.
       throw new Error(`MailerLite API error: ${res.status}`);
     }
 
-    logger.info('syncSubscriberToMailerLite: subscriber synced', { email: data.email });
+    logger.info('syncSubscriberToMailerLite: subscriber synced', {
+      email: data.email,
+      status: res.status,
+      response: responseBody,
+    });
   }
 );

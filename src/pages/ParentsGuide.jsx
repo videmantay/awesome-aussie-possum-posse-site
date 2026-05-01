@@ -7,7 +7,10 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 
 function ParentsGuide() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const langMap = { en: 'en-US', 'es-MX': 'es-MX', 'pt-BR': 'pt-BR' };
+  const prefLang = langMap[i18n.language] ?? 'en-US';
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
@@ -37,6 +40,7 @@ function ParentsGuide() {
       await addDoc(collection(db, 'subscribers'), {
         name: name.trim() || null,
         email: email.trim().toLowerCase(),
+        prefLang,
         notes: null,
         active: true,
         subscribedAt: serverTimestamp(),
