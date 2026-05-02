@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Anchor, Group, Text } from '@mantine/core';
-import { collection, query, where, orderBy, limit, onSnapshot } from 'firebase/firestore';
+import { collection, query, where, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 
 const STYLE_COLORS = {
@@ -18,13 +18,12 @@ export default function AnnouncementBanner({ onPresence }) {
       const q = query(
         collection(db, 'banners'),
         where('active', '==', true),
-        orderBy('createdAt', 'desc'),
-        limit(5),
       );
       unsub = onSnapshot(q, snap => {
         const now = new Date();
         const active = snap.docs
           .map(d => ({ id: d.id, ...d.data() }))
+          .sort((a, b) => (b.createdAt?.seconds ?? 0) - (a.createdAt?.seconds ?? 0))
           .find(b => {
             if (b.startDate && b.startDate.toDate() > now) return false;
             if (b.endDate   && b.endDate.toDate()   < now) return false;

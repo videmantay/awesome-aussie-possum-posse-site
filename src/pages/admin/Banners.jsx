@@ -5,7 +5,7 @@ import {
 } from '@mantine/core';
 import {
   addDoc, collection, deleteDoc, doc, onSnapshot, orderBy,
-  query, serverTimestamp, updateDoc,
+  query, serverTimestamp, Timestamp, updateDoc,
 } from 'firebase/firestore';
 import { notifications } from '@mantine/notifications';
 import { db } from '../../firebase';
@@ -22,7 +22,32 @@ const STYLE_COLORS = {
   info:  { bg: '#4a8a5a', text: '#fdf4eb' },
 };
 
-const BLANK = { text: '', linkUrl: '', linkText: '', style: 'promo' };
+const EXPIRY_OPTIONS = [
+  { value: '',    label: 'No expiry' },
+  { value: '1d',  label: '1 day' },
+  { value: '3d',  label: '3 days' },
+  { value: '7d',  label: '1 week' },
+  { value: '14d', label: '2 weeks' },
+  { value: '30d', label: '30 days' },
+];
+
+const EXPIRY_DAYS = { '1d': 1, '3d': 3, '7d': 7, '14d': 14, '30d': 30 };
+
+function calcEndDate(expiry) {
+  if (!expiry) return null;
+  const d = new Date();
+  d.setDate(d.getDate() + EXPIRY_DAYS[expiry]);
+  return Timestamp.fromDate(d);
+}
+
+function formatExpiry(banner) {
+  if (!banner.endDate) return null;
+  const date = banner.endDate.toDate();
+  const expired = date < new Date();
+  return { label: date.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }), expired };
+}
+
+const BLANK = { text: '', linkUrl: '', linkText: '', style: 'promo', expiry: '' };
 
 export default function Banners() {
   const [banners, setBanners] = useState([]);
@@ -44,10 +69,15 @@ export default function Banners() {
     if (!form.text.trim()) return;
     setSaving(true);
     try {
+      const endDate = calcEndDate(form.expiry);
       await addDoc(collection(db, 'banners'), {
-        ...form,
+        text: form.text,
+        linkUrl: form.linkUrl,
+        linkText: form.linkText,
+        style: form.style,
         active: true,
         createdAt: serverTimestamp(),
+        ...(endDate && { endDate }),
       });
       setForm(BLANK);
       notifications.show({ message: 'Banner created!', color: 'green' });
@@ -125,13 +155,22 @@ export default function Banners() {
                 styles={{ label: { fontFamily: '"Baloo 2", sans-serif', fontWeight: 600 } }}
               />
             </Group>
-            <Select
-              label="Style"
-              data={STYLE_OPTIONS}
-              value={form.style}
-              onChange={v => setForm(f => ({ ...f, style: v }))}
-              styles={{ label: { fontFamily: '"Baloo 2", sans-serif', fontWeight: 600 } }}
-            />
+            <Group grow>
+              <Select
+                label="Style"
+                data={STYLE_OPTIONS}
+                value={form.style}
+                onChange={v => setForm(f => ({ ...f, style: v }))}
+                styles={{ label: { fontFamily: '"Baloo 2", sans-serif', fontWeight: 600 } }}
+              />
+              <Select
+                label="Shelf life"
+                data={EXPIRY_OPTIONS}
+                value={form.expiry}
+                onChange={v => setForm(f => ({ ...f, expiry: v ?? '' }))}
+                styles={{ label: { fontFamily: '"Baloo 2", sans-serif', fontWeight: 600 } }}
+              />
+            </Group>
             {/* Preview */}
             {form.text && (
               <Box
@@ -206,6 +245,15 @@ export default function Banners() {
                         Link: {banner.linkText} → {banner.linkUrl}
                       </Text>
                     )}
+                    {(() => {
+                      const exp = formatExpiry(banner);
+                      if (!exp) return null;
+                      return (
+                        <Badge size="xs" color={exp.expired ? 'red' : 'gray'} variant="light" mt={2}>
+                          {exp.expired ? `Expired ${exp.label}` : `Expires ${exp.label}`}
+                        </Badge>
+                      );
+                    })()}
                   </Box>
                   <Group gap="sm">
                     <Switch
