@@ -15,6 +15,7 @@ import ParentsGuide from './pages/ParentsGuide';
 import AboutAuthor from './pages/AboutAuthor';
 import FrontierPost from './pages/FrontierPost';
 import AboutIllustrator from './pages/AboutIllustrator';
+import Privacy from './pages/Privacy';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminLayout from './pages/admin/AdminLayout';
 import PostsList from './pages/admin/PostsList';
@@ -38,6 +39,7 @@ function App() {
             <Route path="/author" element={<AboutAuthor />} />
             <Route path="/illustrator" element={<AboutIllustrator />} />
             <Route path="/frontier-post" element={<FrontierPost />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Route>
 
           {/* Admin — own layout, auth-gated */}

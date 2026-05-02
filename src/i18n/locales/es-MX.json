@@ -25,7 +25,21 @@
   },
   "parents": {
     "title": "Para Padres",
-    "comingSoon": "Información para padres sobre el libro, nivel de lectura y temas educativos — ¡próximamente!"
+    "ageRange": "De 6 a 11 años · Ideal para leer en voz alta",
+    "pitch": "Una aventura en el Viejo Oeste llena de acción, hecha para leer en voz alta — con historia real, fauna australiana auténtica y siete personajes que no se olvidan.",
+    "whyTitle": "Por Qué Les Encanta a los Papás",
+    "theme1Title": "Fauna Australiana Real",
+    "theme1Body": "Siete especies reales de zarigüeyas de Australia. Los chamaquitos aprenden a distinguir un Possum Mielero de una Gran Planeadora — y se quedan con ganas de saber más.",
+    "theme2Title": "Historia del Viejo Oeste",
+    "theme2Body": "El naufragio de 1873 en California, el viaje a través del país y la geografía real de la frontera, entretejidos de forma natural en cada capítulo.",
+    "theme3Title": "Trabajo en Equipo y Corazón",
+    "theme3Body": "La Pandilla discute, se contradice y se saca de quicio — y luego salva el día de todas formas. Un pretexto perfecto para hablar con los niños sobre resolver conflictos.",
+    "theme4Title": "Tres Idiomas",
+    "theme4Body": "Disponible en inglés, español mexicano y portugués brasileño. Una elección perfecta para familias multilingües y salones bilingües.",
+    "frontierTitle": "El Correo Fronterizo: Tu Guía de Lectura",
+    "frontierBody": "La aventura no termina en la última página. El Correo Fronterizo trae datos reales sobre zarigüeyas, despachos de historia del Viejo Oeste y actividades familiares — todo lo que necesitas para seguir la conversación mucho después de la hora del cuento.",
+    "frontierCta": "Visita el Correo Fronterizo",
+    "niloraNote": "Una nota de Nilora: Ya sé lo que están pensando — ¿por qué hacerle caso a una perrita para recomendar un libro? Pregunta válida. Pero como ex-cazadora de zarigüeyas con fama de ser muy meticulosa, hice mi tarea. Estos siete son los meros meros."
   },
   "author": {
     "title": "Sobre la Autora",
@@ -134,6 +148,9 @@
     "emailPlaceholder": "tu@correo.com",
     "submitButton": "Únete a la Pandilla",
     "successMessage": "¡Yeehaw! ¡Estás dentro, compañero! Pronto llegaremos a tu bandeja de entrada.",
+    "successTitle": "¡Eres parte de la Pandilla!",
+    "successSubtitle": "Te escribiremos con novedades y noticias.",
+    "loadingButton": "Uniéndose…",
     "errorMessage": "Hmm, eso no parece correcto — verifica tu correo e inténtalo de nuevo.",
     "exploreMore": "Explorar Más",
     "browseCharacters": "Conoce a los Personajes",

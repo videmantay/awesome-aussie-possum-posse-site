@@ -286,6 +286,10 @@ function Layout() {
           </Group>
           <Text size="xs" c="brown.4" style={{ fontFamily: 'var(--font-hand, "Patrick Hand", cursive)' }}>
             © {new Date().getFullYear()} The Awesome Aussie Possum Posse
+            {' · '}
+            <Link to="/privacy" style={{ color: 'var(--mantine-color-brown-4)', textDecoration: 'underline' }}>
+              Privacy Policy
+            </Link>
           </Text>
         </Group>
       </AppShell.Footer>

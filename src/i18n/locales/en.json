@@ -25,7 +25,21 @@
   },
   "parents": {
     "title": "For Parents",
-    "comingSoon": "Information for parents about the book, reading level, and educational themes — coming soon!"
+    "ageRange": "Ages 6-11 · Perfect for reading aloud",
+    "pitch": "A rollicking Wild West adventure built for reading aloud — packed with real history, real Australian wildlife, and seven unforgettable characters.",
+    "whyTitle": "Why Parents Love It",
+    "theme1Title": "Real Australian Wildlife",
+    "theme1Body": "Seven genuine possum species from Down Under. Kids walk away knowing a Honey Possum from a Greater Glider — and asking to learn more.",
+    "theme2Title": "Wild West History",
+    "theme2Body": "The 1873 California shipwreck, the cross-country journey east, and real frontier geography woven naturally into every chapter.",
+    "theme3Title": "Teamwork & Heart",
+    "theme3Body": "The Posse bickers, disagrees, and drives each other crazy — then saves the day anyway. A natural conversation-starter about working through conflict.",
+    "theme4Title": "Three Languages",
+    "theme4Body": "Available in English, Mexican Spanish, and Brazilian Portuguese. A perfect pick for multilingual families and bilingual classrooms.",
+    "frontierTitle": "The Frontier Post: Your Reading Companion",
+    "frontierBody": "The adventure doesn't stop at the last page. The Frontier Post delivers real possum facts, Wild West history dispatches, and family activities — everything you need to keep the conversation going long after story time.",
+    "frontierCta": "Visit the Frontier Post",
+    "niloraNote": "A note from Nilora: I know what you're thinking — why take a book recommendation from a dog? Fair question. But as a reformed possum-chaser with a reputation for thoroughness, I did my research. These seven are the real deal."
   },
   "author": {
     "title": "About the Author",
@@ -134,6 +148,9 @@
     "emailPlaceholder": "your@email.com",
     "submitButton": "Join the Posse",
     "successMessage": "Yeehaw! You're in, partner! We'll ride to your inbox soon.",
+    "successTitle": "You're in the Posse!",
+    "successSubtitle": "We'll be in touch with updates and news.",
+    "loadingButton": "Joining…",
     "errorMessage": "Hmm, that doesn't look right — check your email and try again.",
     "exploreMore": "Explore More",
     "browseCharacters": "Meet the Characters",

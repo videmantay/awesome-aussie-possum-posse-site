@@ -24,8 +24,22 @@
     "comingSoon": "Nosso elenco de incríveis gambás australianos está se preparando para se apresentar. Volte em breve!"
   },
   "parents": {
-    "title": "Para Pais",
-    "comingSoon": "Informações para pais sobre o livro, nível de leitura e temas educacionais — em breve!"
+    "title": "Para os Pais",
+    "ageRange": "De 6 a 11 anos · Perfeito para ler em voz alta",
+    "pitch": "Uma aventura animada no Velho Oeste feita para ler em voz alta — cheia de história real, fauna australiana de verdade e sete personagens inesquecíveis.",
+    "whyTitle": "Por Que os Pais Adoram",
+    "theme1Title": "Fauna Australiana de Verdade",
+    "theme1Body": "Sete espécies reais de gambás da Austrália. As crianças saem sabendo a diferença entre um Gambá do Mel e um Grande Planador — e com vontade de aprender mais.",
+    "theme2Title": "História do Velho Oeste",
+    "theme2Body": "O naufrágio de 1873 na Califórnia, a travessia do país rumo ao leste e a geografia real da fronteira, entrelaçados naturalmente em cada capítulo.",
+    "theme3Title": "Trabalho em Equipe e Coração",
+    "theme3Body": "A Gangue discute, discorda e fica louca uma com a outra — e mesmo assim salva o dia. Um ótimo ponto de partida para conversar com as crianças sobre resolver conflitos.",
+    "theme4Title": "Três Idiomas",
+    "theme4Body": "Disponível em inglês, espanhol mexicano e português brasileiro. Uma escolha perfeita para famílias multilíngues e salas de aula bilíngues.",
+    "frontierTitle": "O Correio da Fronteira: Seu Guia de Leitura",
+    "frontierBody": "A aventura não termina na última página. O Correio da Fronteira traz curiosidades reais sobre gambás, despachos de história do Velho Oeste e atividades em família — tudo o que você precisa para continuar a conversa muito depois da hora da história.",
+    "frontierCta": "Visite o Correio da Fronteira",
+    "niloraNote": "Um recado da Nilora: Sei o que vocês estão pensando — por que confiar na recomendação de uma cachorra? Pergunta justa. Mas como ex-caçadora de gambás com reputação de ser bem criteriosa, eu fiz minha pesquisa. Esses sete são o que há de melhor."
   },
   "author": {
     "title": "Sobre a Autora",
@@ -134,6 +148,9 @@
     "emailPlaceholder": "seu@email.com",
     "submitButton": "Entrar para a Gangue",
     "successMessage": "Yeehaw! Você está dentro, parceiro! Em breve chegamos à sua caixa de entrada.",
+    "successTitle": "Você está na Gangue!",
+    "successSubtitle": "Entraremos em contato com novidades e notícias.",
+    "loadingButton": "Entrando…",
     "errorMessage": "Hmm, isso não parece certo — verifique seu e-mail e tente novamente.",
     "exploreMore": "Explorar Mais",
     "browseCharacters": "Conheça os Personagens",

@@ -56,7 +56,7 @@ function NewsletterSignup() {
       });
       setStatus('success');
     } catch {
-      setErrorMsg('Something went wrong. Please try again.');
+      setErrorMsg(t('cta.errorMessage'));
       setStatus('error');
     }
   }
@@ -119,16 +119,17 @@ function NewsletterSignup() {
             }}
           >
             <p style={{ fontFamily: '"Bangers", cursive', fontSize: '1.8rem', color: '#fdf4eb', margin: 0, letterSpacing: '1px' }}>
-              You're in the Posse!
+              {t('cta.successTitle')}
             </p>
             <p style={{ fontFamily: '"Patrick Hand", cursive', color: '#fdf4eb', marginTop: '0.5rem' }}>
-              We'll be in touch with updates and news.
+              {t('cta.successSubtitle')}
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             <input
               type="text"
+              aria-label="Your name (optional)"
               placeholder="Your name (optional)"
               value={name}
               onChange={e => setName(e.target.value)}
@@ -136,6 +137,7 @@ function NewsletterSignup() {
             />
             <input
               type="email"
+              aria-label="Your email address"
               placeholder="Your email address"
               value={email}
               onChange={e => setEmail(e.target.value)}
@@ -168,7 +170,7 @@ function NewsletterSignup() {
               onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.06)')}
               onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
             >
-              {status === 'loading' ? 'Joining…' : t('kidscta.button')}
+              {status === 'loading' ? t('cta.loadingButton') : t('kidscta.button')}
             </button>
           </form>
         )}
