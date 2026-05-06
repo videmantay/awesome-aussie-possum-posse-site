@@ -3,8 +3,8 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import { gsap } from 'gsap';
-import coverImg from '../assets/imgs/shared/Bookcover.png?format=webp&width=1024&quality=75&as=url';
-import woodenSignImg from '../assets/imgs/threeBook/au2cal.png?format=webp&width=1024&quality=75&as=url';
+import coverImg from '../assets/imgs/shared/Bookcover.png';
+import woodenSignImg from '../assets/imgs/threeBook/au2cal.png';
 
 function DustParticles() {
   const ref = useRef();
@@ -61,7 +61,13 @@ function BookMesh() {
   const [coverTex, signTex] = useTexture(
     [coverImg, woodenSignImg],
     (textures) => {
-      textures.forEach(t => { t.colorSpace = THREE.SRGBColorSpace; });
+      textures.forEach(t => {
+        t.colorSpace = THREE.SRGBColorSpace;
+        // Anisotropic filtering keeps the texture sharp when viewed at an angle.
+        // 16 is the maximum most GPUs support; Three.js clamps to the device limit.
+        t.anisotropy = 16;
+        t.needsUpdate = true;
+      });
     }
   );
 

@@ -31,6 +31,7 @@ npm-debug.log*
 .firebase/
 .firebaserc
 firebase.json
+firebase.js
 package-lock.json
 skills-lock.json
 postcss.config.cjs

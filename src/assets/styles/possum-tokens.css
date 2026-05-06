@@ -1,0 +1,105 @@
+/* ============================================================
+   The Awesome Aussie Possum Posse — Design System Tokens
+   Drop-in for the Vite + Mantine site.
+   Import in main.jsx AFTER '@mantine/core/styles.css':
+     import './assets/styles/possum-tokens.css';
+   These vars sit alongside Mantine's --mantine-color-* tokens —
+   they don't clobber anything, they just give you brand-named
+   handles like var(--color-rust) and var(--font-display).
+   ============================================================ */
+
+:root {
+  /* ---------- Brown scale (mirrors theme.js brown[0..9]) ---------- */
+  --brown-0: #fdf4eb;  --brown-1: #f3e4d2;  --brown-2: #e8c6a1;
+  --brown-3: #dca56c;  --brown-4: #d38a42;  --brown-5: #c87828;
+  --brown-6: #c06e1e;  --brown-7: #a95c14;  --brown-8: #96510f;
+  --brown-9: #824404;
+
+  /* ---------- Brand semantic colors ---------- */
+  --color-parchment: var(--brown-0);
+  --color-sand:      var(--brown-1);
+  --color-saddle:    var(--brown-3);
+  --color-rust:      #c45a1a;
+  --color-ember:     var(--brown-5);
+  --color-mahogany:  var(--brown-9);
+  --color-ink:       #3a1e00;
+  --color-ink-2:     #5a3a1a;
+  --color-on-dark:   #fdf4eb;
+
+  /* Character accent palette (use on character cards / chips) */
+  --char-brennen: #c45a1a;
+  --char-gretel:  #4a8a5a;
+  --char-hana:    #8a4a9a;
+  --char-plaid:   #c8a010;
+  --char-pygmy:   #3a8a50;
+  --char-remmy:   #6a6a9a;
+  --char-willow:  #4a7a6a;
+
+  /* Sunset gradient stops (hero / page backgrounds) */
+  --sky-deep:  #4a1200;
+  --sky-rust:  #9a3800;
+  --sky-ember: #c45a1a;
+  --sky-glow:  #e8901a;
+  --sky-sand:  #f5c87a;
+
+  /* ---------- Type ---------- */
+  --font-display: 'Rye', 'Rio Grande', cursive;            /* H1/H2 — western signage */
+  --font-shout:   'Bangers', 'Rye', cursive;               /* CTAs, eyebrows, badges */
+  --font-fun:     'Bubblegum Sans', sans-serif;            /* nav links, friendly subtitles */
+  --font-hand:    'Patrick Hand', cursive;                 /* notes, captions, tagline */
+  --font-body:    'Baloo 2', system-ui, sans-serif;        /* body copy */
+
+  /* ---------- Shape & motion ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.25);
+  --shadow-cta:  0 4px 16px rgba(0,0,0,0.35);
+  --text-shadow-hero: 3px 3px 0 #6b2a0a, 0 0 40px rgba(200,110,30,0.55);
+
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---------- Borders ---------- */
+  --border-card:        3px solid var(--brown-3);
+  --border-card-strong: 3px solid var(--brown-5);
+  --border-frame:       4px solid var(--brown-9);
+  --border-dashed:      2px dashed var(--brown-3);
+}
+
+/* ============================================================
+   Utility classes — opt-in, won't conflict with Mantine
+   ============================================================ */
+.possum-eyebrow {
+  font-family: var(--font-shout);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--brown-6);
+  font-size: 0.85rem;
+}
+.possum-note {
+  font-family: var(--font-hand);
+  font-style: italic;
+  color: var(--brown-6);
+}
+.possum-display {
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+  color: var(--brown-8);
+}
+.possum-stamp {
+  font-family: var(--font-display);
+  color: var(--color-on-dark);
+  text-shadow: var(--text-shadow-hero);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Western-icon defaults: brand ink outline, currentColor fill */
+.possum-icon {
+  display: inline-block;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+}

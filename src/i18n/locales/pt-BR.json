@@ -6,7 +6,7 @@
     "forParents": "Para Pais",
     "theAuthor": "A Autora",
     "theIllustrator": "O Ilustrador",
-    "frontierPost": "O Correio da Fronteira"
+    "frontierPost": "As Notas da Nilora"
   },
   "home": {
     "title": "The Awesome Aussie Possum Posse",
@@ -24,8 +24,22 @@
     "comingSoon": "Nosso elenco de incríveis gambás australianos está se preparando para se apresentar. Volte em breve!"
   },
   "parents": {
-    "title": "Para Pais",
-    "comingSoon": "Informações para pais sobre o livro, nível de leitura e temas educacionais — em breve!"
+    "title": "Para os Pais",
+    "ageRange": "De 6 a 11 anos · Perfeito para ler em voz alta",
+    "pitch": "Uma aventura animada no Velho Oeste feita para ler em voz alta — cheia de história real, fauna australiana de verdade e sete personagens inesquecíveis.",
+    "whyTitle": "Por Que os Pais Adoram",
+    "theme1Title": "Fauna Australiana de Verdade",
+    "theme1Body": "Sete espécies reais de gambás da Austrália. As crianças saem sabendo a diferença entre um Gambá do Mel e um Grande Planador — e com vontade de aprender mais.",
+    "theme2Title": "História do Velho Oeste",
+    "theme2Body": "O naufrágio de 1873 na Califórnia, a travessia do país rumo ao leste e a geografia real da fronteira, entrelaçados naturalmente em cada capítulo.",
+    "theme3Title": "Trabalho em Equipe e Coração",
+    "theme3Body": "A Gangue discute, discorda e fica louca uma com a outra — e mesmo assim salva o dia. Um ótimo ponto de partida para conversar com as crianças sobre resolver conflitos.",
+    "theme4Title": "Três Idiomas",
+    "theme4Body": "Disponível em inglês, espanhol mexicano e português brasileiro. Uma escolha perfeita para famílias multilíngues e salas de aula bilíngues.",
+    "frontierTitle": "As Notas da Nilora: Seu Guia de Leitura",
+    "frontierBody": "A aventura não termina na última página. As Notas da Nilora traz curiosidades reais sobre gambás, história do Velho Oeste e atividades em família — tudo o que você precisa para continuar a conversa muito depois da hora da história.",
+    "frontierCta": "Visite As Notas da Nilora",
+    "niloraNote": "Um recado da Nilora: Sei o que vocês estão pensando — por que confiar na recomendação de uma cachorra? Pergunta justa. Mas como ex-caçadora de gambás com reputação de ser bem criteriosa, eu fiz minha pesquisa. Esses sete são o que há de melhor."
   },
   "author": {
     "title": "Sobre a Autora",
@@ -39,7 +53,7 @@
     "discovery3": "Eu cheguei perto para ver a foto em preto e branco borrada da cena. No come\u00e7o, achei que fosse um gato com uma cara bem engra\u00e7ada. Mas farejei a tela, olhei bem de perto e\u2026 que susto! Fiquei passada.",
     "discovery4": "Bem ali, no meio do deserto, estava um Possum-lemur-branco. Um raro <em>Hemibelideus lemuroides</em>, para ser cient\u00edfica. Eu fiquei chocada! O que um possum australiano estava fazendo no sudoeste dos Estados Unidos em pleno s\u00e9culo 19?",
     "legendTitle": "A Lenda",
-    "legend1": "Eu come\u00e7ei a cavar (e n\u00e3o estou falando do jardim). Descobri uma lenda esquecida: <strong>O Incr\u00edvel Esquadr\u00e3o de Possums Australianos</strong>.",
+    "legend1": "Eu come\u00e7ei a cavar (e n\u00e3o estou falando do jardim). Descobri uma lenda esquecida: <strong> The Awesome Aussie Possum Posse </strong> ( o seja, O Incr\u00edvel Esquadr\u00e3o de Possums Australianos).",
     "legend2": "Acontece que um pequeno grupo de possums australianos salvou o Velho Oeste! Eles protegeram a fronteira de uma gangue de malfeitores gananciosos que queriam dominar tudo. A hist\u00f3ria deles \u00e9 t\u00e3o corajosa \u2014 t\u00e3o inspiradora \u2014 que eu n\u00e3o conseguia acreditar que ningu\u00e9m nunca tinha ouvido falar deles.",
     "legend3": "\u00c9 uma injusti\u00e7a hist\u00f3rica! E, como uma cadela de muita honra, pretendo consertar isso. Estou escrevendo um tributo glorioso a esses marsupiais maravilhosos. Chegou a hora de o mundo saber a verdade sobre esses her\u00f3is que vieram l\u00e1 do outro lado do oceano.",
     "photoCaption": "Querida com Papai",
@@ -48,12 +62,18 @@
   },
   "illustrator": {
     "title": "Sobre o Ilustrador",
-    "comingSoon": "Em breve — conheça o artista por trás dos incríveis gambás australianos!"
+    "para1": "Arthur Nascimento, conhecido como Tucco Nascimento, é um ilustrador brasileiro com uma paixão pela arte que começou na infância. Nascido em São Paulo, ele começou a desenhar desde muito pequeno e, desde então, desenvolveu suas habilidades em uma carreira dedicada a dar vida a histórias por meio da narrativa visual. Seu trabalho é reconhecido pela capacidade de transformar ideias em cenas envolventes e emocionantes, criando uma conexão profunda com os leitores.",
+    "para2": "Seu estilo artístico é versátil, com forte foco em ilustração infantil e design de personagens. Tucco se inspira na própria narrativa, buscando transmitir emoção, movimento e personalidade em cada peça, sempre com um toque expressivo e cativante. Como ilustrador freelancer, ele trabalhou em projetos de livros, ilustrações editoriais e criações pessoais, demonstrando sua capacidade de adaptar seu estilo a diferentes histórias e públicos.",
+    "para3": "Neste projeto em particular, Tucco sentiu uma forte conexão desde o início. O humor, a ação e o ritmo dinâmico da história se alinham perfeitamente com o tipo de ilustrações que ele mais gosta de criar. Cada cena foi cuidadosamente elaborada para realçar o ritmo da narrativa, destacando expressões, movimento e momentos-chave que tornam a experiência mais imersiva. Seu objetivo não era apenas ilustrar a história, mas expandi-la, ajudando o leitor a se sentir mais próximo dos personagens e totalmente envolvido na aventura.",
+    "para4": "Movido pela curiosidade e pela imaginação, Tucco está constantemente explorando novas ideias e formas de crescer como artista. Sua dedicação e atenção aos detalhes garantem que cada projeto tenha uma identidade única, cheia de personalidade e paixão.",
+    "linksTitle": "Você pode explorar mais do seu trabalho e entrar em contato pelos links abaixo:",
+    "quote": "Tenho certeza de que você não vai se arrepender de embarcar nessa aventura, e espero que minhas ilustrações te levem em uma jornada, estimulando sua imaginação e dando vida a essa história de forma ainda mais vívida.",
+    "quoteAttribution": "— Tucco Nascimento"
   },
   "frontier": {
-    "title": "O Correio da Fronteira",
-    "subtitle": "Notícias, despachos e contos da trilha",
-    "comingSoon": "As prensas estão esquentando! Volte em breve para os últimos despachos da gangue."
+    "title": "As Notas da Nilora",
+    "subtitle": "Reflexões, fatos e histórias de uma cachorra muito criteriosa",
+    "comingSoon": "Nilora está ocupada no teclado! Volte em breve para as últimas notas da gangue."
   },
   "languageSwitcher": {
     "label": "Idioma"
@@ -71,7 +91,7 @@
     "gretel": {
       "name": "Gretel",
       "species": "Grande Planadora",
-      "blurb": "Não confunda Gretel com uma donzela em apuros — essa linda planadora é inteligente o suficiente para resolver qualquer problema na hora. Com membranas que a fazem voar igual a uma pipa, ela desce do céu e salva o dia com toda a elegância.",
+      "blurb": "Não confunda Gretel com uma donzela em apuros — essa planadora resolve qualquer problema antes que piore. Com membranas que a fazem voar igual a uma pipa, ela desce do céu e salva o dia com elegância.",
       "skill": "Mestre do Planeio"
     },
     "hana": {
@@ -83,7 +103,7 @@
     "plaid": {
       "name": "Plaid",
       "species": "Gambá Listrado",
-      "blurb": "Plaid não é muito de conversa e definitivamente não ganha prêmios de moda, mas quando você está numa fria, ele é exatamente quem você quer por perto. Os animais selvagens mais ferozes o seguem para onde quer que ele vá.",
+      "blurb": "Plaid não é muito de conversa e não ganha prêmios de moda. Mas quando você está numa fria, é exatamente quem você quer por perto — os animais selvagens o seguem para onde quer que vá.",
       "skill": "Encantador de Feras"
     },
     "pygmy": {
@@ -107,7 +127,11 @@
   },
   "teaser": {
     "heading": "Dê uma Espiada...",
-    "subheading": "Uma aventura no Velho Oeste como nenhuma outra espera lá dentro"
+    "subheading": "Uma aventura no Velho Oeste como nenhuma outra espera lá dentro",
+    "backcover": "Fique de olho na Amazon e nas suas lojas favoritas.",
+    "comingSoon": "Em breve...",
+    "prevPage": "Página anterior",
+    "nextPage": "Próxima página"
   },
   "kidscta": {
     "heading": "Quer Entrar na Turma?",
@@ -119,11 +143,14 @@
     "subheading": "Seja o primeiro a saber quando o livro lançar — receba atualizações, prévias e despachos da Turma direto na sua caixa de entrada."
   },
   "cta": {
-    "heading": "Junte-se ao Correio da Fronteira!",
+    "heading": "Leia As Notas da Nilora!",
     "subheading": "Seja o primeiro a saber quando a aventura começa. Despachos da Gangue direto para sua caixa de entrada.",
     "emailPlaceholder": "seu@email.com",
     "submitButton": "Entrar para a Gangue",
     "successMessage": "Yeehaw! Você está dentro, parceiro! Em breve chegamos à sua caixa de entrada.",
+    "successTitle": "Você está na Gangue!",
+    "successSubtitle": "Entraremos em contato com novidades e notícias.",
+    "loadingButton": "Entrando…",
     "errorMessage": "Hmm, isso não parece certo — verifique seu e-mail e tente novamente.",
     "exploreMore": "Explorar Mais",
     "browseCharacters": "Conheça os Personagens",

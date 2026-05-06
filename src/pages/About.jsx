@@ -1,42 +1,65 @@
-import { Title, Text, Stack, Paper, Box } from '@mantine/core';
-import { useTranslation } from 'react-i18next';
+import { Suspense, lazy } from 'react';
+import { Link } from 'react-router';
+import PageLoader from '../design-system/PageLoader';
 
-function About() {
-  const { t } = useTranslation();
+const PageFlipTeaser = lazy(() => import('../components/PageFlipTeaser'));
 
+function PageNav() {
   return (
-    <Box maw={800} mx="auto" py="xl">
-      <Paper
-        className="page-card"
-        shadow="xl"
-        radius="xl"
-        p="xl"
+    <div
+      style={{
+        background: '#2a1500',
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '1rem',
+        flexWrap: 'wrap',
+        padding: '1.5rem 2rem',
+      }}
+    >
+      <Link
+        to="/characters"
         style={{
-          backgroundColor: 'rgba(253, 244, 235, 0.95)',
-          border: '3px solid var(--mantine-color-brown-3)',
+          background: '#c45a1a',
+          color: '#fdf4eb',
+          padding: '0.75rem 2rem',
+          borderRadius: '30px',
+          fontFamily: '"Bangers", cursive',
+          fontSize: '1.2rem',
+          letterSpacing: '1.5px',
+          textDecoration: 'none',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.35)',
         }}
       >
-        <Stack gap="md">
-          <Title
-            order={1}
-            ta="center"
-            style={{
-              color: 'var(--mantine-color-brown-8)',
-              fontFamily: '"Rye", cursive',
-            }}
-          >
-            {t('about.title')}
-          </Title>
-          <Text
-            size="lg"
-            ta="center"
-            style={{ fontFamily: '"Bubblegum Sans", sans-serif' }}
-          >
-            {t('about.comingSoon')}
-          </Text>
-        </Stack>
-      </Paper>
-    </Box>
+        Meet the Characters →
+      </Link>
+      <Link
+        to="/parents"
+        style={{
+          background: 'transparent',
+          color: '#f5c87a',
+          padding: '0.75rem 2rem',
+          borderRadius: '30px',
+          border: '2px solid #f5c87a',
+          fontFamily: '"Bangers", cursive',
+          fontSize: '1.2rem',
+          letterSpacing: '1.5px',
+          textDecoration: 'none',
+        }}
+      >
+        For Parents →
+      </Link>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div>
+      <Suspense fallback={<PageLoader />}>
+        <PageFlipTeaser />
+      </Suspense>
+      <PageNav />
+    </div>
   );
 }
 

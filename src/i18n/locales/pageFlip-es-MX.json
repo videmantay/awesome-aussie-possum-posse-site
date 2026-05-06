@@ -1,39 +1,80 @@
 {
-  "leftPages": [
+  "pages": [
     {
-      "title": "Brennen Bingham",
-      "subtitle": "Zarigüeya Común de Cola Peluda",
-      "body": "Tranquilo bajo presión, primero en ayudar y último en rendirse. Brennen tiene una misión: reunir a los suyos y volver a Australia — y nada en el Viejo Oeste lo va a detener."
+      "heading": "El Naufragio del 1873 y Brennen",
+      "paragraphs": [
+        "Acérquense a la fogata, chamaquitos, que les voy a contar una historia del Viejo Oeste que no van a encontrar en ningún libro de historia. Ya oyeron hablar de Wyatt Earp y de Buffalo Bill, pero ¿han oído hablar de la Pandilla Marsupial Australiana?",
+        "Allá por 1873, un barco lleno de animales exóticos de Australia iba rumbo a un zoológico recién inaugurado en Filadelfia. Pero una tormenta endemoniada azotó el Pacífico, ¡y ese barco se hizo añicos contra las rocas de la costa de California!",
+        "Entre las olas bravas, un zarigüeyo joven y peludo llamado Brennen abrió su jaula de un empujón justo cuando el océano se tragaba el barco. Rodó por los rápidos y despertó tosiendo en una playa de arena.",
+        "Pero no estaba solo, ni de chiste. La orilla estaba llena de cajas y animales desesperados que trataban de zafarse de los cazadores furtivos que querían encerrarlos de nuevo. ¡Era un asunto de vida o muerte, y la aventura apenas empezaba!"
+      ]
     },
     {
-      "title": "Gretel",
-      "subtitle": "Gran Planeadora",
-      "body": "Resolvió el Principio de Bernoulli antes del desayuno y puede planear más lejos de lo que puedes gritar '¡Cuidado!' No la confundas con una doncella — ella es quien hace el rescate."
+      "heading": "La Gran Escapada de Pygmy",
+      "paragraphs": [
+        "Brennen era un tipo valiente, pero andaba bien desanimado hasta que escuchó una voz amortiguada que llamaba desde la arena. ¡Encontró una manita saliendo de la tierra como si brotara del mero suelo y jaló con todas sus fuerzas!",
+        "Después de escarbar la arena y abrir el cerrojo del cajón, esperaba que le dieran las gracias a gritos. En lugar de eso, un tipejo regordete y tranquilo salió caminando despacito. Agarró una etiqueta de envío, leyó: «Ah, según esto me llamo Pygmy, Pygmy Possum» y la tiró como si fuera basura.",
+        "Brennen extendió la mano, pero Pygmy tenía otras ideas. ¡Rápido como un coyote, Pygmy enrolló una cola del tamaño de un sarape alrededor del brazo de Brennen y lo lanzó a volar por toda la playa! Brennen cayó de cabeza en la arena, con la cabeza como campana, dándose cuenta de que acababa de conocer a un compañero muy peculiar —y muy forzudo."
+      ]
     },
     {
-      "title": "Hanna",
-      "subtitle": "Possum Melero",
-      "body": "Cabe en la palma de tu mano, pero tiene más cerebro que un rancho lleno de bandidos. Dale unas piezas sueltas y construirá algo que salve a todo el pueblo."
+      "heading": "Gretel y el Matón",
+      "paragraphs": [
+        "Mientras Brennen todavía se sacudía la arena del pelo, vio a una «deslumbrante damisela» en apuros. Decidió ser el héroe y le mordió el tobillo a un cazador furtivo para liberarla.",
+        "Pos el cazador no quedó muy contento y agarró a Brennen con un puño que apretaba como una prensa. ¡Brennen pensó que la estaba rescatando, pero esta señorita no necesitaba a ningún galán de película del Oeste!",
+        "Ella lo miró, frunció el hocico y se burló: «¿Tú me vas a rescatar?» ¡Y luego fue ella misma quien le mordió la mano al captor! Cuando cayó, extendió los brazos y dejó ver unas membranas planeadoras bien esbeltas.",
+        "«¡Ándale, eres una planeadora!», gritó Brennen mientras ella agarraba el viento. Ella se presentó como Gretel la Gran Planeadora y se alejó volando, dejando al pobre Brennen frente a un matón muy enojado y muy rezongón."
+      ]
     },
     {
-      "title": "Plaid",
-      "subtitle": "Zarigüeya Rayada",
-      "body": "No dice mucho. No necesita hacerlo. Los animales salvajes del doble de su tamaño lo siguen como si fuera su jefe — y puede que lo sea."
+      "heading": "El Rescate Chistoso de Remy",
+      "paragraphs": [
+        "Ora sí, Brennen estaba en un aprieto bien gacho, mirando de frente la jeta espantosa de ese cazador. Estaba a punto de que le llegara su hora cuando, de la nada, ¡apareció otro zarigüeyo!",
+        "Este nuevo cuate cayó perfecto encima del matón... bueno, digamos que le cayó justo donde más duele.",
+        "El cazador pegó un alarido y se desplomó en el suelo, dejando a Brennen escaparse.",
+        "El recién llegado era un zarigüeyo de cola anillada con ojos saltones llamado Remy Rodrick, ¡y se estaba partiendo de la risa! Le dijo a Brennen que nunca había visto al matón, pero que sí vio que le estaba dando una vida del diablo.",
+        "Brennen trató de actuar como si fuera muy calmado, sacudiéndose el polvo y fingiendo que todo estaba bajo control, pero en el fondo sabía que le debía una bien grande a Remy.",
+        "Los dos se dieron la mano, tranquilos por un momento — aunque fuera breve."
+      ]
     },
     {
-      "title": "Pygmy",
-      "subtitle": "Zarigüeya Pigmea Oriental",
-      "body": "El alma más tierna de la pandilla — hasta que te pones del lado equivocado. Esa cola puede lazar un búfalo y golpea con la fuerza de un rinoceronte en carrera."
+      "heading": "La Bienvenida a Cañonazos de Willow",
+      "paragraphs": [
+        "No tuvieron mucho tiempo pa' celebrar. Una zarigüeya blanca y salvaje llegó disparada, más caliente que un jalapeño en salsa picante.",
+        "Era Willow Willamena, y estaba que echaba lumbre. Le dijo a Brennen que era un «fanfarrón sin sesos» porque había estado gritando contraórdenes mientras ella trataba de salvar a los animales.",
+        "¡Estaba tan encabronada que levantó los puños, lista para un duelo a madrazos allí mismo en la arena!",
+        "Brennen le contestó gritando, llamándola imbécil por querer llevarlos a todos a una trampa en un hueco de árbol.",
+        "Parecía que iban a liarse a golpes hasta que Remy intervino. Agarró el puño de Willow y se puso a sacudirlo como si fueran viejos cuates, presentándose con una sonrisa.",
+        "Detrás de Willow estaba una dulce possum mielera llamada Hanna Holly, que nomás asentía con la cabeza. ¡Vaya bola de héroes tan espinosos!"
+      ]
     },
     {
-      "title": "Remmy",
-      "subtitle": "Zarigüeya de Cola Anillada",
-      "body": "Siempre riendo, siempre divirtiéndose. Los villanos siempre cometen el error de subestimarlo — hasta que caen bajo 'El Whammy' y hacen todo lo que Remmy dice."
+      "heading": "El Té del Desierto de Hanna",
+      "paragraphs": [
+        "El grupo se internó en el desierto del sur de California para escapar de los cazadores, pero ese sol quemaba más que un comal al rojo vivo.",
+        "Gretel y Pygmy se desmayaron del calor. Willow estaba segura de que estaban perdidos porque no había ni gota de agua a la vista. ¡Pero la pequeña Hanna Holly nomás sonrió! Con un poco de ingenio, se puso a trabajar en un maguey, moviéndose tan rápido que parecía estar en todas partes al mismo tiempo.",
+        "¡En segundos, había hecho sillas, una palapa y tazas chiquitas llenas de un líquido espeso y blanco! Los demás se quedaron con la boca abierta mientras se sentaban en sillas de maguey y tomaban el «Té del Desierto de Hanna».",
+        "¡Remy hasta dijo que estaba mejor que las pimientas de Tasmania! Ya estaban bien relajados cuando el suelo empezó a temblar como panza de gigante con hambre."
+      ]
     },
     {
-      "title": "Willow Willemina",
-      "subtitle": "Zarigüeya Blanca de Cola Anillada",
-      "body": "Ardiente, valiente y siempre la primera en la batalla. No hay villano demasiado duro ni pelea demasiado grande. ¿Rufianes dándote problemas? Llama a Willow."
+      "heading": "La Estampida: Plaid y sus Corceles",
+      "paragraphs": [
+        "¡Una estampida de borregos cimarrones venía directo hacia ellos! Willow y Brennen volvieron a gritar órdenes diferentes — uno dijo «¡córranle!» y el otro dijo «¡escóndanse!»",
+        "Los demás zarigüeyos se confundieron tanto que acabaron hechos un nudo, ¡con la cola de Pygmy enrollada en todos! Pero los borregos pararon a un pelo de zorillo de distancia.",
+        "Encima del borrego más grandote iba un zarigüeyo rayado y misterioso. Se bajó de un brinco y se puso a chupar el té de Hanna sin decir palabra.",
+        "Cuando Willow le preguntó su nombre, nomás gruñó: «Plaid.» Era hombre de pocas palabras — básicamente solo «sí» y «no».",
+        "¡Había estado montando esos borregos como si fueran caballos de rancho! Pygmy sugirió que todos usaran los borregos para entrar al pueblo, y aunque Willow trató de hacerlo pasar como idea suya, el plan quedó."
+      ]
+    },
+    {
+      "heading": "Arranque Accidentado de una Gran Aventura",
+      "paragraphs": [
+        "La Pandilla por fin se ponía en marcha, pero no todos nacieron pa' jinetes.",
+        "Brennen y Willow iban a la cabeza en sus carneros grandotes, disparados hacia un pueblo llamado Hang Town. Remy, Gretel y Plaid iban justo atrás. ¡Pero el pobre Pygmy tuvo que lazarse a una liebre y apenas aguantaba mientras ésta brincaba sin parar! ¿Y Hanna? Construyó una diligencia entera de matojos y hojas de maguey, jalada por dos ratones canguro llamados Ranga y Koo.",
+        "La pandilla iba rumbo al este a rescatar a sus cuates del zoológico. ¿Podrán estos siete héroes de lo más disparatados dejar de pelearse lo suficiente para sobrevivir el Viejo Oeste? ¿Cruzarán todo Estados Unidos para rescatar a sus amigos del Zoológico de Filadelfia? ¿Lograrán volver a Australia?",
+        "¡Ojalá que sí!"
+      ]
     }
   ]
 }

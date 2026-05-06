@@ -6,7 +6,7 @@
     "forParents": "Para Padres",
     "theAuthor": "La Autora",
     "theIllustrator": "El Ilustrador",
-    "frontierPost": "El Correo Fronterizo"
+    "frontierPost": "Las Notas de Nilora"
   },
   "home": {
     "title": "The Awesome Aussie Possum Posse",
@@ -25,7 +25,21 @@
   },
   "parents": {
     "title": "Para Padres",
-    "comingSoon": "Información para padres sobre el libro, nivel de lectura y temas educativos — ¡próximamente!"
+    "ageRange": "De 6 a 11 años · Ideal para leer en voz alta",
+    "pitch": "Una aventura en el Viejo Oeste llena de acción, hecha para leer en voz alta — con historia real, fauna australiana auténtica y siete personajes que no se olvidan.",
+    "whyTitle": "Por Qué Les Encanta a los Papás",
+    "theme1Title": "Fauna Australiana Real",
+    "theme1Body": "Siete especies reales de zarigüeyas de Australia. Los chamaquitos aprenden a distinguir un Possum Mielero de una Gran Planeadora — y se quedan con ganas de saber más.",
+    "theme2Title": "Historia del Viejo Oeste",
+    "theme2Body": "El naufragio de 1873 en California, el viaje a través del país y la geografía real de la frontera, entretejidos de forma natural en cada capítulo.",
+    "theme3Title": "Trabajo en Equipo y Corazón",
+    "theme3Body": "La Pandilla discute, se contradice y se saca de quicio — y luego salva el día de todas formas. Un pretexto perfecto para hablar con los niños sobre resolver conflictos.",
+    "theme4Title": "Tres Idiomas",
+    "theme4Body": "Disponible en inglés, español mexicano y portugués brasileño. Una elección perfecta para familias multilingües y salones bilingües.",
+    "frontierTitle": "Las Notas de Nilora: Tu Guía de Lectura",
+    "frontierBody": "La aventura no termina en la última página. Las Notas de Nilora trae datos reales sobre zarigüeyas, historia del Viejo Oeste y actividades familiares — todo lo que necesitas para seguir la conversación mucho después de la hora del cuento.",
+    "frontierCta": "Visita Las Notas de Nilora",
+    "niloraNote": "Una nota de Nilora: Ya sé lo que están pensando — ¿por qué hacerle caso a una perrita para recomendar un libro? Pregunta válida. Pero como ex-cazadora de zarigüeyas con fama de ser muy meticulosa, hice mi tarea. Estos siete son los meros meros."
   },
   "author": {
     "title": "Sobre la Autora",
@@ -39,7 +53,7 @@
     "discovery3": "Me acerc\u00e9 a ver la foto borrosa en blanco y negro de la escena. Al principio, pens\u00e9 que era un gato muy raro. Pero olfate\u00e9 la pantalla, mir\u00e9 bien y \u00a1pum! Me qued\u00e9 de a seis.",
     "discovery4": "Ah\u00ed mismo, en medio del desierto, hab\u00eda un P\u00f3sum Lemur Blanco. Un raro <em>Hemibelideus lemuroides</em>, para ser cient\u00edficos. \u00a1Estaba estupefacta! \u00bfQu\u00e9 hac\u00eda un p\u00f3sum australiano en el suroeste de Estados Unidos en el siglo XIX?",
     "legendTitle": "La Leyenda",
-    "legend1": "Me puse a escarbar (y no me refiero al jard\u00edn). Descubr\u00ed una leyenda oculta: <strong>La Incre\u00edble Patrulla de P\u00f3sums Australianos</strong>.",
+    "legend1": "Me puse a escarbar (y no me refiero al jard\u00edn). Descubr\u00ed una leyenda oculta: <strong>The Awesome Aussie Possum Posse </strong> ( o sea, La Incre\u00edble Patrulla de P\u00f3sums Australianos).",
     "legend2": "Resulta que un peque\u00f1o grupo de p\u00f3sums australianos \u00a1salv\u00f3 al Viejo Oeste! Protegieron la frontera de una banda de maleantes codiciosos que quer\u00edan apoderarse de todo. Su historia es tan valiente e inspiradora que no pod\u00eda creer que nadie la recordara.",
     "legend3": "\u00a1Es una tragedia hist\u00f3rica! Y como perrita de honor que soy, pienso arreglarlo. Estoy escribiendo un glorioso tributo a estos maravillosos marsupiales. Ya es hora de que el mundo sepa la verdad sobre estos h\u00e9roes del otro lado del mundo.",
     "photoCaption": "Coraz\u00f3n con Papi",
@@ -48,12 +62,18 @@
   },
   "illustrator": {
     "title": "Sobre el Ilustrador",
-    "comingSoon": "Próximamente — ¡conoce al artista detrás de las increíbles zarigüeyas australianas!"
+    "para1": "Arthur Nascimento, conocido como Tucco Nascimento, es un ilustrador brasileño con una pasión por el arte que comenzó en la infancia. Nacido en São Paulo, empezó a dibujar desde muy pequeño y ha desarrollado sus habilidades en una carrera dedicada a dar vida a las historias a través de la narrativa visual. Su trabajo es reconocido por su capacidad de transformar ideas en escenas atractivas y emotivas, creando una conexión profunda con los lectores.",
+    "para2": "Su estilo artístico es versátil, con un fuerte enfoque en la ilustración infantil y el diseño de personajes. Tucco se inspira en la narrativa misma, con el objetivo de transmitir emoción, movimiento y personalidad en cada pieza, siempre con un toque expresivo y cautivador. Como ilustrador independiente, ha trabajado en proyectos de libros, ilustraciones editoriales y creaciones personales, demostrando su capacidad de adaptar su estilo a diferentes historias y audiencias.",
+    "para3": "En este proyecto en particular, Tucco sintió una fuerte conexión desde el principio. El humor, la acción y el ritmo dinámico de la historia se alinean perfectamente con el tipo de ilustraciones que más disfruta crear. Cada escena fue elaborada cuidadosamente para realzar el ritmo de la narrativa, destacando expresiones, movimiento y momentos clave que hacen la experiencia más envolvente. Su objetivo no era solo ilustrar la historia, sino expandirla, ayudando al lector a sentirse más cerca de los personajes y completamente inmerso en la aventura.",
+    "para4": "Impulsado por la curiosidad y la imaginación, Tucco explora constantemente nuevas ideas y formas de crecer como artista. Su dedicación y atención al detalle garantizan que cada proyecto tenga una identidad única, llena de personalidad y pasión.",
+    "linksTitle": "Puedes explorar más de su trabajo y ponerte en contacto a través de los siguientes enlaces:",
+    "quote": "Estoy seguro de que no te arrepentirás de embarcarte en esta aventura, y espero que mis ilustraciones te lleven en un viaje, estimulando tu imaginación y dando vida a esta historia de manera aún más vívida.",
+    "quoteAttribution": "— Tucco Nascimento"
   },
   "frontier": {
-    "title": "El Correo Fronterizo",
-    "subtitle": "Noticias, despachos y cuentos del camino",
-    "comingSoon": "¡Las prensas se están calentando! Vuelve pronto para los últimos despachos de la pandilla."
+    "title": "Las Notas de Nilora",
+    "subtitle": "Reflexiones, datos y cuentos de una perra muy exigente",
+    "comingSoon": "¡Nilora está ocupada en el teclado! Vuelve pronto para las últimas notas de la pandilla."
   },
   "languageSwitcher": {
     "label": "Idioma"
@@ -71,7 +91,7 @@
     "gretel": {
       "name": "Gretel",
       "species": "Gran Planeadora",
-      "blurb": "No confundas a Gretel con una doncella en apuros — esta hermosa planeadora es inteligente para resolver cualquier problema antes de que empeore. Con sus membranas que la hacen volar como un papalote, desciende desde las alturas y salva el día con todo el estilo.",
+      "blurb": "No confundas a Gretel con una doncella en apuros — esta planeadora resuelve cualquier problema antes de que empeore. Sus membranas la hacen volar como un papalote y salva el día con todo el estilo.",
       "skill": "Maestra del Planeo"
     },
     "hana": {
@@ -83,7 +103,7 @@
     "plaid": {
       "name": "Plaid",
       "species": "Zarigüeya Rayada",
-      "blurb": "Plaid no es de los que hablan mucho y tampoco gana premios de moda, pero cuando estás en apuros, es el que quieres de tu lado. Los animales salvajes más grandes le obedecen sin pensarlo, y a donde va Plaid, ellos van también.",
+      "blurb": "Plaid no es de los que hablan mucho y tampoco gana premios de moda. Pero cuando estás en apuros, es el que quieres de tu lado — a donde va Plaid, los animales salvajes van también.",
       "skill": "Domador de Bestias"
     },
     "pygmy": {
@@ -107,7 +127,11 @@
   },
   "teaser": {
     "heading": "Un Vistazo...",
-    "subheading": "Una aventura en el Viejo Oeste como ninguna otra te espera adentro"
+    "subheading": "Una aventura en el Viejo Oeste como ninguna otra te espera adentro",
+    "backcover": "Mantente al tanto de Amazon y de tus tiendas favoritas.",
+    "comingSoon": "Próximamente...",
+    "prevPage": "Página anterior",
+    "nextPage": "Página siguiente"
   },
   "kidscta": {
     "heading": "¿Quieres Unirte a la Pandilla?",
@@ -119,11 +143,14 @@
     "subheading": "Sé el primero en saber cuando el libro salga — recibe actualizaciones, adelantos y despachos de la Pandilla directo a tu correo."
   },
   "cta": {
-    "heading": "¡Únete al Correo Fronterizo!",
+    "heading": "¡Lee Las Notas de Nilora!",
     "subheading": "Sé el primero en saber cuándo comienza la aventura. Despachos de la Pandilla, directo a tu correo.",
     "emailPlaceholder": "tu@correo.com",
     "submitButton": "Únete a la Pandilla",
     "successMessage": "¡Yeehaw! ¡Estás dentro, compañero! Pronto llegaremos a tu bandeja de entrada.",
+    "successTitle": "¡Eres parte de la Pandilla!",
+    "successSubtitle": "Te escribiremos con novedades y noticias.",
+    "loadingButton": "Uniéndose…",
     "errorMessage": "Hmm, eso no parece correcto — verifica tu correo e inténtalo de nuevo.",
     "exploreMore": "Explorar Más",
     "browseCharacters": "Conoce a los Personajes",
