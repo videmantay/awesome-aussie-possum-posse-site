@@ -38,7 +38,7 @@ function App() {
             <Route path="/parents" element={<ParentsGuide />} />
             <Route path="/author" element={<AboutAuthor />} />
             <Route path="/illustrator" element={<AboutIllustrator />} />
-            <Route path="/frontier-post" element={<FrontierPost />} />
+            <Route path="/niloras-notes" element={<FrontierPost />} />
             <Route path="/privacy" element={<Privacy />} />
           </Route>
 

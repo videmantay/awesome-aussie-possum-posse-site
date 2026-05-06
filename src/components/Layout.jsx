@@ -35,7 +35,7 @@ const navLinks = [
   { to: '/parents',       labelKey: 'nav.forParents',     icon: 'family' },
   { to: '/author',        labelKey: 'nav.theAuthor',      icon: 'quill' },
   { to: '/illustrator',   labelKey: 'nav.theIllustrator', icon: 'palette' },
-  { to: '/frontier-post', labelKey: 'nav.frontierPost',   icon: 'mailbox' },
+  { to: '/niloras-notes', labelKey: 'nav.frontierPost',   icon: 'mailbox' },
 ];
 
 function Layout() {

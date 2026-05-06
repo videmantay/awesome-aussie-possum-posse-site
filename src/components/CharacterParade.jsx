@@ -371,7 +371,7 @@ function CharacterParade() {
                 Want to know more?
               </p>
               <Link
-                to="/frontier-post"
+                to="/niloras-notes"
                 style={{
                   background: '#fdf4eb',
                   color: '#a95c14',

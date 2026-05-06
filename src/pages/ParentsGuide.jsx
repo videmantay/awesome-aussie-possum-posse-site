@@ -194,7 +194,7 @@ function ParentsGuide() {
                 {t('parents.frontierBody')}
               </Text>
               <Link
-                to="/frontier-post"
+                to="/niloras-notes"
                 style={{
                   background: '#c45a1a',
                   color: '#fdf4eb',
@@ -381,7 +381,7 @@ function ParentsGuide() {
           Meet the Characters →
         </Link>
         <Link
-          to="/frontier-post"
+          to="/niloras-notes"
           style={{
             background: 'transparent',
             color: '#f5c87a',
