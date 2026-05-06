@@ -34,6 +34,14 @@ body {
   transform: scale(1.05);
 }
 
+/* Hide hero text on small screens so the 3D book is unobstructed */
+@media (max-width: 768px) {
+  .hero-heading,
+  .hero-intro {
+    display: none;
+  }
+}
+
 /* Page card entrance */
 .page-card {
   border-radius: 20px;

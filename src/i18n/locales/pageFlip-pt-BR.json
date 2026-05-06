@@ -1,39 +1,80 @@
 {
-  "leftPages": [
+  "pages": [
     {
-      "title": "Brennen Bingham",
-      "subtitle": "Gambá Comum de Cauda Peluda",
-      "body": "Calmo sob pressão, o primeiro a ajudar e o último a desistir. Brennen tem uma missão: reunir os amigos e voltar para a Austrália — e nada no Velho Oeste vai impedi-lo."
+      "heading": "O Naufrágio de 1873 e Brennen",
+      "paragraphs": [
+        "Cheguem perto da fogueira, galerinha, que vou contar uma história do Velho Oeste que vocês não vão achar em livro nenhum. Todo mundo conhece Wyatt Earp e Buffalo Bill, mas já ouviram falar da Gangue dos Gambás Australianos?",
+        "Lá por 1873, um navio cheio de animais exóticos da Austrália estava a caminho de um zoológico novinho em folha na Filadélfia. Mas uma tempestade danada veio com tudo no Pacífico, e esse navio foi parar nas pedras da costa da Califórnia!",
+        "No meio das ondas furiosas, um gambá jovem de cauda peluda chamado Brennen arrombou a porta da gaiola bem na hora em que o oceano engolia o navio. Ele foi levado pela correnteza e acordou engasgado numa praia de areia.",
+        "Mas ele não estava sozinho, não senhor. A praia estava cheia de caixotes e bichos desesperados tentando escapar dos caçadores gananciosos que queriam prender todo mundo de novo. Era uma questão de vida ou morte, e a aventura mal tinha começado!"
+      ]
     },
     {
-      "title": "Gretel",
-      "subtitle": "Grande Planadora",
-      "body": "Ela resolveu o Princípio de Bernoulli antes do café da manhã e consegue planar mais longe do que você consegue gritar 'Cuidado!' Não a confunda com uma donzela — ela é quem faz o resgate."
+      "heading": "A Grande Fuga de Pygmy",
+      "paragraphs": [
+        "Brennen era corajoso, mas estava bem pra baixo quando ouviu uma voz abafada chamando debaixo da areia. Encontrou uma mãozinha esticada que parecia pedir socorro e puxou com toda a força que tinha!",
+        "Depois de cavar a areia e abrir a trava do caixote, esperava receber um agradecimento desesperado. Mas em vez disso, um sujeitinho gordinho e calmo saiu tranquilão. Pegou uma etiqueta de entrega, leu: «Ah, aparentemente me chamo Pygmy, Pygmy Possum», e jogou fora como se fosse lixo.",
+        "Brennen estendeu a mão, mas Pygmy tinha outros planos. Rápido como um raio, Pygmy enrolou uma cauda do tamanho de uma quadra ao redor do braço de Brennen e o catapultou pela praia inteira! Brennen caiu de cabeça na areia, com a cabeça zunindo, percebendo que acabara de conhecer um novo parceiro muito esquisito — e muito, muito forte."
+      ]
     },
     {
-      "title": "Hanna",
-      "subtitle": "Possum do Mel",
-      "body": "Cabe na palma da mão, mas tem mais cérebro do que um celeiro cheio de bandidos. Dê a ela algumas peças e ela vai construir algo que salva a cidade inteira."
+      "heading": "Gretel e o Capanga",
+      "paragraphs": [
+        "Enquanto Brennen ainda estava sacudindo a areia do pelo, viu uma «bela donzela» em apuros. Resolveu ser o herói e mordeu o tornozelo de um caçador pra soltá-la.",
+        "Pois o caçador não ficou nada feliz e agarrou Brennen num punho que apertava feito uma morsa! Brennen achava que estava salvando ela, mas essa moça não precisava de nenhum príncipe encantado.",
+        "Ela olhou pra ele, torceu o focinho e deu uma risada de deboche: «Ah, você me salvando?» Aí foi ela mesma que mordeu a mão do capturador! Ao cair, abriu os braços e mostrou suas membranas de planagem elegantes.",
+        "«Caramba, você é uma planadora!», Brennen gritou enquanto ela pegava o vento. Ela se apresentou como Gretel, a Maior Planadora, e saiu voando, deixando o pobre Brennen encarando um capanga muito bravo e muito mal-humorado."
+      ]
     },
     {
-      "title": "Plaid",
-      "subtitle": "Gambá Listrado",
-      "body": "Ele não fala muito. Não precisa. Animais selvagens do dobro do seu tamanho o seguem como se fosse o líder deles — e talvez seja mesmo."
+      "heading": "O Resgate Gargalhante de Remy",
+      "paragraphs": [
+        "Aí Brennen estava numa fria danada, encarando de frente aquele caçador medonho. Estava quase chegando o seu fim quando, do nada, apareceu outro gambá!",
+        "Esse novo chegou bem em cima do capanga... bom, digamos que acertou bem onde dói mais.",
+        "O caçador soltou um berrão e caiu no chão, deixando Brennen se soltar.",
+        "O recém-chegado era um gambá de cauda anelada com olhos arregalados chamado Remy Rodrick, e estava morrendo de rir! Disse a Brennen que nunca tinha visto o capanga antes, mas viu que estava aprontando feio com ele.",
+        "Brennen tentou agir com estilo, sacudindo o pó e fingindo que estava tudo dominado, mas sabia muito bem que devia uma grande ao Remy.",
+        "Os dois se deram um aperto de mão, finalmente em paz por um breve momento."
+      ]
     },
     {
-      "title": "Pygmy",
-      "subtitle": "Gambá Pigmeu Oriental",
-      "body": "A alma mais gentil da gangue — até você acabar do lado errado das coisas. Aquela cauda consegue laçar um búfalo e bate com a força de um rinoceronte em disparada."
+      "heading": "A Chegada na Marra de Willow",
+      "paragraphs": [
+        "Não deu tempo de comemorar. Uma gambá branca e selvagem veio chegando que nem ventania, mais quente que pimenta malagueta na brasa.",
+        "Era Willow Willamena, e estava furiosa pra caramba. Chamou Brennen de «idiota metido» porque ficou gritando ordens contrárias enquanto ela tentava salvar os animais.",
+        "Ficou tão brava que ergueu os punhos, pronta pra uma briga ali mesmo na praia!",
+        "Brennen gritou de volta, chamando ela de imbecil por querer levar todo mundo pra dentro de uma armadilha num oco de árvore.",
+        "Parecia que iam se estapear quando Remy entrou no meio. Pegou o punho de Willow e começou a sacudir como se fossem velhos amigos, se apresentando com um sorrão.",
+        "Atrás de Willow estava uma docinha de gambá meleira chamada Hanna Holly, que só ficou balançando a cabeça concordando. Que turma espinhosa de heróis!"
+      ]
     },
     {
-      "title": "Remmy",
-      "subtitle": "Gambá de Cauda Anelada",
-      "body": "Sempre rindo, sempre se divertindo. Os vilões adoram subestimá-lo — até levarem um 'Whammy' e ficarem prontos para fazer tudo o que Remmy mandar."
+      "heading": "O Chá do Deserto da Hanna",
+      "paragraphs": [
+        "A turma correu pro deserto do Sul da Califórnia pra escapar dos caçadores, mas aquele sol tava mais quente que brasa em caldeirão.",
+        "Gretel e Pygmy desmaiaram do calor. Willow tinha certeza que estavam perdidos porque não tinha uma gota d'água à vista. Mas a pequena Hanna Holly só deu um sorrisinho! Com um pouco de criatividade, foi trabalhar num agave, se mexendo tão rápido que parecia estar em vários lugares ao mesmo tempo.",
+        "Em segundos, tinha feito cadeiras, uma cobertura e copaizinhos cheios de um líquido branco e grossinho. Os outros ficaram boquiabertos enquanto se sentavam em cadeiras de agave e tomavam o «Chá do Deserto da Hanna».",
+        "Remy até disse que era melhor do que as pimentas da Tasmânia! Estavam finalmente relaxando quando o chão começou a tremer que nem barriga de gigante com fome."
+      ]
     },
     {
-      "title": "Willow Willemina",
-      "subtitle": "Gambá Branco de Cauda Anelada",
-      "body": "Feroz, destemida e sempre a primeira na briga. Nenhum vilão é duro demais e nenhuma confusão é grande demais. Valentões dando trabalho? É só chamar a Willow."
+      "heading": "A Debandada: Plaid e seus Corcéis",
+      "paragraphs": [
+        "Uma debandada de carneiros da serra vinha direto pra cima deles! Willow e Brennen gritaram ordens diferentes de novo — um disse «corre!» e o outro disse «se esconde!»",
+        "O resto dos gambás ficou tão confuso que acabou num monte emaranhado, com a cauda de Pygmy enrolada em todo mundo! Mas os carneiros pararam a um palmo de distância.",
+        "Em cima do carneiro maior estava um gambá listrado e misterioso. Desceu num pulo e começou a tomar o chá da Hanna sem dizer uma palavra.",
+        "Quando Willow perguntou o nome dele, só grunhiu: «Plaid.» Era um cara de poucas palavras — basicamente só «sim» e «não».",
+        "Ele estava montando esses carneiros igual a cavalos! Pygmy sugeriu que todos usassem os carneiros pra entrar na cidade, e mesmo que Willow tentasse fazer parecer que foi ideia dela, o plano estava feito."
+      ]
+    },
+    {
+      "heading": "Começo Turbulento de uma Grande Aventura",
+      "paragraphs": [
+        "A Gangue finalmente estava em movimento, mas nem todo mundo nasceu pra cavaleiro.",
+        "Brennen e Willow foram na frente nos carneiros grandes, correndo em direção a uma cidade chamada Hang Town. Remy, Gretel e Plaid vieram logo atrás. Mas o coitado do Pygmy teve que laçar uma lebre e mal conseguia se segurar enquanto ela saltava pra todo lado! E a Hanna? Construiu uma diligência inteira de tumbleweeds e folhas de agave, puxada por dois ratos-canguru chamados Ranga e Koo.",
+        "A turma foi em direção ao leste pra resgatar os amigos do zoológico. Esses sete heróis improváveis vão conseguir parar de brigar tempo suficiente pra sobreviver ao Velho Oeste? Vão conseguir cruzar todos os Estados Unidos pra resgatar os amigos do Zoológico da Filadélfia? Será que vão conseguir voltar pra Austrália?",
+        "Torçamos que sim!"
+      ]
     }
   ]
 }

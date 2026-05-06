@@ -14,10 +14,12 @@ import {
   Anchor,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import ReactCountryFlag from 'react-country-flag';
-import MusicPlayer from './MusicPlayer';
+import WesternIcon from './icons/WesternIcon';
+import AnnouncementBanner from './AnnouncementBanner';
 
 const LANGUAGES = [
   { code: 'en',    countryCode: 'US', label: 'English'   },
@@ -25,25 +27,27 @@ const LANGUAGES = [
   { code: 'pt-BR', countryCode: 'BR', label: 'Português' },
 ];
 
+// Western SVG icons replace the old emoji glyphs.
 const navLinks = [
-  { to: '/', labelKey: 'nav.home', emoji: '\u{1F3E0}' },
-  { to: '/about', labelKey: 'nav.theBook', emoji: '\u{1F4D6}' },
-  { to: '/characters', labelKey: 'nav.characters', emoji: '\u{1F43E}' },
-  { to: '/parents', labelKey: 'nav.forParents', emoji: '\u{1F468}\u200D\u{1F469}\u200D\u{1F467}' },
-  { to: '/author', labelKey: 'nav.theAuthor', emoji: '\u270D\uFE0F' },
-  { to: '/illustrator', labelKey: 'nav.theIllustrator', emoji: '\u{1F3A8}' },
-  { to: '/frontier-post', labelKey: 'nav.frontierPost', emoji: '\u{1F4EC}' },
+  { to: '/',              labelKey: 'nav.home',           icon: 'hat' },
+  { to: '/about',         labelKey: 'nav.theBook',        icon: 'poster' },
+  { to: '/characters',    labelKey: 'nav.characters',     icon: 'paw' },
+  { to: '/parents',       labelKey: 'nav.forParents',     icon: 'family' },
+  { to: '/author',        labelKey: 'nav.theAuthor',      icon: 'quill' },
+  { to: '/illustrator',   labelKey: 'nav.theIllustrator', icon: 'palette' },
+  { to: '/niloras-notes', labelKey: 'nav.frontierPost',   icon: 'mailbox' },
 ];
 
 function Layout() {
   const { t, i18n } = useTranslation();
   const [opened, { toggle, close }] = useDisclosure(false);
+  const [hasBanner, setHasBanner] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
 
   return (
     <AppShell
-      header={{ height: 65 }}
+      header={{ height: hasBanner ? 65 + 36 : 65 }}
       footer={{ height: 56 }}
       navbar={{
         width: 260,
@@ -63,9 +67,12 @@ function Layout() {
             : '4px solid var(--mantine-color-brown-9)',
           backdropFilter: isHome ? 'blur(8px)' : 'none',
           transition: 'background-color 0.3s',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        <Group h="100%" px="md">
+        <AnnouncementBanner onPresence={setHasBanner} />
+        <Group h="65px" px="md">
           <Group gap="sm">
             <Burger
               opened={opened}
@@ -81,7 +88,7 @@ function Layout() {
               style={{
                 color: '#fdf4eb',
                 textDecoration: 'none',
-                fontFamily: '"Rye", cursive',
+                fontFamily: 'var(--font-display, "Rye", cursive)',
                 letterSpacing: '1px',
                 fontSize: 'clamp(0.7rem, 3vw, 1.1rem)',
                 whiteSpace: 'nowrap',
@@ -111,36 +118,46 @@ function Layout() {
               c="brown.6"
               px="sm"
               mb={4}
-              style={{ fontFamily: '"Bangers", cursive', letterSpacing: '2px', fontSize: '0.85rem' }}
+              style={{ fontFamily: 'var(--font-shout, "Bangers", cursive)', letterSpacing: '2px', fontSize: '0.85rem' }}
             >
               {t('nav.explore', 'Explore')}
             </Text>
 
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                component={Link}
-                to={link.to}
-                label={
-                  <Text size="md" fw={600} style={{ fontFamily: '"Bubblegum Sans", sans-serif' }}>
-                    {link.emoji} {t(link.labelKey)}
-                  </Text>
-                }
-                active={location.pathname === link.to}
-                onClick={close}
-                className="nav-link"
-                styles={{
-                  root: {
-                    borderRadius: '12px',
-                    padding: '10px 14px',
-                    '&[dataActive]': {
-                      backgroundColor: 'var(--mantine-color-brown-3)',
+            {navLinks.map((link) => {
+              const active = location.pathname === link.to;
+              return (
+                <NavLink
+                  key={link.to}
+                  component={Link}
+                  to={link.to}
+                  label={
+                    <Group gap={8} wrap="nowrap">
+                      <WesternIcon
+                        name={link.icon}
+                        size={20}
+                        color={active ? '#3a1e00' : '#5a3a1a'}
+                      />
+                      <Text size="md" fw={600} style={{ fontFamily: 'var(--font-fun, "Bubblegum Sans", sans-serif)' }}>
+                        {t(link.labelKey)}
+                      </Text>
+                    </Group>
+                  }
+                  active={active}
+                  onClick={close}
+                  className="nav-link"
+                  styles={{
+                    root: {
+                      borderRadius: '12px',
+                      padding: '10px 14px',
+                      '&[dataActive]': {
+                        backgroundColor: 'var(--mantine-color-brown-3)',
+                      },
                     },
-                  },
-                }}
-                color="brown"
-              />
-            ))}
+                  }}
+                  color="brown"
+                />
+              );
+            })}
 
             <Divider my="md" color="brown.3" />
 
@@ -151,7 +168,7 @@ function Layout() {
                 tt="uppercase"
                 c="brown.5"
                 mb={6}
-                style={{ fontFamily: '"Bangers", cursive', letterSpacing: '2px', fontSize: '0.75rem' }}
+                style={{ fontFamily: 'var(--font-shout, "Bangers", cursive)', letterSpacing: '2px', fontSize: '0.75rem' }}
               >
                 {t('languageSwitcher.label')}
               </Text>
@@ -169,7 +186,7 @@ function Layout() {
                         tooltip: {
                           backgroundColor: 'var(--mantine-color-brown-8)',
                           color: '#fdf4eb',
-                          fontFamily: '"Bubblegum Sans", sans-serif',
+                          fontFamily: 'var(--font-fun, "Bubblegum Sans", sans-serif)',
                           fontSize: '0.8rem',
                           border: '1px solid var(--mantine-color-brown-5)',
                         },
@@ -180,7 +197,7 @@ function Layout() {
                         variant={isActive ? 'filled' : 'subtle'}
                         size="lg"
                         radius="md"
-                        onClick={() => i18n.changeLanguage(code)}
+                        onClick={() => { i18n.changeLanguage(code); close(); }}
                         aria-label={label}
                         aria-pressed={isActive}
                         style={{
@@ -211,7 +228,7 @@ function Layout() {
                 c="brown.6"
                 ta="center"
                 fs="italic"
-                style={{ fontFamily: '"Patrick Hand", cursive' }}
+                style={{ fontFamily: 'var(--font-hand, "Patrick Hand", cursive)' }}
               >
                 {t('nav.tagline', 'Adventure awaits, mate!')}
               </Text>
@@ -230,10 +247,7 @@ function Layout() {
         <Outlet />
       </AppShell.Main>
 
-      {/* --- Persistent Music Player --- */}
-      <MusicPlayer />
-
-      {/* --- Footer --- */}
+{/* --- Footer --- */}
       <AppShell.Footer
         style={{
           backgroundColor: 'var(--mantine-color-brown-9)',
@@ -270,8 +284,12 @@ function Layout() {
               </ActionIcon>
             </Anchor>
           </Group>
-          <Text size="xs" c="brown.4" style={{ fontFamily: '"Patrick Hand", cursive' }}>
+          <Text size="xs" c="brown.4" style={{ fontFamily: 'var(--font-hand, "Patrick Hand", cursive)' }}>
             © {new Date().getFullYear()} The Awesome Aussie Possum Posse
+            {' · '}
+            <Link to="/privacy" style={{ color: 'var(--mantine-color-brown-4)', textDecoration: 'underline' }}>
+              Privacy Policy
+            </Link>
           </Text>
         </Group>
       </AppShell.Footer>

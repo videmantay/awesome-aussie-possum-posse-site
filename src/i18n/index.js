@@ -6,15 +6,17 @@ import en from './locales/en.json';
 import esMX from './locales/es-MX.json';
 import ptBR from './locales/pt-BR.json';
 import pageFlipEn from './locales/pageFlip-en.json';
+import pageFlipEsMX from './locales/pageFlip-es-MX.json';
+import pageFlipPtBR from './locales/pageFlip-pt-BR.json';
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { translation: en, pageFlip: pageFlipEn },
-      'es-MX': { translation: esMX },
-      'pt-BR': { translation: ptBR },
+      en:     { translation: en,     pageFlip: pageFlipEn },
+      'es-MX': { translation: esMX,  pageFlip: pageFlipEsMX },
+      'pt-BR': { translation: ptBR,  pageFlip: pageFlipPtBR },
     },
     fallbackLng: 'en',
     interpolation: {

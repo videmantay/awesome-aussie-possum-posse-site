@@ -1,0 +1,123 @@
+/* Tiptap editor surface */
+.tiptap-editor {
+  border: 2px solid var(--mantine-color-brown-3);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 1rem 1.25rem;
+  min-height: 320px;
+  cursor: text;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1rem;
+  color: var(--mantine-color-brown-9);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.tiptap-editor:focus-within {
+  border-color: var(--mantine-color-brown-5);
+}
+
+.tiptap-editor h1 {
+  font-family: 'Rye', cursive;
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--mantine-color-brown-8);
+}
+.tiptap-editor h2 {
+  font-family: 'Rye', cursive;
+  font-size: 1.5rem;
+  margin: 0.9rem 0 0.45rem;
+  color: var(--mantine-color-brown-8);
+}
+.tiptap-editor h3 {
+  font-family: 'Rye', cursive;
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.4rem;
+  color: var(--mantine-color-brown-7);
+}
+.tiptap-editor p {
+  margin: 0 0 0.75rem;
+  line-height: 1.75;
+}
+.tiptap-editor p:last-child {
+  margin-bottom: 0;
+}
+.tiptap-editor img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 0.75rem 0;
+  display: block;
+}
+.tiptap-editor a {
+  color: var(--mantine-color-brown-6);
+  text-decoration: underline;
+}
+.tiptap-editor blockquote {
+  border-left: 4px solid var(--mantine-color-brown-4);
+  margin: 1rem 0;
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--mantine-color-brown-7);
+}
+.tiptap-editor ul,
+.tiptap-editor ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+.tiptap-editor p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--mantine-color-brown-4);
+  pointer-events: none;
+  height: 0;
+}
+
+/* Rendered post content on the public Frontier Post page */
+.post-content h1 {
+  font-family: 'Rye', cursive;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin: 1rem 0 0.5rem;
+  color: var(--mantine-color-brown-8);
+}
+.post-content h2 {
+  font-family: 'Rye', cursive;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin: 0.9rem 0 0.45rem;
+  color: var(--mantine-color-brown-8);
+}
+.post-content h3 {
+  font-family: 'Rye', cursive;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin: 0.8rem 0 0.4rem;
+  color: var(--mantine-color-brown-7);
+}
+.post-content p {
+  margin: 0 0 0.85rem;
+  line-height: 1.75;
+  font-family: 'Baloo 2', sans-serif;
+}
+.post-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 0.75rem auto;
+  display: block;
+}
+.post-content a {
+  color: var(--mantine-color-brown-6);
+  text-decoration: underline;
+}
+.post-content blockquote {
+  border-left: 4px solid var(--mantine-color-brown-4);
+  margin: 1rem 0;
+  padding-left: 1rem;
+  font-style: italic;
+  color: var(--mantine-color-brown-7);
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+  line-height: 1.7;
+  font-family: 'Baloo 2', sans-serif;
+}
