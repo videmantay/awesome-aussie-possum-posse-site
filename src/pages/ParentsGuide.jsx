@@ -394,7 +394,7 @@ function ParentsGuide() {
             textDecoration: 'none',
           }}
         >
-          Frontier Post →
+          Nilora's Notes →
         </Link>
       </div>
     </div>

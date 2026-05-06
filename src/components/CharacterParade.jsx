@@ -384,7 +384,7 @@ function CharacterParade() {
                   boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
                 }}
               >
-                Frontier Post →
+                Nilora's Notes →
               </Link>
             </div>
           </div>

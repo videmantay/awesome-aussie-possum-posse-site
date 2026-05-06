@@ -6,7 +6,7 @@
     "forParents": "Para Padres",
     "theAuthor": "La Autora",
     "theIllustrator": "El Ilustrador",
-    "frontierPost": "El Correo Fronterizo"
+    "frontierPost": "Las Notas de Nilora"
   },
   "home": {
     "title": "The Awesome Aussie Possum Posse",
@@ -36,9 +36,9 @@
     "theme3Body": "La Pandilla discute, se contradice y se saca de quicio — y luego salva el día de todas formas. Un pretexto perfecto para hablar con los niños sobre resolver conflictos.",
     "theme4Title": "Tres Idiomas",
     "theme4Body": "Disponible en inglés, español mexicano y portugués brasileño. Una elección perfecta para familias multilingües y salones bilingües.",
-    "frontierTitle": "El Correo Fronterizo: Tu Guía de Lectura",
-    "frontierBody": "La aventura no termina en la última página. El Correo Fronterizo trae datos reales sobre zarigüeyas, despachos de historia del Viejo Oeste y actividades familiares — todo lo que necesitas para seguir la conversación mucho después de la hora del cuento.",
-    "frontierCta": "Visita el Correo Fronterizo",
+    "frontierTitle": "Las Notas de Nilora: Tu Guía de Lectura",
+    "frontierBody": "La aventura no termina en la última página. Las Notas de Nilora trae datos reales sobre zarigüeyas, historia del Viejo Oeste y actividades familiares — todo lo que necesitas para seguir la conversación mucho después de la hora del cuento.",
+    "frontierCta": "Visita Las Notas de Nilora",
     "niloraNote": "Una nota de Nilora: Ya sé lo que están pensando — ¿por qué hacerle caso a una perrita para recomendar un libro? Pregunta válida. Pero como ex-cazadora de zarigüeyas con fama de ser muy meticulosa, hice mi tarea. Estos siete son los meros meros."
   },
   "author": {
@@ -71,9 +71,9 @@
     "quoteAttribution": "— Tucco Nascimento"
   },
   "frontier": {
-    "title": "El Correo Fronterizo",
-    "subtitle": "Noticias, despachos y cuentos del camino",
-    "comingSoon": "¡Las prensas se están calentando! Vuelve pronto para los últimos despachos de la pandilla."
+    "title": "Las Notas de Nilora",
+    "subtitle": "Reflexiones, datos y cuentos de una perra muy exigente",
+    "comingSoon": "¡Nilora está ocupada en el teclado! Vuelve pronto para las últimas notas de la pandilla."
   },
   "languageSwitcher": {
     "label": "Idioma"
@@ -143,7 +143,7 @@
     "subheading": "Sé el primero en saber cuando el libro salga — recibe actualizaciones, adelantos y despachos de la Pandilla directo a tu correo."
   },
   "cta": {
-    "heading": "¡Únete al Correo Fronterizo!",
+    "heading": "¡Lee Las Notas de Nilora!",
     "subheading": "Sé el primero en saber cuándo comienza la aventura. Despachos de la Pandilla, directo a tu correo.",
     "emailPlaceholder": "tu@correo.com",
     "submitButton": "Únete a la Pandilla",

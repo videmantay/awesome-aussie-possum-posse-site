@@ -142,7 +142,7 @@ function FrontierPostFeed() {
           size="lg"
           style={{ fontFamily: '"Bubblegum Sans", sans-serif', color: 'var(--mantine-color-brown-5)' }}
         >
-          Dispatches coming soon — check back, partner!
+          Nilora is typing… check back soon, partner!
         </Text>
       </Paper>
     );
@@ -155,6 +155,148 @@ function FrontierPostFeed() {
   );
 }
 
+function NilorasMasthead() {
+  const { t } = useTranslation();
+
+  return (
+    <Paper
+      shadow="xl"
+      radius="xl"
+      style={{
+        backgroundColor: 'rgba(253, 244, 235, 0.97)',
+        border: '3px solid var(--mantine-color-brown-3)',
+        overflow: 'hidden',
+        position: 'relative',
+      }}
+    >
+      {/* Top decorative rope-stitch border */}
+      <div style={{
+        height: 8,
+        background: 'repeating-linear-gradient(90deg, #8B4513 0px, #8B4513 12px, #c87941 12px, #c87941 16px)',
+        borderBottom: '2px solid #5a2800',
+      }} />
+
+      {/* Star divider row */}
+      <div style={{
+        textAlign: 'center',
+        fontSize: '0.65rem',
+        color: '#8B4513',
+        letterSpacing: '0.35rem',
+        padding: '0.35rem 1rem',
+        borderBottom: '1px solid rgba(139,69,19,0.2)',
+        fontFamily: '"Rye", cursive',
+        background: 'rgba(196,90,26,0.06)',
+      }}>
+        ✦ &nbsp; EST. IN THE WILD WEST &nbsp; ✦
+      </div>
+
+      {/* Main masthead content */}
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '1.5rem',
+        padding: '1.5rem 2rem',
+        flexWrap: 'wrap',
+      }}>
+        {/* Author image placeholder — swap in Nilora's animated PNG/SVG when ready */}
+        <div style={{
+          flexShrink: 0,
+          width: 120,
+          height: 120,
+          borderRadius: '50%',
+          border: '3px solid #8B4513',
+          background: 'linear-gradient(135deg, #f5e6d0 0%, #e8cfa8 100%)',
+          boxShadow: '0 4px 16px rgba(90,40,0,0.25), inset 0 0 0 2px rgba(255,255,255,0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: '2.5rem',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+          title="Nilora's author portrait — animated image coming soon"
+        >
+          <span style={{ opacity: 0.35, fontSize: '3rem' }}>🐾</span>
+          <span style={{
+            position: 'absolute',
+            bottom: 4,
+            fontSize: '0.45rem',
+            color: '#8B4513',
+            fontFamily: '"Patrick Hand", cursive',
+            letterSpacing: '0.05em',
+            opacity: 0.6,
+          }}>
+            NILORA
+          </span>
+        </div>
+
+        {/* Title + subtitle */}
+        <div style={{ flex: 1, minWidth: 180 }}>
+          <div style={{
+            fontSize: '0.65rem',
+            fontFamily: '"Rye", cursive',
+            color: '#8B4513',
+            letterSpacing: '0.3rem',
+            textTransform: 'uppercase',
+            marginBottom: '0.25rem',
+            opacity: 0.7,
+          }}>
+            — a column by —
+          </div>
+          <div style={{
+            fontFamily: '"Rye", cursive',
+            fontSize: 'clamp(2rem, 6vw, 3.2rem)',
+            color: '#3d1a00',
+            lineHeight: 1.1,
+            textShadow: '2px 3px 0 rgba(139,69,19,0.18)',
+            letterSpacing: '0.02em',
+          }}>
+            {t('frontier.title')}
+          </div>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            marginTop: '0.5rem',
+          }}>
+            <div style={{ flex: 1, height: 1, background: 'rgba(139,69,19,0.3)' }} />
+            <span style={{
+              fontFamily: '"Patrick Hand", cursive',
+              color: '#8B4513',
+              fontSize: '0.95rem',
+              fontStyle: 'italic',
+            }}>
+              {t('frontier.subtitle')}
+            </span>
+            <div style={{ flex: 1, height: 1, background: 'rgba(139,69,19,0.3)' }} />
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom star divider */}
+      <div style={{
+        textAlign: 'center',
+        fontSize: '0.65rem',
+        color: '#8B4513',
+        letterSpacing: '0.35rem',
+        padding: '0.35rem 1rem',
+        borderTop: '1px solid rgba(139,69,19,0.2)',
+        fontFamily: '"Rye", cursive',
+        background: 'rgba(196,90,26,0.06)',
+      }}>
+        ✦ &nbsp; NILORA TAKIA &nbsp; · &nbsp; RESIDENT CORRESPONDENT &nbsp; ✦
+      </div>
+
+      {/* Bottom rope-stitch border */}
+      <div style={{
+        height: 8,
+        background: 'repeating-linear-gradient(90deg, #8B4513 0px, #8B4513 12px, #c87941 12px, #c87941 16px)',
+        borderTop: '2px solid #5a2800',
+      }} />
+    </Paper>
+  );
+}
+
 function FrontierPost() {
   const { t } = useTranslation();
 
@@ -162,36 +304,7 @@ function FrontierPost() {
     <div>
       <Box maw={760} mx="auto" py="xl">
         <Stack gap="xl">
-          <Paper
-            shadow="xl"
-            radius="xl"
-            p="xl"
-            ta="center"
-            style={{
-              backgroundColor: 'rgba(253, 244, 235, 0.97)',
-              border: '3px solid var(--mantine-color-brown-3)',
-            }}
-          >
-            <Title
-              order={1}
-              style={{
-                fontFamily: '"Rye", cursive',
-                color: 'var(--mantine-color-brown-8)',
-                textShadow: '2px 2px 0 rgba(0,0,0,0.1)',
-              }}
-            >
-              {t('frontier.title')}
-            </Title>
-            <Text
-              ta="center"
-              size="lg"
-              fs="italic"
-              mt="xs"
-              style={{ fontFamily: '"Patrick Hand", cursive', color: 'var(--mantine-color-brown-6)' }}
-            >
-              {t('frontier.subtitle')}
-            </Text>
-          </Paper>
+          <NilorasMasthead />
 
           <FrontierPostFeed />
         </Stack>

@@ -6,7 +6,7 @@
     "forParents": "Para Pais",
     "theAuthor": "A Autora",
     "theIllustrator": "O Ilustrador",
-    "frontierPost": "O Correio da Fronteira"
+    "frontierPost": "As Notas da Nilora"
   },
   "home": {
     "title": "The Awesome Aussie Possum Posse",
@@ -36,9 +36,9 @@
     "theme3Body": "A Gangue discute, discorda e fica louca uma com a outra — e mesmo assim salva o dia. Um ótimo ponto de partida para conversar com as crianças sobre resolver conflitos.",
     "theme4Title": "Três Idiomas",
     "theme4Body": "Disponível em inglês, espanhol mexicano e português brasileiro. Uma escolha perfeita para famílias multilíngues e salas de aula bilíngues.",
-    "frontierTitle": "O Correio da Fronteira: Seu Guia de Leitura",
-    "frontierBody": "A aventura não termina na última página. O Correio da Fronteira traz curiosidades reais sobre gambás, despachos de história do Velho Oeste e atividades em família — tudo o que você precisa para continuar a conversa muito depois da hora da história.",
-    "frontierCta": "Visite o Correio da Fronteira",
+    "frontierTitle": "As Notas da Nilora: Seu Guia de Leitura",
+    "frontierBody": "A aventura não termina na última página. As Notas da Nilora traz curiosidades reais sobre gambás, história do Velho Oeste e atividades em família — tudo o que você precisa para continuar a conversa muito depois da hora da história.",
+    "frontierCta": "Visite As Notas da Nilora",
     "niloraNote": "Um recado da Nilora: Sei o que vocês estão pensando — por que confiar na recomendação de uma cachorra? Pergunta justa. Mas como ex-caçadora de gambás com reputação de ser bem criteriosa, eu fiz minha pesquisa. Esses sete são o que há de melhor."
   },
   "author": {
@@ -71,9 +71,9 @@
     "quoteAttribution": "— Tucco Nascimento"
   },
   "frontier": {
-    "title": "O Correio da Fronteira",
-    "subtitle": "Notícias, despachos e contos da trilha",
-    "comingSoon": "As prensas estão esquentando! Volte em breve para os últimos despachos da gangue."
+    "title": "As Notas da Nilora",
+    "subtitle": "Reflexões, fatos e histórias de uma cachorra muito criteriosa",
+    "comingSoon": "Nilora está ocupada no teclado! Volte em breve para as últimas notas da gangue."
   },
   "languageSwitcher": {
     "label": "Idioma"
@@ -143,7 +143,7 @@
     "subheading": "Seja o primeiro a saber quando o livro lançar — receba atualizações, prévias e despachos da Turma direto na sua caixa de entrada."
   },
   "cta": {
-    "heading": "Junte-se ao Correio da Fronteira!",
+    "heading": "Leia As Notas da Nilora!",
     "subheading": "Seja o primeiro a saber quando a aventura começa. Despachos da Gangue direto para sua caixa de entrada.",
     "emailPlaceholder": "seu@email.com",
     "submitButton": "Entrar para a Gangue",

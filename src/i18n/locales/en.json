@@ -6,7 +6,7 @@
     "forParents": "For Parents",
     "theAuthor": "The Author",
     "theIllustrator": "The Illustrator",
-    "frontierPost": "Frontier Post"
+    "frontierPost": "Nilora's Notes"
   },
   "home": {
     "title": "The Awesome Aussie Possum Posse",
@@ -36,9 +36,9 @@
     "theme3Body": "The Posse bickers, disagrees, and drives each other crazy — then saves the day anyway. A natural conversation-starter about working through conflict.",
     "theme4Title": "Three Languages",
     "theme4Body": "Available in English, Mexican Spanish, and Brazilian Portuguese. A perfect pick for multilingual families and bilingual classrooms.",
-    "frontierTitle": "The Frontier Post: Your Reading Companion",
-    "frontierBody": "The adventure doesn't stop at the last page. The Frontier Post delivers real possum facts, Wild West history dispatches, and family activities — everything you need to keep the conversation going long after story time.",
-    "frontierCta": "Visit the Frontier Post",
+    "frontierTitle": "Nilora's Notes: Your Reading Companion",
+    "frontierBody": "The adventure doesn't stop at the last page. Nilora's Notes delivers real possum facts, Wild West history, and family activities — everything you need to keep the conversation going long after story time.",
+    "frontierCta": "Visit Nilora's Notes",
     "niloraNote": "A note from Nilora: I know what you're thinking — why take a book recommendation from a dog? Fair question. But as a reformed possum-chaser with a reputation for thoroughness, I did my research. These seven are the real deal."
   },
   "author": {
@@ -71,9 +71,9 @@
     "quoteAttribution": "— Tucco Nascimento"
   },
   "frontier": {
-    "title": "The Frontier Post",
-    "subtitle": "News, dispatches, and tales from the trail",
-    "comingSoon": "The presses are warming up! Check back soon for the latest dispatches from the posse."
+    "title": "Nilora's Notes",
+    "subtitle": "Musings, facts, and tales from a very discerning dog",
+    "comingSoon": "Nilora is busy at the keyboard! Check back soon for the latest notes from the posse."
   },
   "languageSwitcher": {
     "label": "Language"
@@ -143,8 +143,8 @@
     "subheading": "Be the first to know when the book launches — get updates, sneak peeks, and dispatches from the Posse delivered straight to your inbox."
   },
   "cta": {
-    "heading": "Join the Frontier Post!",
-    "subheading": "Be the first to know when the adventure begins. Dispatches from the Posse, straight to your inbox.",
+    "heading": "Read Nilora's Notes!",
+    "subheading": "Be the first to know when the adventure begins. Notes from Nilora, straight to your inbox.",
     "emailPlaceholder": "your@email.com",
     "submitButton": "Join the Posse",
     "successMessage": "Yeehaw! You're in, partner! We'll ride to your inbox soon.",
