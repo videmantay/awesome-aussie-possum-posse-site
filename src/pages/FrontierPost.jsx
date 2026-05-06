@@ -8,6 +8,7 @@ import { gsap } from 'gsap';
 import { db } from '../firebase';
 import { ANIMATION_PRESETS, SPEED_MAP, TRIGGER_MAP } from '../lib/animationPresets';
 import '../assets/styles/tiptap.css';
+import authorImg from '../assets/imgs/aboutAuthor/authorPic2.png' 
 
 // Maps i18n language codes → Firestore field suffix
 const LANG_CODE = { en: 'en', 'es-MX': 'es', 'pt-BR': 'pt' };
@@ -187,7 +188,7 @@ function NilorasMasthead() {
         fontFamily: '"Rye", cursive',
         background: 'rgba(196,90,26,0.06)',
       }}>
-        ✦ &nbsp; EST. IN THE WILD WEST &nbsp; ✦
+        ✦ &nbsp; EST. IN THE STATE OF CA &nbsp; ✦
       </div>
 
       {/* Main masthead content */}
@@ -214,9 +215,9 @@ function NilorasMasthead() {
           position: 'relative',
           overflow: 'hidden',
         }}
-          title="Nilora's author portrait — animated image coming soon"
+          title="Nilora the dog's portrait"
         >
-          <span style={{ opacity: 0.35, fontSize: '3rem' }}>🐾</span>
+          <span style={{ opacity: 0.35, fontSize: '3rem' }}><img src={authorImg} alt="Nilora's portraitd" /></span>
           <span style={{
             position: 'absolute',
             bottom: 4,
@@ -241,7 +242,7 @@ function NilorasMasthead() {
             marginBottom: '0.25rem',
             opacity: 0.7,
           }}>
-            — a column by —
+            — read along with —
           </div>
           <div style={{
             fontFamily: '"Rye", cursive',
