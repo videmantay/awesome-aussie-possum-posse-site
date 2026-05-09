@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import DOMPurify from 'dompurify';
 import { Box, Center, Loader, Paper, Stack, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
@@ -19,8 +19,15 @@ function getLocalized(post, field, i18nLang) {
 }
 
 function PostCard({ post, i18nLang }) {
-  const title = getLocalized(post, 'title', i18nLang);
-  const body  = getLocalized(post, 'body',  i18nLang);
+  const title   = getLocalized(post, 'title',   i18nLang);
+  const body    = getLocalized(post, 'body',     i18nLang);
+  const summary = getLocalized(post, 'summary',  i18nLang);
+  const summaryType = post.summaryType || null;
+  const isLegacy = summaryType === null;
+
+  const publishDate = post.publishedAt
+    ? post.publishedAt.toDate().toLocaleDateString(i18nLang, { year: 'numeric', month: 'long', day: 'numeric' })
+    : null;
 
   return (
     <Paper
@@ -33,7 +40,7 @@ function PostCard({ post, i18nLang }) {
         overflow: 'hidden',
       }}
     >
-      {post.mediaUrl && (
+      {post.mediaUrl && (summaryType === 'image' || isLegacy) && (
         post.mediaType === 'video' ? (
           <video src={post.mediaUrl} controls
             style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
@@ -42,19 +49,46 @@ function PostCard({ post, i18nLang }) {
             style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
         )
       )}
+
       <Box p="xl">
         <Title order={2} mb="xs"
           style={{ fontFamily: '"Rye", cursive', color: 'var(--mantine-color-brown-8)', fontSize: 'clamp(1.4rem, 3.5vw, 2rem)' }}>
           {title}
         </Title>
-        {post.publishedAt && (
+        {publishDate && (
           <Text size="xs" c="brown.5" mb="md" style={{ fontFamily: '"Patrick Hand", cursive' }}>
-            {post.publishedAt.toDate().toLocaleDateString(i18nLang, {
-              year: 'numeric', month: 'long', day: 'numeric',
-            })}
+            {publishDate}
           </Text>
         )}
-        <div className="post-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(body) }} />
+
+        {isLegacy ? (
+          <div className="post-content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(body) }} />
+        ) : (
+          <>
+            {summaryType === 'text' && summary && (
+              <Text mb="md" style={{ fontFamily: '"Baloo 2", sans-serif', color: 'var(--mantine-color-brown-7)', lineHeight: 1.65 }}>
+                {summary}
+              </Text>
+            )}
+            <Link
+              to={`/niloras-notes/${post.id}`}
+              style={{
+                display: 'inline-block',
+                background: '#3a1e00',
+                color: '#fdf4eb',
+                borderRadius: 20,
+                padding: '0.5rem 1.5rem',
+                fontFamily: '"Bangers", cursive',
+                fontSize: '1rem',
+                letterSpacing: '1px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+              }}
+            >
+              Read More →
+            </Link>
+          </>
+        )}
       </Box>
     </Paper>
   );
@@ -299,8 +333,6 @@ function NilorasMasthead() {
 }
 
 function FrontierPost() {
-  const { t } = useTranslation();
-
   return (
     <div>
       <Box maw={760} mx="auto" py="xl">

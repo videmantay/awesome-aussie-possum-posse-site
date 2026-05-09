@@ -14,6 +14,7 @@ import Characters from './pages/Characters';
 import ParentsGuide from './pages/ParentsGuide';
 import AboutAuthor from './pages/AboutAuthor';
 import FrontierPost from './pages/FrontierPost';
+import NilorasNotesPost from './pages/NilorasNotesPost';
 import AboutIllustrator from './pages/AboutIllustrator';
 import Privacy from './pages/Privacy';
 import AdminLogin from './pages/admin/AdminLogin';
@@ -22,6 +23,7 @@ import PostsList from './pages/admin/PostsList';
 import PostEditor from './pages/admin/PostEditor';
 import Subscribers from './pages/admin/Subscribers';
 import Banners from './pages/admin/Banners';
+import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -39,7 +41,9 @@ function App() {
             <Route path="/author" element={<AboutAuthor />} />
             <Route path="/illustrator" element={<AboutIllustrator />} />
             <Route path="/niloras-notes" element={<FrontierPost />} />
+            <Route path="/niloras-notes/:id" element={<NilorasNotesPost />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
 
           {/* Admin — own layout, auth-gated */}

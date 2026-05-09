@@ -9,7 +9,7 @@ import TextAlign from '@tiptap/extension-text-align';
 import Placeholder from '@tiptap/extension-placeholder';
 import {
   ActionIcon, Badge, Box, Button, Group, Loader, Paper,
-  Select, SegmentedControl, Stack, Text, TextInput, Tooltip,
+  Select, SegmentedControl, Stack, Text, Textarea, TextInput, Tooltip,
 } from '@mantine/core';
 import {
   doc, getDoc, serverTimestamp, setDoc, updateDoc,
@@ -28,12 +28,13 @@ const BLANK_POST = {
   scrollAnimation: 'none',
   animationSpeed: 'normal',
   animationTrigger: 'center',
+  summaryType: 'text',
 };
 
 const BLANK_LANGS = {
-  en: { title: '', body: '' },
-  es: { title: '', body: '' },
-  pt: { title: '', body: '' },
+  en: { title: '', body: '', summary: '' },
+  es: { title: '', body: '', summary: '' },
+  pt: { title: '', body: '', summary: '' },
 };
 
 const LANG_TABS = [
@@ -238,9 +239,9 @@ export default function PostEditor() {
         const d = snap.data();
         setPost({ ...BLANK_POST, ...d });
         const loaded = {
-          en: { title: d.title_en || d.title || '', body: d.body_en || d.body || '' },
-          es: { title: d.title_es || '', body: d.body_es || '' },
-          pt: { title: d.title_pt || '', body: d.body_pt || '' },
+          en: { title: d.title_en || d.title || '', body: d.body_en || d.body || '', summary: d.summary_en || '' },
+          es: { title: d.title_es || '', body: d.body_es || '', summary: d.summary_es || '' },
+          pt: { title: d.title_pt || '', body: d.body_pt || '', summary: d.summary_pt || '' },
         };
         setLangs(loaded);
         editor.commands.setContent(loaded.en.body || '');
@@ -339,6 +340,9 @@ export default function PostEditor() {
       body_en:  langs.en.body,
       body_es:  langs.es.body,
       body_pt:  langs.pt.body,
+      summary_en: langs.en.summary,
+      summary_es: langs.es.summary,
+      summary_pt: langs.pt.summary,
       // Legacy fallback (English)
       title: langs.en.title,
       body:  langs.en.body,
@@ -545,6 +549,43 @@ export default function PostEditor() {
                 <input type="file" accept="image/*,video/*" style={{ display: 'none' }} onChange={handleMediaFile} />
               </Button>
             )}
+          </Paper>
+
+          {/* Post Summary */}
+          <Paper p="md" radius="lg" style={{ border: '2px solid var(--mantine-color-brown-3)', background: '#fff9f3' }}>
+            <Text fw={700} mb="sm" style={{ fontFamily: '"Bangers", cursive', letterSpacing: '1px', color: 'var(--mantine-color-brown-7)' }}>
+              Post Summary
+            </Text>
+            <Stack gap="sm">
+              <Box>
+                <Text size="xs" fw={600} mb={4} style={{ fontFamily: '"Baloo 2", sans-serif', color: 'var(--mantine-color-brown-7)' }}>Summary Type</Text>
+                <SegmentedControl fullWidth size="xs" color="brown"
+                  data={[
+                    { value: 'text', label: 'Text' },
+                    { value: 'image', label: 'Image' },
+                  ]}
+                  value={post.summaryType || 'text'}
+                  onChange={v => setPost(p => ({ ...p, summaryType: v }))}
+                />
+              </Box>
+              {(post.summaryType || 'text') === 'text' ? (
+                <Textarea
+                  placeholder={`Short summary in ${LANG_TABS.find(t => t.code === activeLang)?.label}…`}
+                  value={langs[activeLang].summary}
+                  onChange={e => setLangField('summary', e.target.value)}
+                  minRows={3}
+                  autosize
+                  styles={{
+                    input: { fontFamily: '"Baloo 2", sans-serif', fontSize: '0.9rem' },
+                    label: { fontFamily: '"Baloo 2", sans-serif', fontWeight: 600, fontSize: '0.8rem' },
+                  }}
+                />
+              ) : (
+                <Text size="xs" c="brown.5" fs="italic" style={{ fontFamily: '"Patrick Hand", cursive' }}>
+                  The hero image above will display as the preview card. Upload one if you haven't yet.
+                </Text>
+              )}
+            </Stack>
           </Paper>
 
           {/* GSAP Animation */}
