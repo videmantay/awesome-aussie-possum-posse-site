@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react'; // useRef kept for activeLangRef
 import { useNavigate, useParams } from 'react-router';
 import DOMPurify from 'dompurify';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import Image from '@tiptap/extension-image';
+import { ResizableImage } from './ResizableImage';
 import Link from '@tiptap/extension-link';
 import TextAlign from '@tiptap/extension-text-align';
 import Placeholder from '@tiptap/extension-placeholder';
@@ -14,9 +14,9 @@ import {
 import {
   doc, getDoc, serverTimestamp, setDoc, updateDoc,
 } from 'firebase/firestore';
-import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
 import { notifications } from '@mantine/notifications';
-import { db, storage } from '../../firebase';
+import { db } from '../../firebase';
+import MediaPicker from './MediaPicker';
 import { ANIMATION_PRESETS, SPEED_MAP, TRIGGER_MAP } from '../../lib/animationPresets';
 import { translateText } from '../../lib/translate';
 import '../../assets/styles/tiptap.css';
@@ -205,14 +205,13 @@ export default function PostEditor() {
   const [saving, setSaving]           = useState(false);
   const [translating, setTranslating] = useState(false);
   const [preview, setPreview]         = useState(false);
-  const [uploadProgress, setUploadProgress] = useState(null);
-  const imageInputRef = useRef();
+  const [pickerTarget, setPickerTarget] = useState(null); // 'body' | 'hero' | null
 
   // ── Editor ──────────────────────────────────────────────────────────────
   const editor = useEditor({
     extensions: [
       StarterKit,
-      Image.configure({ inline: false }),
+      ResizableImage.configure({ inline: false, postId }),
       Link.configure({ openOnClick: false }),
       TextAlign.configure({ types: ['heading', 'paragraph'] }),
       Placeholder.configure({ placeholder: 'Write your Frontier Post here, partner…' }),
@@ -273,11 +272,22 @@ export default function PostEditor() {
     }
     setTranslating(true);
     try {
-      const [title, body] = await Promise.all([
+      // Pull img tags out before translating — the API will mangle src/style/data-* attrs
+      const imgTags = [];
+      const strippedBody = (langs.en.body || '').replace(/<img[^>]*>/gi, match => {
+        imgTags.push(match);
+        return `@@IMG_${imgTags.length - 1}@@`;
+      });
+
+      const [title, translatedBody] = await Promise.all([
         translateText(langs.en.title, tab.translateCode),
-        translateText(langs.en.body,  tab.translateCode),
+        translateText(strippedBody,   tab.translateCode),
       ]);
-      setLangs(prev => ({ ...prev, [activeLang]: { title, body } }));
+
+      // Put the original img tags back
+      const body = translatedBody.replace(/@@IMG_(\d+)@@/gi, (_, i) => imgTags[+i] ?? '');
+
+      setLangs(prev => ({ ...prev, [activeLang]: { ...prev[activeLang], title, body } }));
       editor?.commands.setContent(body || '');
       notifications.show({ message: 'Translation loaded — review and edit as needed.', color: 'green' });
     } catch (err) {
@@ -287,42 +297,27 @@ export default function PostEditor() {
     }
   }
 
-  function triggerImageUpload() { imageInputRef.current?.click(); }
-
-  function handleImageFile(e) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const storageRef = ref(storage, `posts/${postId}/${Date.now()}_${file.name}`);
-    const task = uploadBytesResumable(storageRef, file);
-    task.on('state_changed',
-      snap => setUploadProgress(Math.round(snap.bytesTransferred / snap.totalBytes * 100)),
-      ()   => { notifications.show({ message: 'Image upload failed.', color: 'red' }); setUploadProgress(null); },
-      async () => {
-        const url = await getDownloadURL(task.snapshot.ref);
-        editor?.chain().focus().setImage({ src: url }).run();
-        setUploadProgress(null);
-        e.target.value = '';
-      },
-    );
-  }
-
-  function handleMediaFile(e) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const mediaType = file.type.startsWith('video/') ? 'video' : 'image';
-    const storageRef = ref(storage, `posts/${postId}/hero_${Date.now()}_${file.name}`);
-    const task = uploadBytesResumable(storageRef, file);
-    setUploadProgress(0);
-    task.on('state_changed',
-      snap => setUploadProgress(Math.round(snap.bytesTransferred / snap.totalBytes * 100)),
-      ()   => { notifications.show({ message: 'Upload failed.', color: 'red' }); setUploadProgress(null); },
-      async () => {
-        const url = await getDownloadURL(task.snapshot.ref);
-        setPost(p => ({ ...p, mediaUrl: url, mediaType }));
-        setUploadProgress(null);
-        e.target.value = '';
-      },
-    );
+  function handlePickerSelect(url, type, alt = '', allLangs = true) {
+    if (pickerTarget === 'body') {
+      // Insert at cursor in the active language editor
+      editor?.chain().focus().setImage({ src: url, alt }).run();
+      // Append to all other language bodies unless restricted to active lang
+      if (allLangs) {
+        const imgHtml = `<img src="${url}" alt="${alt}">`;
+        setLangs(prev => {
+          const updated = { ...prev };
+          Object.keys(updated).forEach(lang => {
+            if (lang !== activeLang) {
+              updated[lang] = { ...updated[lang], body: (updated[lang].body || '') + imgHtml };
+            }
+          });
+          return updated;
+        });
+      }
+    } else if (pickerTarget === 'hero') {
+      setPost(p => ({ ...p, mediaUrl: url, mediaType: type || 'image' }));
+    }
+    setPickerTarget(null);
   }
 
   async function handleSave(status) {
@@ -494,16 +489,13 @@ export default function PostEditor() {
             </Box>
 
             {/* Toolbar + editor — no outer border, Paper provides it */}
-            <input ref={imageInputRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleImageFile} />
-            <EditorToolbar editor={editor} onImageUpload={triggerImageUpload} />
+            <EditorToolbar editor={editor} onImageUpload={() => setPickerTarget('body')} />
             <EditorContent editor={editor} className="tiptap-editor" style={{ borderRadius: 0, border: 'none', borderTop: '2px solid var(--mantine-color-brown-3)' }} />
           </Paper>
 
-          {uploadProgress !== null && (
-            <Text size="sm" c="brown.6" style={{ fontFamily: '"Patrick Hand", cursive' }}>
-              Uploading… {uploadProgress}%
-            </Text>
-          )}
+          <Text size="xs" c="brown.4" style={{ fontFamily: '"Patrick Hand", cursive' }}>
+            Body images are inserted into the active language tab only.
+          </Text>
 
           {/* Translation completeness hint */}
           <Group gap="xs">
@@ -537,18 +529,26 @@ export default function PostEditor() {
                   ? <video src={post.mediaUrl} controls style={{ width: '100%', borderRadius: 8 }} />
                   : <img src={post.mediaUrl} alt="" style={{ width: '100%', borderRadius: 8, objectFit: 'cover', maxHeight: 160 }} />
                 }
-                <Button size="xs" variant="subtle" color="brown"
-                  onClick={() => setPost(p => ({ ...p, mediaUrl: '', mediaType: null }))}>
-                  Remove
-                </Button>
+                <Group gap="xs">
+                  <Button size="xs" variant="outline" color="brown" onClick={() => setPickerTarget('hero')}
+                    style={{ fontFamily: '"Baloo 2", sans-serif', flex: 1 }}>
+                    Replace
+                  </Button>
+                  <Button size="xs" variant="subtle" color="red"
+                    onClick={() => setPost(p => ({ ...p, mediaUrl: '', mediaType: null }))}>
+                    Remove
+                  </Button>
+                </Group>
               </Stack>
             ) : (
-              <Button component="label" variant="outline" color="brown" fullWidth
-                style={{ fontFamily: '"Baloo 2", sans-serif', borderRadius: 10, cursor: 'pointer' }}>
-                Upload Image / Video
-                <input type="file" accept="image/*,video/*" style={{ display: 'none' }} onChange={handleMediaFile} />
+              <Button variant="outline" color="brown" fullWidth onClick={() => setPickerTarget('hero')}
+                style={{ fontFamily: '"Baloo 2", sans-serif', borderRadius: 10 }}>
+                Browse / Upload Media
               </Button>
             )}
+            <Text size="xs" c="brown.4" mt="xs" style={{ fontFamily: '"Patrick Hand", cursive' }}>
+              Shared across all languages.
+            </Text>
           </Paper>
 
           {/* Post Summary */}
@@ -634,6 +634,14 @@ export default function PostEditor() {
 
         </Stack>
       </Box>
+
+      <MediaPicker
+        opened={pickerTarget !== null}
+        onClose={() => setPickerTarget(null)}
+        onSelect={handlePickerSelect}
+        postId={postId}
+        accept={pickerTarget === 'hero' ? 'all' : 'image'}
+      />
     </Box>
   );
 }
