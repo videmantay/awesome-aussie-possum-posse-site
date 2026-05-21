@@ -111,6 +111,11 @@ export default function NilorasNotesPost() {
             post.mediaType === 'video' ? (
               <video src={post.mediaUrl} controls
                 style={{ width: '100%', maxHeight: 420, objectFit: 'cover', display: 'block' }} />
+            ) : post.mediaType === 'youtube' ? (
+              <iframe src={post.mediaUrl}
+                style={{ width: '100%', aspectRatio: '16/9', display: 'block', border: 'none' }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen title="YouTube video" />
             ) : (
               <img src={post.mediaUrl} alt=""
                 style={{ width: '100%', maxHeight: 420, objectFit: 'cover', display: 'block' }} />

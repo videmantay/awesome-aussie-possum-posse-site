@@ -107,6 +107,8 @@ function PostPreview({ langs, post }) {
         {post.mediaUrl && (
           post.mediaType === 'video'
             ? <video src={post.mediaUrl} controls style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
+            : post.mediaType === 'youtube'
+            ? <iframe src={post.mediaUrl} style={{ width: '100%', aspectRatio: '16/9', display: 'block', border: 'none' }} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="YouTube video" />
             : <img src={post.mediaUrl} alt="" style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
         )}
         <Box p="xl">
@@ -527,6 +529,8 @@ export default function PostEditor() {
               <Stack gap="xs">
                 {post.mediaType === 'video'
                   ? <video src={post.mediaUrl} controls style={{ width: '100%', borderRadius: 8 }} />
+                  : post.mediaType === 'youtube'
+                  ? <iframe src={post.mediaUrl} style={{ width: '100%', aspectRatio: '16/9', borderRadius: 8, border: 'none' }} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="YouTube video" />
                   : <img src={post.mediaUrl} alt="" style={{ width: '100%', borderRadius: 8, objectFit: 'cover', maxHeight: 160 }} />
                 }
                 <Group gap="xs">

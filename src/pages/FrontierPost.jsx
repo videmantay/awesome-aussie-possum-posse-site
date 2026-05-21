@@ -13,6 +13,11 @@ import authorImg from '../assets/imgs/aboutAuthor/authorPic2.png'
 // Maps i18n language codes → Firestore field suffix
 const LANG_CODE = { en: 'en', 'es-MX': 'es', 'pt-BR': 'pt' };
 
+function youtubeThumbnail(embedUrl) {
+  const m = embedUrl?.match(/\/embed\/([a-zA-Z0-9_-]{11})/);
+  return m ? `https://img.youtube.com/vi/${m[1]}/hqdefault.jpg` : null;
+}
+
 function getLocalized(post, field, i18nLang) {
   const code = LANG_CODE[i18nLang] || 'en';
   return post[`${field}_${code}`] || post[`${field}_en`] || post[field] || '';
@@ -44,6 +49,11 @@ function PostCard({ post, i18nLang }) {
         post.mediaType === 'video' ? (
           <video src={post.mediaUrl} controls
             style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
+        ) : post.mediaType === 'youtube' ? (
+          youtubeThumbnail(post.mediaUrl) && (
+            <img src={youtubeThumbnail(post.mediaUrl)} alt=""
+              style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />
+          )
         ) : (
           <img src={post.mediaUrl} alt=""
             style={{ width: '100%', maxHeight: 340, objectFit: 'cover', display: 'block' }} />

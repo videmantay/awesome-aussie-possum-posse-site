@@ -15,6 +15,22 @@ import { db, storage } from '../../firebase';
 
 const ALLOWED_IMAGE = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
 const ALLOWED_ALL   = [...ALLOWED_IMAGE, 'video/mp4', 'video/webm', 'video/ogg'];
+
+// ─── YouTube helpers ──────────────────────────────────────────────────────────
+
+function extractYouTubeId(url) {
+  const patterns = [
+    /[?&]v=([a-zA-Z0-9_-]{11})/,
+    /youtu\.be\/([a-zA-Z0-9_-]{11})/,
+    /\/embed\/([a-zA-Z0-9_-]{11})/,
+    /\/shorts\/([a-zA-Z0-9_-]{11})/,
+  ];
+  for (const p of patterns) {
+    const m = url.match(p);
+    if (m) return m[1];
+  }
+  return null;
+}
 const MAX_IMAGE = 10  * 1024 * 1024;
 const MAX_VIDEO = 100 * 1024 * 1024;
 
@@ -90,6 +106,16 @@ function MediaCard({ url, thumb, label, sublabel, type = 'image', onSelect }) {
             {label}
           </Text>
         </div>
+      ) : type === 'youtube' ? (
+        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+          {thumb
+            ? <img src={thumb} alt={label} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} loading="lazy" />
+            : <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#1a1a1a' }}><span style={{ fontSize: '2rem' }}>▶</span></div>
+          }
+          <div style={{ position: 'absolute', bottom: 4, left: 4, background: 'rgba(255,0,0,0.85)', color: '#fff', fontSize: 9, fontWeight: 700, padding: '2px 5px', borderRadius: 3, letterSpacing: 1 }}>
+            YT
+          </div>
+        </div>
       ) : (
         <img
           src={thumb || url}
@@ -145,7 +171,7 @@ function LibraryTab({ accept, onSelect }) {
   }, []);
 
   const items = media.filter(item => {
-    if (accept === 'image' && item.type === 'video') return false;
+    if (accept === 'image' && (item.type === 'video' || item.type === 'youtube')) return false;
     return !search || item.name.toLowerCase().includes(search.toLowerCase());
   });
 
@@ -390,6 +416,50 @@ function UploadTab({ postId, accept, onSelect }) {
   );
 }
 
+// ─── YouTube tab ──────────────────────────────────────────────────────────────
+
+function YouTubeTab({ onSelect }) {
+  const [url, setUrl]     = useState('');
+  const [error, setError] = useState(null);
+
+  async function handleEmbed() {
+    const id = extractYouTubeId(url.trim());
+    if (!id) { setError('Could not find a YouTube video ID in that URL.'); return; }
+    const embedUrl = `https://www.youtube.com/embed/${id}`;
+    const thumbUrl = `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+    await addDoc(collection(db, 'media'), {
+      url: embedUrl, thumb: thumbUrl,
+      name: `YouTube: ${id}`, type: 'youtube', size: 0,
+      source: 'youtube', createdAt: serverTimestamp(),
+    }).catch(() => {});
+    onSelect(embedUrl, 'youtube', `YouTube video ${id}`);
+  }
+
+  return (
+    <Stack gap="md">
+      <Text size="sm" style={{ fontFamily: '"Patrick Hand", cursive', color: 'var(--mantine-color-brown-6)' }}>
+        Paste any YouTube link — watch page, short, or share URL — to embed it as the hero video.
+      </Text>
+      <TextInput
+        placeholder="https://www.youtube.com/watch?v=…"
+        value={url}
+        onChange={e => { setUrl(e.target.value); setError(null); }}
+        styles={{ input: { fontFamily: '"Baloo 2", sans-serif' } }}
+        onKeyDown={e => e.key === 'Enter' && url.trim() && handleEmbed()}
+      />
+      {error && <Text size="sm" c="red" style={{ fontFamily: '"Patrick Hand", cursive' }}>{error}</Text>}
+      <Button
+        color="brown"
+        onClick={handleEmbed}
+        disabled={!url.trim()}
+        style={{ fontFamily: '"Baloo 2", sans-serif', borderRadius: 10 }}
+      >
+        Embed YouTube Video
+      </Button>
+    </Stack>
+  );
+}
+
 // ─── Main MediaPicker ─────────────────────────────────────────────────────────
 
 const TAB_STYLE = { fontFamily: '"Baloo 2", sans-serif', fontWeight: 600 };
@@ -421,6 +491,7 @@ export default function MediaPicker({ opened, onClose, onSelect, postId, accept 
           <Tabs.Tab value="library">My Library</Tabs.Tab>
           <Tabs.Tab value="unsplash">Unsplash</Tabs.Tab>
           <Tabs.Tab value="upload">Upload</Tabs.Tab>
+          {!isBodyPicker && <Tabs.Tab value="youtube">YouTube</Tabs.Tab>}
         </Tabs.List>
 
         <Box style={{ minHeight: 380, maxHeight: '62vh', overflowY: 'auto', paddingRight: 4 }}>
@@ -433,6 +504,11 @@ export default function MediaPicker({ opened, onClose, onSelect, postId, accept 
           <Tabs.Panel value="upload">
             <UploadTab postId={postId} accept={accept} onSelect={pick} />
           </Tabs.Panel>
+          {!isBodyPicker && (
+            <Tabs.Panel value="youtube">
+              <YouTubeTab onSelect={pick} />
+            </Tabs.Panel>
+          )}
         </Box>
       </Tabs>
 
